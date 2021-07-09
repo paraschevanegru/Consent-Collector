@@ -1,0 +1,15 @@
+C:\Users\Para\Desktop\Consent-Collector\ConsentCollector\ConsentCollector.Business\bin\Debug\net5.0\ConsentCollector.Business.deps.json
+C:\Users\Para\Desktop\Consent-Collector\ConsentCollector\ConsentCollector.Business\bin\Debug\net5.0\ConsentCollector.Business.dll
+C:\Users\Para\Desktop\Consent-Collector\ConsentCollector\ConsentCollector.Business\bin\Debug\net5.0\ref\ConsentCollector.Business.dll
+C:\Users\Para\Desktop\Consent-Collector\ConsentCollector\ConsentCollector.Business\bin\Debug\net5.0\ConsentCollector.Business.pdb
+C:\Users\Para\Desktop\Consent-Collector\ConsentCollector\ConsentCollector.Business\bin\Debug\net5.0\ConsentCollector.Persistence.dll
+C:\Users\Para\Desktop\Consent-Collector\ConsentCollector\ConsentCollector.Business\bin\Debug\net5.0\ConsentCollector.Persistence.pdb
+C:\Users\Para\Desktop\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.csproj.AssemblyReference.cache
+C:\Users\Para\Desktop\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Para\Desktop\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.AssemblyInfoInputs.cache
+C:\Users\Para\Desktop\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.AssemblyInfo.cs
+C:\Users\Para\Desktop\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.csproj.CoreCompileInputs.cache
+C:\Users\Para\Desktop\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.csproj.CopyComplete
+C:\Users\Para\Desktop\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.dll
+C:\Users\Para\Desktop\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ref\ConsentCollector.Business.dll
+C:\Users\Para\Desktop\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.pdb
