@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsentCollector.Entities.Consent
+{
+    public sealed class Answer : Entity
+    {
+        public Answer(bool agree, DateTime answerDate):base()
+        {
+            Agree = agree;
+            AnswerDate = answerDate;
+        }
+
+        public bool Agree { get; set; }
+        public DateTime AnswerDate { get; set; }
+
+        public Guid IdUser { get; set; }
+
+        public Guid IdSurvey { get; set; }
+
+        public Guid IdQuestion { get; set; }
+    }
+}

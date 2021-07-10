@@ -1,7 +1,9 @@
+using ConsentCollector.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -32,6 +34,11 @@ namespace ConsentCollector.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ConsentCollector.API", Version = "v1" });
             });
+
+            services.AddDbContext<ConsentContext>(config =>
+            {
+                config.UseSqlServer(Configuration.GetConnectionString("ConsentConnection"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +61,10 @@ namespace ConsentCollector.API
             {
                 endpoints.MapControllers();
             });
+
+            using var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
+            var dbContext = serviceScope.ServiceProvider.GetService<ConsentContext>();
+            dbContext.Database.EnsureCreated();
         }
     }
 }
