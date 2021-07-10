@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace ConsentCollector.Entities.Consent
 {
-    public sealed class Notifications : Entity
+    public sealed class Notification : Entity
     {
-        public Notifications(string title, string description):base()
-        {
-            Title = title;
-            Description = description;
-        }
+        //public Notification(string title, string description):base()
+        //{
+        //    Title = title;
+        //    Description = description;
+        //}
 
         public string Title { get; set; }
         public string Description { get; set; }
@@ -21,5 +21,9 @@ namespace ConsentCollector.Entities.Consent
         public Guid IdUser { get; set; }
 
         public Guid IdSurvey { get; set; }
+
+        public User User { get; set; }
+
+        public Survey Survey { get; set; }
     }
 }

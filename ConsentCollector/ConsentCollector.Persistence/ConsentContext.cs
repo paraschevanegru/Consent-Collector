@@ -58,6 +58,19 @@ namespace ConsentCollector.Persistence
                 e.HasOne(u => u.Detail)
                 .WithOne(d => d.User)
                 .HasForeignKey<UserDetail>(d=>d.IdUser);
+
+                e.HasMany(u => u.Comments)
+                .WithOne(c => c.User)
+                .HasForeignKey(u => u.IdUser);
+
+                e.HasMany(u => u.Answers)
+                .WithOne(a => a.User)
+                .HasForeignKey(u => u.IdUser);
+
+                e.HasMany(u => u.Notifications)
+                 .WithOne(n => n.User)
+                 .HasForeignKey(u => u.IdUser);
+
             });
 
             modelBuilder.Entity<Survey>(e =>
@@ -93,6 +106,18 @@ namespace ConsentCollector.Persistence
                .IsRequired()
                .ValueGeneratedNever();
 
+                e.HasMany(s => s.Comments)
+                .WithOne(c => c.Survey)
+                .HasForeignKey(s => s.IdSurvey);
+
+                e.HasMany(s => s.Answers)
+              .WithOne(a => a.Survey)
+              .HasForeignKey(s => s.IdSurvey);
+
+                e.HasMany(s => s.Notifications)
+                 .WithOne(n => n.Survey)
+                 .HasForeignKey(s => s.IdSurvey);
+
             });
 
 
@@ -125,6 +150,79 @@ namespace ConsentCollector.Persistence
                 .HasColumnName("Email")
                 .IsRequired()
                 .ValueGeneratedNever();
+            });
+
+            modelBuilder.Entity<Comment>(e =>
+            {
+                e.Property(c => c.Id)
+                .HasColumnName("Id")
+                .IsRequired()
+                .ValueGeneratedNever();
+
+                e.Property(c => c.Text)
+                .HasColumnName("Text")
+                .IsRequired()
+                .ValueGeneratedNever();
+            });
+
+
+            modelBuilder.Entity<Answer>(e =>
+            {
+                e.Property(c => c.Id)
+                .HasColumnName("Id")
+                .IsRequired()
+                .ValueGeneratedNever();
+
+                e.Property(c => c.Agree)
+                .HasColumnName("Agree")
+                .IsRequired()
+                .ValueGeneratedNever();
+
+                e.Property(c => c.AnswerDate)
+                .HasColumnName("AnswerDate")
+                .IsRequired()
+                .ValueGeneratedNever();
+            });
+
+            modelBuilder.Entity<Notification>(e =>
+            {
+                e.Property(c => c.Id)
+                .HasColumnName("Id")
+                .IsRequired()
+                .ValueGeneratedNever();
+
+                e.Property(c => c.Title)
+                .HasColumnName("Title")
+                .IsRequired()
+                .ValueGeneratedNever();
+
+                e.Property(c => c.Description)
+                .HasColumnName("Description")
+                .IsRequired()
+                .ValueGeneratedNever();
+            });
+
+
+            modelBuilder.Entity<Question>(e =>
+            {
+                e.Property(c => c.Id)
+                .HasColumnName("Id")
+                .IsRequired()
+                .ValueGeneratedNever();
+
+                e.Property(c => c.Optional)
+                .HasColumnName("Optional")
+                .IsRequired()
+                .ValueGeneratedNever();
+
+                e.Property(c => c.Questions)
+                .HasColumnName("Questions")
+                .IsRequired()
+                .ValueGeneratedNever();
+
+                e.HasMany(q => q.Answers)
+                .WithOne(a => a.Question)
+                .HasForeignKey(q => q.IdQuestion);
             });
         }
 

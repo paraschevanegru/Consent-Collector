@@ -19,7 +19,11 @@ namespace ConsentCollector.Entities.Consent
         public string Password { get; set; }
         public string Role { get; set; }
         public UserDetail Detail { get; set; }
+        public ICollection<Comment> Comments { get; set; } = new List<Comment>();
 
+        public ICollection<Answer> Answers { get; set; } = new List<Answer>();
+
+        public ICollection<Notification> Notifications { get; set; } = new List<Notification>();
         //public void Ceva()
         //{
         //    new Users

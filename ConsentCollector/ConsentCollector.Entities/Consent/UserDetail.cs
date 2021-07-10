@@ -28,7 +28,6 @@ namespace ConsentCollector.Entities.Consent
         public string Lastname { get; set; }
         public string Number { get; set; }
         public string Email { get; set; }
-
         public User User { get; set; }
     }
 }

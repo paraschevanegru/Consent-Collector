@@ -30,6 +30,12 @@ namespace ConsentCollector.Entities.Consent
         public DateTime LaunchDate { get; set; }
         public DateTime ExpirationDate { get; set; }
 
+        public ICollection<Comment> Comments { get; set; } = new List<Comment>();
+
+        public ICollection<Answer> Answers { get; set; } = new List<Answer>();
+
+        public ICollection<Notification> Notifications { get; set; } = new List<Notification>();
+
         //public Guid IdQuestion { get; set; }
     }
 }
