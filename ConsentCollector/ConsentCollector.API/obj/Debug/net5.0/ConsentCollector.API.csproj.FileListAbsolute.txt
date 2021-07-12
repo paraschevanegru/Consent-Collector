@@ -96,3 +96,5 @@ E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.AP
 E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ref\ConsentCollector.API.dll
 E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.pdb
 E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.genruntimeconfig.cache
+E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\AutoMapper.dll
+E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace ConsentCollector.API.Controllers
 {
+    [Route("api/v1/consent")]
+    [ApiController]
     public class ConsentCollector:ControllerBase
     {
         private readonly ISurveyService surveyService;

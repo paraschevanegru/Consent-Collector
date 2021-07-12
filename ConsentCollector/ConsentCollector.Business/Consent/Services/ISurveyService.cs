@@ -11,6 +11,6 @@ namespace ConsentCollector.Business.Consent.Services
     {
         Task<SurveyModel> GetById(Guid id);
 
-        //Task<SurveyModel> Create(CreateSurveyModel model);
+        Task<SurveyModel> Create(CreateSurveyModel model);
     }
 }

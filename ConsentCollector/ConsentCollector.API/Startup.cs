@@ -1,3 +1,4 @@
+using ConsentCollector.Business;
 using ConsentCollector.Business.Consent.Services;
 using ConsentCollector.Persistence;
 using Microsoft.AspNetCore.Builder;
@@ -41,6 +42,10 @@ namespace ConsentCollector.API
                 config.UseSqlServer(Configuration.GetConnectionString("ConsentConnection"));
             });
 
+            services.AddAutoMapper(config =>
+            {
+                config.AddProfile<ConsentMappingProfile>();
+            });
             services.AddScoped<IConsentRepository, ConsentRepository>();
             services.AddScoped<ISurveyService, SurveyService>();
 
