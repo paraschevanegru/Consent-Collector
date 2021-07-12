@@ -1,3 +1,4 @@
+using ConsentCollector.Business.Consent.Services;
 using ConsentCollector.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -39,6 +40,11 @@ namespace ConsentCollector.API
             {
                 config.UseSqlServer(Configuration.GetConnectionString("ConsentConnection"));
             });
+
+            services.AddScoped<IConsentRepository, ConsentRepository>();
+            services.AddScoped<ISurveyService, SurveyService>();
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -9,13 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsentCollector.Business",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsentCollector.Persistence", "ConsentCollector.Persistence\ConsentCollector.Persistence.csproj", "{B51D6F02-2B7E-4002-A422-FA4824896243}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{D5BF7A79-D3C4-4188-B687-FD873AA0F8BD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Presentation", "01.Presentation", "{D5BF7A79-D3C4-4188-B687-FD873AA0F8BD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{1A96E9AE-AF5C-4393-B72D-E45B41FD6AEB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Business", "02.Business", "{1A96E9AE-AF5C-4393-B72D-E45B41FD6AEB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{44309EFB-EBF6-438B-A27D-55DE07E520BC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.Persistence", "03.Persistence", "{44309EFB-EBF6-438B-A27D-55DE07E520BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsentCollector.Entities", "ConsentCollector.Entities\ConsentCollector.Entities.csproj", "{77A19655-0BC9-47B1-9165-1DCFC01882BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsentCollector.Entities", "ConsentCollector.Entities\ConsentCollector.Entities.csproj", "{77A19655-0BC9-47B1-9165-1DCFC01882BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
