@@ -28,6 +28,6 @@ namespace ConsentCollector.Entities.Consent
 
         public Survey Survey { get; set; }
 
-        public Question Question { get; set; };
+        public Question Question { get; set; }
     }
 }

@@ -1,0 +1,57 @@
+﻿using ConsentCollector.Entities.Consent;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsentCollector.Persistence.Mappings
+{
+    internal abstract class UserMappings
+    {
+        internal static void Map(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>(e =>
+            {
+                e.Property(c => c.Id)
+                .HasColumnName("Id")
+                .IsRequired()
+                .ValueGeneratedNever();
+
+                e.Property(c => c.Username)
+                .HasColumnName("Username")
+                .HasMaxLength(20)
+                .IsRequired()
+                .ValueGeneratedNever();
+
+                e.Property(c => c.Password)
+                .HasColumnName("Password")
+                .HasMaxLength(20)
+                .IsRequired()
+                .ValueGeneratedNever();
+
+                e.Property(c => c.Role)
+                .HasColumnName("Role")
+                .IsRequired()
+                .ValueGeneratedNever();
+
+                e.HasOne(u => u.Detail)
+                .WithOne(d => d.User)
+                .HasForeignKey<UserDetail>(d => d.IdUser);
+
+                e.HasMany(u => u.Comments)
+                .WithOne(c => c.User)
+                .HasForeignKey(u => u.IdUser);
+
+                e.HasMany(u => u.Answers)
+                .WithOne(a => a.User)
+                .HasForeignKey(u => u.IdUser);
+
+                e.HasMany(u => u.Notifications)
+                 .WithOne(n => n.User)
+                 .HasForeignKey(u => u.IdUser);
+            });
+        }
+    }
+}
