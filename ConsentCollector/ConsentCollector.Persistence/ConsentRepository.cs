@@ -21,6 +21,11 @@ namespace ConsentCollector.Persistence
             await this.context.Survey.AddAsync(survey);
         }
 
+        public void Delete(Survey survey)
+        {
+            context.Survey.Remove(survey);
+        }
+
         public async Task<Survey> GetSurveyById(Guid id)
         {
             return await context.Survey

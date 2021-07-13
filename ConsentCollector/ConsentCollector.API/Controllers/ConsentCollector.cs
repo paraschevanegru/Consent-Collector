@@ -32,5 +32,21 @@ namespace ConsentCollector.API.Controllers
             var result = await surveyService.Create(model);
             return Created(result.Id.ToString(), null);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete([FromRoute] Guid id)
+        {
+            await surveyService.Delete(id);
+
+            return NoContent();
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] CreateSurveyModel model)
+        {
+            await surveyService.Update(id, model);
+
+            return NoContent();
+        }
     }
 }

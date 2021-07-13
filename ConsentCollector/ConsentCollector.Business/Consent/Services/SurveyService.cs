@@ -44,5 +44,25 @@ namespace ConsentCollector.Business.Consent.Services
 
             return mapper.Map<SurveyModel>(survey);
         }
+
+        public async Task Delete(Guid surveyId)
+        {
+            var survey = await consentRepository.GetSurveyById(surveyId);
+
+            consentRepository.Delete(survey);
+
+            await consentRepository.SaveChanges();
+        }
+
+        public async Task Update(Guid surveyId, CreateSurveyModel model)
+        {
+            var survey = await consentRepository.GetSurveyById(surveyId);
+
+            mapper.Map(model, survey);
+
+            consentRepository.Update(survey);
+
+            await consentRepository.SaveChanges();
+        }
     }
 }

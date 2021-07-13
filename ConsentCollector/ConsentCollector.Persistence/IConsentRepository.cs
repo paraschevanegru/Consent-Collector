@@ -15,6 +15,7 @@ namespace ConsentCollector.Persistence
 
         Task SaveChanges();
 
+        void Delete(Survey survey);
         void Update(Survey survey);
     }
 }
