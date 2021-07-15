@@ -8,34 +8,26 @@ using System.Threading.Tasks;
 
 namespace ConsentCollector.Persistence.Mappings
 {
-    internal abstract class QuestionMappings
+    internal abstract class SurveyQuestionMappings
     {
         internal static void Map(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Question>(e =>
+            modelBuilder.Entity<SurveyQuestion>(e =>
             {
                 e.Property(c => c.Id)
                 .HasColumnName("Id")
                 .IsRequired()
                 .ValueGeneratedNever();
 
-                e.Property(c => c.Optional)
-                .HasColumnName("Optional")
+                e.Property(c => c.IdSurvey)
+                .HasColumnName("IdSurvey")
                 .IsRequired()
                 .ValueGeneratedNever();
 
-                e.Property(c => c.Questions)
-                .HasColumnName("Questions")
+                e.Property(c => c.IdQuestion)
+                .HasColumnName("IdQuestion")
                 .IsRequired()
                 .ValueGeneratedNever();
-
-                e.HasMany(q => q.Answers)
-                .WithOne(a => a.Question)
-                .HasForeignKey(q => q.IdQuestion);
-
-                e.HasMany(q => q.SurveyQuestion)
-                .WithOne(sq => sq.Question)
-                .HasForeignKey(q => q.IdQuestion);
             });
         }
     }

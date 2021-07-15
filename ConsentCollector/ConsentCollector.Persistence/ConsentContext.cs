@@ -26,12 +26,12 @@ namespace ConsentCollector.Persistence
         public DbSet<Comment> Comment { get; set; }
         public DbSet<Notification> Notification { get; set; }
         public DbSet<Question> Question { get; set; }
-
+        public DbSet<SurveyQuestion> SurveyQuestion { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //string connectionString = @"Data Source=DESKTOP-B7LDT20\SQLEXPRESS;Initial Catalog=Consent;Integrated Security=True";
-            string connectionString = @"Data Source=DESKTOP-VM7UR1F\SQLEXPRESS;Initial Catalog=Consent;Integrated Security=True";
+            string connectionString = @"Data Source=DESKTOP-B7LDT20\SQLEXPRESS;Initial Catalog=Consent;Integrated Security=True";
+            //string connectionString = @"Data Source=DESKTOP-VM7UR1F\SQLEXPRESS;Initial Catalog=Consent;Integrated Security=True";
 
             optionsBuilder.UseSqlServer(connectionString);
         }
@@ -45,6 +45,7 @@ namespace ConsentCollector.Persistence
             SurveyMappings.Map(modelBuilder);
             UserDetailMappings.Map(modelBuilder);
             UserMappings.Map(modelBuilder);
+            SurveyQuestionMappings.Map(modelBuilder);
         }
           
 

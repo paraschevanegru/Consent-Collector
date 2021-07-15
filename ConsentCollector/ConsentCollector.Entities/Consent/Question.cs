@@ -17,5 +17,6 @@ namespace ConsentCollector.Entities.Consent
         public string Questions { get; set; }
 
         public ICollection<Answer>  Answers { get; set; } = new List<Answer>();
+        public ICollection<SurveyQuestion> SurveyQuestion { get; set; } = new List<SurveyQuestion>();
     }
 }

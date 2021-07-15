@@ -28,3 +28,18 @@ F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector
 F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ref\ConsentCollector.Entities.dll
 F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.pdb
 F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.genruntimeconfig.cache
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\bin\Debug\net5.0\ConsentCollector.Entities.deps.json
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\bin\Debug\net5.0\ConsentCollector.Entities.runtimeconfig.json
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\bin\Debug\net5.0\ConsentCollector.Entities.runtimeconfig.dev.json
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\bin\Debug\net5.0\ConsentCollector.Entities.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\bin\Debug\net5.0\ref\ConsentCollector.Entities.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\bin\Debug\net5.0\ConsentCollector.Entities.pdb
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.csproj.AssemblyReference.cache
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.AssemblyInfoInputs.cache
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.AssemblyInfo.cs
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.csproj.CoreCompileInputs.cache
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ref\ConsentCollector.Entities.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.pdb
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.genruntimeconfig.cache
