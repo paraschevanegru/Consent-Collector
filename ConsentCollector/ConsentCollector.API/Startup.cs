@@ -19,6 +19,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ConsentCollector.Business.Consent.Services.UserDetails;
+using ConsentCollector.Business.Consent.Services.Users;
+using ConsentCollector.Persistence.UserRepository;
 
 namespace ConsentCollector.API
 {
@@ -52,6 +55,13 @@ namespace ConsentCollector.API
             });
 
             services.AddScoped<IConsentRepository, ConsentRepository>();
+
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserDetailRepository, UserDetailRepository>();
+
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserDetailService, UserDetailService>();
+
             services.AddScoped<INotificationRepository, NotificationRepository>();
             services.AddScoped<IQuestionRepository, QuestionRepository>();
             services.AddScoped<ICommentRepository, CommentRepository>();

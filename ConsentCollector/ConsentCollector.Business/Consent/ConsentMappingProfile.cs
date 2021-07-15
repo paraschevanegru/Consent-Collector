@@ -4,6 +4,8 @@ using ConsentCollector.Business.Consent.Models.CommentModel;
 using ConsentCollector.Business.Consent.Models.QuestionModel;
 using ConsentCollector.Entities.Consent;
 using System;
+using ConsentCollector.Business.Consent.Models.UserDetails;
+using ConsentCollector.Business.Consent.Models.Users;
 
 namespace ConsentCollector.Business
 {
@@ -15,6 +17,15 @@ namespace ConsentCollector.Business
 
             CreateMap<CreateSurveyModel, Survey>();
 
+            CreateMap<User, UserModel>();
+
+            CreateMap<CreateUserModel, User>();
+
+
+            CreateMap<UserDetail, UserDetailModel>();
+
+            CreateMap<CreateUserDetailModel, UserDetail>();
+            
             CreateMap<Notification, NotificationModel>();
 
             CreateMap<NotificationModel, Notification>();
@@ -29,6 +40,7 @@ namespace ConsentCollector.Business
 
             CreateMap<Answer, AnswerModel>();
             CreateMap<CreateAnswerModel, Answer>();
+
         }
     }
 }
