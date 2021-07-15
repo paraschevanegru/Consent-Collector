@@ -46,8 +46,12 @@ namespace ConsentCollector.API
             {
                 config.AddProfile<ConsentMappingProfile>();
             });
+
             services.AddScoped<IConsentRepository, ConsentRepository>();
+            services.AddScoped<INotificationRepository, NotificationRepository>();
+
             services.AddScoped<ISurveyService, SurveyService>();
+            services.AddScoped<INotificationService, NotificationService>();
 
             services.AddSwaggerGen();
         }

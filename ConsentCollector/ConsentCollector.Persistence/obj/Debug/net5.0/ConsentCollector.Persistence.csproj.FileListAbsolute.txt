@@ -28,3 +28,21 @@ E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.Pe
 E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ref\ConsentCollector.Persistence.dll
 E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.pdb
 E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.genruntimeconfig.cache
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.deps.json
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.runtimeconfig.json
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.runtimeconfig.dev.json
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ref\ConsentCollector.Persistence.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.pdb
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Entities.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Entities.pdb
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.csproj.AssemblyReference.cache
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.AssemblyInfoInputs.cache
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.AssemblyInfo.cs
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.csproj.CoreCompileInputs.cache
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.csproj.CopyComplete
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ref\ConsentCollector.Persistence.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.pdb
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.genruntimeconfig.cache

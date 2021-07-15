@@ -12,6 +12,10 @@ namespace ConsentCollector.Business
             CreateMap<Survey, SurveyModel>();
 
             CreateMap<CreateSurveyModel, Survey>();
+
+            CreateMap<Notification, NotificationModel>();
+
+            CreateMap<NotificationModel, Notification>();
         }
     }
 }

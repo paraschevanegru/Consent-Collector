@@ -30,3 +30,20 @@ E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.Bu
 E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.dll
 E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ref\ConsentCollector.Business.dll
 E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.pdb
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\bin\Debug\net5.0\ConsentCollector.Business.deps.json
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\bin\Debug\net5.0\ConsentCollector.Business.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\bin\Debug\net5.0\ref\ConsentCollector.Business.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\bin\Debug\net5.0\ConsentCollector.Business.pdb
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\bin\Debug\net5.0\ConsentCollector.Entities.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\bin\Debug\net5.0\ConsentCollector.Persistence.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\bin\Debug\net5.0\ConsentCollector.Persistence.pdb
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\bin\Debug\net5.0\ConsentCollector.Entities.pdb
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.csproj.AssemblyReference.cache
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.GeneratedMSBuildEditorConfig.editorconfig
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.AssemblyInfoInputs.cache
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.AssemblyInfo.cs
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.csproj.CoreCompileInputs.cache
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.csproj.CopyComplete
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ref\ConsentCollector.Business.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.Business\obj\Debug\net5.0\ConsentCollector.Business.pdb

@@ -5780,25 +5780,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ecaterina\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\horia\\.nuget\\packages\\": {},
+    "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Centric\\Proiect_Github\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj",
+      "projectUniqueName": "F:\\Centric\\Consent Collector\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj",
       "projectName": "ConsentCollector.Business",
-      "projectPath": "E:\\Centric\\Proiect_Github\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj",
-      "packagesPath": "C:\\Users\\Ecaterina\\.nuget\\packages\\",
-      "outputPath": "E:\\Centric\\Proiect_Github\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\obj\\",
+      "projectPath": "F:\\Centric\\Consent Collector\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj",
+      "packagesPath": "C:\\Users\\horia\\.nuget\\packages\\",
+      "outputPath": "F:\\Centric\\Consent Collector\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ecaterina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\horia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -5811,8 +5814,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Centric\\Proiect_Github\\Consent-Collector\\ConsentCollector\\ConsentCollector.Persistence\\ConsentCollector.Persistence.csproj": {
-              "projectPath": "E:\\Centric\\Proiect_Github\\Consent-Collector\\ConsentCollector\\ConsentCollector.Persistence\\ConsentCollector.Persistence.csproj"
+            "F:\\Centric\\Consent Collector\\Consent-Collector\\ConsentCollector\\ConsentCollector.Persistence\\ConsentCollector.Persistence.csproj": {
+              "projectPath": "F:\\Centric\\Consent Collector\\Consent-Collector\\ConsentCollector\\ConsentCollector.Persistence\\ConsentCollector.Persistence.csproj"
             }
           }
         }
