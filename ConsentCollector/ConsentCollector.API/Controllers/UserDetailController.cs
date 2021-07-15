@@ -27,7 +27,7 @@ namespace ConsentCollector.API.Controllers
             return Ok(details);
         }
 
-        [HttpGet("{detailId}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> Get([FromRoute] Guid id)
         {
             var result = await userDetailService.GetById(id);
@@ -42,7 +42,7 @@ namespace ConsentCollector.API.Controllers
             return Created(result.Id.ToString(), null);
         }
 
-        [HttpDelete("{detailId}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
             await userDetailService.Delete(id);
@@ -50,7 +50,7 @@ namespace ConsentCollector.API.Controllers
             return NoContent();
         }
 
-        [HttpPut("{detailId}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] CreateUserDetailModel model)
         {
             await userDetailService.Update(id, model);
