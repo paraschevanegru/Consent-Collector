@@ -55,11 +55,13 @@ namespace ConsentCollector.API
             services.AddScoped<INotificationRepository, NotificationRepository>();
             services.AddScoped<IQuestionRepository, QuestionRepository>();
             services.AddScoped<ICommentRepository, CommentRepository>();
+            services.AddScoped<IAnswerRepository, AnswerRepository>();
 
             services.AddScoped<ISurveyService, SurveyService>();
             services.AddScoped<INotificationService, NotificationService>();
             services.AddScoped<IQuestionService, QuestionService>();
             services.AddScoped<ICommentService, CommentService>();
+            services.AddScoped<IAnswerService, AnswerService>();
 
             services.AddSwaggerGen();
         }

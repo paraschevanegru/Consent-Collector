@@ -26,6 +26,9 @@ namespace ConsentCollector.Business
             CreateMap<Comment, CommentModel>();
 
             CreateMap<CreateCommentModel, Comment>();
+
+            CreateMap<Answer, AnswerModel>();
+            CreateMap<CreateAnswerModel, Answer>();
         }
     }
 }

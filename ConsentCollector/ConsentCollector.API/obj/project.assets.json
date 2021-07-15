@@ -6008,24 +6008,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ecaterina\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Centric\\Nou\\Consent-Collector\\ConsentCollector\\ConsentCollector.API\\ConsentCollector.API.csproj",
+      "projectUniqueName": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.API\\ConsentCollector.API.csproj",
       "projectName": "ConsentCollector.API",
-      "projectPath": "E:\\Centric\\Nou\\Consent-Collector\\ConsentCollector\\ConsentCollector.API\\ConsentCollector.API.csproj",
-      "packagesPath": "C:\\Users\\Ecaterina\\.nuget\\packages\\",
-      "outputPath": "E:\\Centric\\Nou\\Consent-Collector\\ConsentCollector\\ConsentCollector.API\\obj\\",
+      "projectPath": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.API\\ConsentCollector.API.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Ecaterina\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6039,8 +6034,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Centric\\Nou\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj": {
-              "projectPath": "E:\\Centric\\Nou\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj"
+            "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj": {
+              "projectPath": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj"
             }
           }
         }
