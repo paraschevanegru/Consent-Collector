@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using ConsentCollector.Business.Consent.Models;
+using ConsentCollector.Business.Consent.Models.CommentModel;
+using ConsentCollector.Business.Consent.Models.QuestionModel;
 using ConsentCollector.Entities.Consent;
 using System;
 using ConsentCollector.Business.Consent.Models.UserDetails;
@@ -23,6 +25,22 @@ namespace ConsentCollector.Business
             CreateMap<UserDetail, UserDetailModel>();
 
             CreateMap<CreateUserDetailModel, UserDetail>();
+            
+            CreateMap<Notification, NotificationModel>();
+
+            CreateMap<NotificationModel, Notification>();
+
+            CreateMap<Question, QuestionModel>();
+
+            CreateMap<CreateQuestionModel, Question>();
+
+            CreateMap<Comment, CommentModel>();
+
+            CreateMap<CreateCommentModel, Comment>();
+
+            CreateMap<Answer, AnswerModel>();
+            CreateMap<CreateAnswerModel, Answer>();
+
         }
     }
 }

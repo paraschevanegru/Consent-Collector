@@ -32,6 +32,10 @@ namespace ConsentCollector.Persistence.Mappings
                 e.HasMany(q => q.Answers)
                 .WithOne(a => a.Question)
                 .HasForeignKey(q => q.IdQuestion);
+
+                e.HasMany(q => q.SurveyQuestion)
+                .WithOne(sq => sq.Question)
+                .HasForeignKey(q => q.IdQuestion);
             });
         }
     }

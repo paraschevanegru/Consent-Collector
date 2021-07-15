@@ -35,6 +35,7 @@ namespace ConsentCollector.Entities.Consent
         public ICollection<Answer> Answers { get; set; } = new List<Answer>();
 
         public ICollection<Notification> Notifications { get; set; } = new List<Notification>();
+        public ICollection<SurveyQuestion> SurveyQuestion { get; set; } = new List<SurveyQuestion>();
 
         //public Guid IdQuestion { get; set; }
     }

@@ -1,6 +1,10 @@
 using ConsentCollector.Business;
 using ConsentCollector.Business.Consent.Services;
+using ConsentCollector.Business.Consent.Services.CommentService;
+using ConsentCollector.Business.Consent.Services.QuestionService;
 using ConsentCollector.Persistence;
+using ConsentCollector.Persistence.CommentRepository;
+using ConsentCollector.Persistence.QuestionRepository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -49,13 +53,25 @@ namespace ConsentCollector.API
             {
                 config.AddProfile<ConsentMappingProfile>();
             });
+
             services.AddScoped<IConsentRepository, ConsentRepository>();
+
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserDetailRepository, UserDetailRepository>();
 
-            services.AddScoped<ISurveyService, SurveyService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUserDetailService, UserDetailService>();
+
+            services.AddScoped<INotificationRepository, NotificationRepository>();
+            services.AddScoped<IQuestionRepository, QuestionRepository>();
+            services.AddScoped<ICommentRepository, CommentRepository>();
+            services.AddScoped<IAnswerRepository, AnswerRepository>();
+
+            services.AddScoped<ISurveyService, SurveyService>();
+            services.AddScoped<INotificationService, NotificationService>();
+            services.AddScoped<IQuestionService, QuestionService>();
+            services.AddScoped<ICommentService, CommentService>();
+            services.AddScoped<IAnswerService, AnswerService>();
 
             services.AddSwaggerGen();
         }
