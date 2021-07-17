@@ -22,11 +22,13 @@ using System.Threading.Tasks;
 using ConsentCollector.Business.Consent.Services.UserDetails;
 using ConsentCollector.Business.Consent.Services.Users;
 using ConsentCollector.Persistence.UserRepository;
+using Microsoft.Net.Http.Headers;
 
 namespace ConsentCollector.API
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -39,6 +41,19 @@ namespace ConsentCollector.API
         {
 
             services.AddControllers();
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                    builder =>
+                    {
+                        builder.WithOrigins("*")
+                            .WithHeaders(HeaderNames.ContentType,
+                                HeaderNames.AccessControlAllowMethods, 
+                                HeaderNames.AccessControlAllowHeaders,
+                                HeaderNames.AccessControlAllowOrigin );
+                    });
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ConsentCollector.API", Version = "v1" });
@@ -90,11 +105,15 @@ namespace ConsentCollector.API
 
             app.UseRouting();
 
+            app.UseCors(MyAllowSpecificOrigins);
+
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllers()
+                    .RequireCors(MyAllowSpecificOrigins);
             });
 
             using var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
