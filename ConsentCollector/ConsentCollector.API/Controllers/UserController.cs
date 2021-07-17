@@ -19,9 +19,15 @@ namespace ConsentCollector.API.Controllers
         {
             this.userService = userService;
         }
+        [HttpOptions]
+        public IActionResult Options()
+        {
+            return Ok();
+        }
         [HttpGet]
         public IActionResult GetAll()
         {
+
             var users = userService.GetAll();
 
             return Ok(users);
