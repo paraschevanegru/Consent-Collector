@@ -20,10 +20,10 @@ namespace ConsentCollector.Persistence.Mappings
                 .ValueGeneratedNever();
 
                 e.Property(c => c.Username)
-                .HasColumnName("Username")
-                .HasMaxLength(20)
-                .IsRequired()
-                .ValueGeneratedNever();
+                    .HasColumnName("Username")
+                    .HasMaxLength(20)
+                    .IsRequired()
+                    .ValueGeneratedNever();
 
                 e.Property(c => c.Password)
                 .HasColumnName("Password")
@@ -35,6 +35,9 @@ namespace ConsentCollector.Persistence.Mappings
                 .HasColumnName("Role")
                 .IsRequired()
                 .ValueGeneratedNever();
+
+                e.HasIndex(c => c.Username)
+                    .IsUnique(true);
 
                 e.HasOne(u => u.Detail)
                 .WithOne(d => d.User)

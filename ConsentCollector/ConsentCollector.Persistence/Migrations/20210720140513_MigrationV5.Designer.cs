@@ -4,14 +4,16 @@ using ConsentCollector.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ConsentCollector.Persistence.Migrations
 {
     [DbContext(typeof(ConsentContext))]
-    partial class ConsentContextModelSnapshot : ModelSnapshot
+    [Migration("20210720140513_MigrationV5")]
+    partial class MigrationV5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

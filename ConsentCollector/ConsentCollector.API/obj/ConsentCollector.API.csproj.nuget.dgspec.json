@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.API\\ConsentCollector.API.csproj": {}
+    "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.API\\ConsentCollector.API.csproj": {}
   },
   "projects": {
-    "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.API\\ConsentCollector.API.csproj": {
+    "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.API\\ConsentCollector.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.API\\ConsentCollector.API.csproj",
+        "projectUniqueName": "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.API\\ConsentCollector.API.csproj",
         "projectName": "ConsentCollector.API",
-        "projectPath": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.API\\ConsentCollector.API.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.API\\obj\\",
+        "projectPath": "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.API\\ConsentCollector.API.csproj",
+        "packagesPath": "C:\\Users\\Ecaterina\\.nuget\\packages\\",
+        "outputPath": "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ecaterina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +32,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj": {
-                "projectPath": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj"
+              "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj": {
+                "projectPath": "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj"
               }
             }
           }
@@ -71,21 +75,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj": {
+    "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj",
+        "projectUniqueName": "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj",
         "projectName": "ConsentCollector.Business",
-        "projectPath": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\obj\\",
+        "projectPath": "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\ConsentCollector.Business.csproj",
+        "packagesPath": "C:\\Users\\Ecaterina\\.nuget\\packages\\",
+        "outputPath": "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Business\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ecaterina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,8 +107,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Persistence\\ConsentCollector.Persistence.csproj": {
-                "projectPath": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Persistence\\ConsentCollector.Persistence.csproj"
+              "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Persistence\\ConsentCollector.Persistence.csproj": {
+                "projectPath": "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Persistence\\ConsentCollector.Persistence.csproj"
               }
             }
           }
@@ -135,21 +143,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj": {
+    "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj",
+        "projectUniqueName": "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj",
         "projectName": "ConsentCollector.Entities",
-        "projectPath": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\obj\\",
+        "projectPath": "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj",
+        "packagesPath": "C:\\Users\\Ecaterina\\.nuget\\packages\\",
+        "outputPath": "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ecaterina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -207,21 +219,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Persistence\\ConsentCollector.Persistence.csproj": {
+    "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Persistence\\ConsentCollector.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Persistence\\ConsentCollector.Persistence.csproj",
+        "projectUniqueName": "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Persistence\\ConsentCollector.Persistence.csproj",
         "projectName": "ConsentCollector.Persistence",
-        "projectPath": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Persistence\\ConsentCollector.Persistence.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Persistence\\obj\\",
+        "projectPath": "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Persistence\\ConsentCollector.Persistence.csproj",
+        "packagesPath": "C:\\Users\\Ecaterina\\.nuget\\packages\\",
+        "outputPath": "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Persistence\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ecaterina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -235,8 +251,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj": {
-                "projectPath": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj"
+              "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj": {
+                "projectPath": "E:\\Centric\\Proiect_Github\\Back\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj"
               }
             }
           }
@@ -283,7 +299,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
