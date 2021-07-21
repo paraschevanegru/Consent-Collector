@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.Persistence", "03.Persis
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsentCollector.Entities", "ConsentCollector.Entities\ConsentCollector.Entities.csproj", "{77A19655-0BC9-47B1-9165-1DCFC01882BE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.Tests", "04.Tests", "{E9DDE950-2F24-4769-8D7B-87A448ADFEE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsentCollector", "TestConsentCollector\TestConsentCollector.csproj", "{D5D3E928-8FD3-427D-9D14-488FB2A2E151}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,10 @@ Global
 		{77A19655-0BC9-47B1-9165-1DCFC01882BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77A19655-0BC9-47B1-9165-1DCFC01882BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77A19655-0BC9-47B1-9165-1DCFC01882BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5D3E928-8FD3-427D-9D14-488FB2A2E151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5D3E928-8FD3-427D-9D14-488FB2A2E151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5D3E928-8FD3-427D-9D14-488FB2A2E151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5D3E928-8FD3-427D-9D14-488FB2A2E151}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +56,7 @@ Global
 		{6D95AAA8-A522-4E91-8725-2EE135ED36BF} = {1A96E9AE-AF5C-4393-B72D-E45B41FD6AEB}
 		{B51D6F02-2B7E-4002-A422-FA4824896243} = {44309EFB-EBF6-438B-A27D-55DE07E520BC}
 		{77A19655-0BC9-47B1-9165-1DCFC01882BE} = {44309EFB-EBF6-438B-A27D-55DE07E520BC}
+		{D5D3E928-8FD3-427D-9D14-488FB2A2E151} = {E9DDE950-2F24-4769-8D7B-87A448ADFEE8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {84292B67-BAAB-4FCF-B6DC-604120D52E7F}
