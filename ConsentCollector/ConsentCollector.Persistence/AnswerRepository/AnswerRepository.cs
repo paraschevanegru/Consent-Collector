@@ -25,6 +25,11 @@ namespace ConsentCollector.Persistence
             context.Answer.Remove(answer);
         }
 
+        public IEnumerable<Answer> GetAll()
+        { 
+            return context.Answer;
+        }
+
         public async Task<Answer> GetAnswerById(Guid id)
         {
             return await context.Answer
