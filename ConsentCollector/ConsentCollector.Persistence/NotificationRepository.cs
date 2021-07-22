@@ -40,5 +40,10 @@ namespace ConsentCollector.Persistence
         {
             this.context.Notification.Update(notification);
         }
+
+        public IEnumerable<Notification> GetAll()
+        {
+            return context.Notification;
+        }
     }
 }

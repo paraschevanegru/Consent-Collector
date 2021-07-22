@@ -56,5 +56,12 @@ namespace ConsentCollector.Business.Consent.Services
             await notificationRepository.SaveChanges();
         
         }
+
+        public IEnumerable<NotificationModel> GetAll()
+        {
+            var notification = notificationRepository.GetAll();
+
+            return mapper.Map<IEnumerable<NotificationModel>>(notification);
+        }
     }
 }
