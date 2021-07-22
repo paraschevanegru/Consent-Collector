@@ -26,6 +26,11 @@ namespace ConsentCollector.Persistence.CommentRepository
             context.Comment.Remove(comment);
         }
 
+        public IEnumerable<Comment> GetAll()
+        {
+            return context.Comment;
+        }
+
         public async Task<Comment> GetCommentById(Guid id)
         {
             return await context.Comment

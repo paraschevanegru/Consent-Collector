@@ -9,6 +9,7 @@ namespace ConsentCollector.Persistence.CommentRepository
 {
     public interface ICommentRepository
     {
+        IEnumerable<Comment> GetAll();
         Task<Comment> GetCommentById(Guid id);
         Task Create(Comment comment);
         Task SaveChanges();

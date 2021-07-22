@@ -20,6 +20,14 @@ namespace ConsentCollector.API.Controllers
             this.commentService = commentService;
         }
 
+        public IActionResult GetAll()
+        {
+
+            var comments = commentService.GetAll();
+
+            return Ok(comments);
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> Get([FromRoute] Guid id)
         {
