@@ -9,6 +9,7 @@ namespace ConsentCollector.Persistence.QuestionRepository
 {
     public interface IQuestionRepository
     {
+        IEnumerable<Question> GetAll();
         Task<Question> GetQuestionById(Guid id);
 
         Task Create(Question question);

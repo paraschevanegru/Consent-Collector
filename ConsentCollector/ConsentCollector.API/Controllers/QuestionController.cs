@@ -20,7 +20,14 @@ namespace ConsentCollector.API.Controllers
         {
             this.questionService = questionService;
         }
+        [HttpGet]
+        public IActionResult GetAll()
+        {
 
+            var answers = questionService.GetAll();
+
+            return Ok(answers);
+        }
         [HttpGet("{id}")]
         public async Task<IActionResult> Get([FromRoute] Guid id)
         {

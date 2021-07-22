@@ -40,6 +40,13 @@ namespace ConsentCollector.Business.Consent.Services.QuestionService
             await questionRepository.SaveChanges();
         }
 
+        public IEnumerable<QuestionModel> GetAll()
+        {
+            var question = questionRepository.GetAll();
+
+            return mapper.Map<IEnumerable<QuestionModel>>(question);
+        }
+
         public async Task<QuestionModel> GetById(Guid id)
         {
             var question = await questionRepository.GetQuestionById(id);
