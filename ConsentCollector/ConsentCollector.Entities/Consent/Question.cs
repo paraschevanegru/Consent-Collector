@@ -8,11 +8,11 @@ namespace ConsentCollector.Entities.Consent
 {
     public sealed class Question : Entity
     {
-        //public Question(bool optional, string questions):base()
-        //{
-        //    Optional = optional;
-        //    Questions = questions;
-        //}
+        public Question(bool optional, string questions) : base()
+        {
+            Optional = optional;
+            Questions = questions;
+        }
         public bool Optional { get; set; }
         public string Questions { get; set; }
 
