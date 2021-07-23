@@ -30,7 +30,7 @@ namespace ConsentCollector.API.Controllers
         public async Task<IActionResult> Create([FromBody] CreateSurveyModel model)
         {
             var result = await surveyService.Create(model);
-            return Created(result.Id.ToString(), null);
+            return Created(result.Id.ToString(), result);
         }
 
         [HttpDelete("{id}")]

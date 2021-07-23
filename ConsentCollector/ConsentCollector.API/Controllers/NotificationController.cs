@@ -31,7 +31,7 @@ namespace ConsentCollector.API.Controllers
         public async Task<IActionResult> Create([FromBody]NotificationModel model)
         {
             var result = await notificationService.Create(model);
-            return Created(result.IdSurvey.ToString(),null);
+            return Created(result.IdSurvey.ToString(),result);
         }
 
         [HttpPut("{id}")]

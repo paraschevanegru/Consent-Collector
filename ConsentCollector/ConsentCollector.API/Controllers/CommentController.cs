@@ -19,7 +19,7 @@ namespace ConsentCollector.API.Controllers
         {
             this.commentService = commentService;
         }
-
+        [HttpGet]
         public IActionResult GetAll()
         {
 
@@ -39,7 +39,7 @@ namespace ConsentCollector.API.Controllers
         public async Task<IActionResult> Create([FromBody] CreateCommentModel model)
         {
             var result = await commentService.Create(model);
-            return Created(result.Id.ToString(), null);
+            return Created(result.Id.ToString(), result);
         }
 
         [HttpDelete("{id}")]
