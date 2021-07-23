@@ -133,5 +133,72 @@ namespace TestConsentCollector
             result.Should().BeEquivalentTo(expectedResult);
 
         }
+
+
+        [Fact]
+        public async void When_Delete_IsCalled_Expect_GetQuestionByIdAndDeleteAndSaveChangesFromRepositoryToBeInvoked()
+        {
+            //Arrange
+            var question = new Question(false, "Question");
+
+            _questionRepositoryMock
+                .Setup(a => a.GetQuestionById(question.Id))
+                .ReturnsAsync(question);
+
+            _questionRepositoryMock
+                .Setup(a => a.Delete(question));
+
+            _questionRepositoryMock
+                .Setup(a => a.SaveChanges())
+                .Returns(Task.CompletedTask);
+            //Act
+            await sut.Delete(question.Id);
+
+            //Assert
+            //result.Should().BeEquivalentTo(expectedResult);
+
+        }
+
+        [Fact]
+        public async void When_Update_IsCalled_Expect_GetQuestionByIdAndUpdateAndSaveChangesFromRepositoryToBeInvoked()
+        {
+            //Arrange
+            var question = new Question(false, "Question");
+            var initialModel = new CreateQuestionModel()
+            {
+                Optional = question.Optional,
+                Questions = question.Questions
+            };
+
+            //var expectedResult = new QuestionModel()
+            //{
+            //    Id = question.Id,
+            //    Optional = question.Optional,
+            //    Questions = question.Questions
+            //};
+
+            _questionRepositoryMock
+                .Setup(a => a.GetQuestionById(question.Id))
+                .ReturnsAsync(question);
+
+            _mapperMock
+                .Setup(m => m.Map(initialModel, question))
+                .Returns(question);
+
+            _questionRepositoryMock
+                .Setup(a => a.Update(question));
+
+            _questionRepositoryMock
+                .Setup(a => a.SaveChanges())
+                .Returns(Task.CompletedTask);
+
+
+            //Act
+            await sut.Update(question.Id, initialModel);
+
+            //Assert
+            //result.Should().BeEquivalentTo(expectedResult);
+
+        }
     }
 }

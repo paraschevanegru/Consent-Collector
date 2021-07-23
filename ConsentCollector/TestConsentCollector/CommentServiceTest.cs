@@ -138,5 +138,73 @@ namespace TestConsentCollector
             result.Should().BeEquivalentTo(expectedResult);
 
         }
+
+        [Fact]
+        public async void When_Delete_IsCalled_Expect_GetCommentByIdAndDeleteAndSaveChangesFromRepositoryToBeInvoked()
+        {
+            //Arrange
+            var comment = new Comment(Guid.NewGuid(), Guid.NewGuid(), "Text");
+
+            _commentRepositoryMock
+                .Setup(a => a.GetCommentById(comment.Id))
+                .ReturnsAsync(comment);
+
+            _commentRepositoryMock
+                .Setup(a => a.Delete(comment));
+
+            _commentRepositoryMock
+                .Setup(a => a.SaveChanges())
+                .Returns(Task.CompletedTask);
+            //Act
+            await sut.Delete(comment.Id);
+
+            //Assert
+            //result.Should().BeEquivalentTo(expectedResult);
+
+        }
+
+        [Fact]
+        public async void When_Update_IsCalled_Expect_GetCommentByIdAndUpdateAndSaveChangesFromRepositoryToBeInvoked()
+        {
+            //Arrange
+            var comment = new Comment(Guid.NewGuid(), Guid.NewGuid(), "Text");
+            var initialModel = new CreateCommentModel()
+            {
+                IdUser = comment.IdUser,
+                IdSurvey = comment.IdSurvey,
+                Text = comment.Text
+            };
+
+            //var expectedResult = new CommentModel()
+            //{
+            //    Id = comment.Id,
+            //    IdUser = comment.IdUser,
+            //    IdSurvey = comment.IdSurvey,
+            //    Text = comment.Text
+            //};
+
+            _commentRepositoryMock
+                .Setup(a => a.GetCommentById(comment.Id))
+                .ReturnsAsync(comment);
+
+            _mapperMock
+                .Setup(m => m.Map(initialModel, comment))
+                .Returns(comment);
+
+            _commentRepositoryMock
+                .Setup(a => a.Update(comment));
+
+            _commentRepositoryMock
+                .Setup(a => a.SaveChanges())
+                .Returns(Task.CompletedTask);
+
+
+            //Act
+            await sut.Update(comment.Id, initialModel);
+
+            //Assert
+            //result.Should().BeEquivalentTo(expectedResult);
+
+        }
     }
 }

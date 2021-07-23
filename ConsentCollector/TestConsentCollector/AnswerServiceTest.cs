@@ -145,6 +145,77 @@ namespace TestConsentCollector
             result.Should().BeEquivalentTo(expectedResult);
 
         }
+        [Fact]
+        public async void When_Delete_IsCalled_Expect_GetAnswerByIdAndDeleteAndSaveChangesFromRepositoryToBeInvoked()
+        {
+            //Arrange
+            var answer = new Answer(false, DateTime.Now);
+
+            _answerRepositoryMock
+                .Setup(a => a.GetAnswerById(answer.Id))
+                .ReturnsAsync(answer);
+
+            _answerRepositoryMock
+                .Setup(a => a.Delete(answer));
+
+            _answerRepositoryMock
+                .Setup(a => a.SaveChanges())
+                .Returns(Task.CompletedTask);
+            //Act
+            await sut.Delete(answer.Id);
+
+            //Assert
+            //result.Should().BeEquivalentTo(expectedResult);
+
+        }
+
+        [Fact]
+        public async void When_Update_IsCalled_Expect_GetAnswerByIdAndUpdateAndSaveChangesFromRepositoryToBeInvoked()
+        {
+            //Arrange
+            var answer = new Answer(false, DateTime.Now);
+            var initialModel = new CreateAnswerModel()
+            {
+                Agree = answer.Agree,
+                AnswerDate = answer.AnswerDate,
+                IdSurvey = answer.IdSurvey,
+                IdQuestion = answer.IdQuestion,
+                IdUser = answer.IdUser
+            };
+
+            //var expectedResult = new AnswerModel()
+            //{
+            //    Id = answer.Id,
+            //    Agree = answer.Agree,
+            //    AnswerDate = answer.AnswerDate,
+            //    IdSurvey = answer.IdSurvey,
+            //    IdQuestion = answer.IdQuestion,
+            //    IdUser = answer.IdUser
+            //};
+
+            _answerRepositoryMock
+                .Setup(a => a.GetAnswerById(answer.Id))
+                .ReturnsAsync(answer);
+
+            _mapperMock
+                .Setup(m => m.Map(initialModel, answer))
+                .Returns(answer);
+
+            _answerRepositoryMock
+                .Setup(a => a.Update(answer));
+
+            _answerRepositoryMock
+                .Setup(a => a.SaveChanges())
+                .Returns(Task.CompletedTask);
+
+            
+            //Act
+             await sut.Update(answer.Id, initialModel);
+
+            //Assert
+            //result.Should().BeEquivalentTo(expectedResult);
+
+        }
     }
 
 }
