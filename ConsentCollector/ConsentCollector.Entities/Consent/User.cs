@@ -8,12 +8,12 @@ namespace ConsentCollector.Entities.Consent
 {
     public sealed class User:Entity
     {
-        //public Users(string username,string password,string role) : base()
-        //{
-        //    Username = username;
-        //    Password = password;
-        //    Role = role;
-        //}
+        public User(string username, string password, string role) : base()
+        {
+            Username = username;
+            Password = password;
+            Role = role;
+        }
 
         public string Username { get; set; }
         public string Password { get; set; }

@@ -32,15 +32,21 @@ namespace ConsentCollector.Persistence.Mappings
                 .ValueGeneratedNever();
 
                 e.Property(c => c.Number)
-                .HasColumnName("Number")
-                .HasMaxLength(10)
-                .IsRequired()
-                .ValueGeneratedNever();
+                    .HasColumnName("Number")
+                    .HasMaxLength(10)
+                    .IsRequired()
+                    .ValueGeneratedNever();
 
                 e.Property(c => c.Email)
                 .HasColumnName("Email")
                 .IsRequired()
                 .ValueGeneratedNever();
+
+                e.HasIndex(c => c.Email)
+                    .IsUnique(true);
+
+                e.HasIndex(c => c.Number)
+                    .IsUnique(true);
             });
 
         }

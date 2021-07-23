@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Centric\\Proiect_Github\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj": {}
+    "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj": {}
   },
   "projects": {
-    "E:\\Centric\\Proiect_Github\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj": {
+    "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Centric\\Proiect_Github\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj",
+        "projectUniqueName": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj",
         "projectName": "ConsentCollector.Entities",
-        "projectPath": "E:\\Centric\\Proiect_Github\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj",
-        "packagesPath": "C:\\Users\\Ecaterina\\.nuget\\packages\\",
-        "outputPath": "E:\\Centric\\Proiect_Github\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\obj\\",
+        "projectPath": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\ConsentCollector.Entities.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Practica\\Proiect\\Consent-Collector\\ConsentCollector\\ConsentCollector.Entities\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ecaterina\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -48,17 +44,17 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.7, )"
+              "version": "[5.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.7, )"
+              "version": "[5.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.7, )"
+              "version": "[5.0.8, )"
             }
           },
           "imports": [

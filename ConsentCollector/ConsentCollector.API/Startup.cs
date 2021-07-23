@@ -1,6 +1,10 @@
 using ConsentCollector.Business;
 using ConsentCollector.Business.Consent.Services;
+using ConsentCollector.Business.Consent.Services.CommentService;
+using ConsentCollector.Business.Consent.Services.QuestionService;
 using ConsentCollector.Persistence;
+using ConsentCollector.Persistence.CommentRepository;
+using ConsentCollector.Persistence.QuestionRepository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -15,11 +19,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ConsentCollector.Business.Consent.Services.UserDetails;
+using ConsentCollector.Business.Consent.Services.Users;
+using ConsentCollector.Persistence.UserRepository;
+using Microsoft.Net.Http.Headers;
 
 namespace ConsentCollector.API
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -32,6 +41,19 @@ namespace ConsentCollector.API
         {
 
             services.AddControllers();
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                    builder =>
+                    {
+                        builder.WithOrigins("*")
+                            .WithHeaders(HeaderNames.ContentType,
+                                HeaderNames.AccessControlAllowMethods, 
+                                HeaderNames.AccessControlAllowHeaders,
+                                HeaderNames.AccessControlAllowOrigin );
+                    });
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ConsentCollector.API", Version = "v1" });
@@ -46,8 +68,25 @@ namespace ConsentCollector.API
             {
                 config.AddProfile<ConsentMappingProfile>();
             });
+
             services.AddScoped<IConsentRepository, ConsentRepository>();
+
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserDetailRepository, UserDetailRepository>();
+
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserDetailService, UserDetailService>();
+
+            services.AddScoped<INotificationRepository, NotificationRepository>();
+            services.AddScoped<IQuestionRepository, QuestionRepository>();
+            services.AddScoped<ICommentRepository, CommentRepository>();
+            services.AddScoped<IAnswerRepository, AnswerRepository>();
+
             services.AddScoped<ISurveyService, SurveyService>();
+            services.AddScoped<INotificationService, NotificationService>();
+            services.AddScoped<IQuestionService, QuestionService>();
+            services.AddScoped<ICommentService, CommentService>();
+            services.AddScoped<IAnswerService, AnswerService>();
 
             services.AddSwaggerGen();
         }
@@ -66,11 +105,15 @@ namespace ConsentCollector.API
 
             app.UseRouting();
 
+            app.UseCors(MyAllowSpecificOrigins);
+
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllers()
+                    .RequireCors(MyAllowSpecificOrigins);
             });
 
             using var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();

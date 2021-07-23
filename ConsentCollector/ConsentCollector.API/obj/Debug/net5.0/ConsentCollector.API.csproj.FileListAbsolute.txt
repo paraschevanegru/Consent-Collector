@@ -98,3 +98,271 @@ E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.AP
 E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.genruntimeconfig.cache
 E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\AutoMapper.dll
 E:\Centric\Proiect_Github\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\appsettings.Development.json
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\appsettings.json
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.exe
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.deps.json
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.runtimeconfig.json
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.runtimeconfig.dev.json
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ref\ConsentCollector.API.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.pdb
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\AutoMapper.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Newtonsoft.Json.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.Runtime.Caching.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Business.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Entities.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Persistence.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Business.pdb
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Entities.pdb
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Persistence.pdb
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.csproj.AssemblyReference.cache
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.GeneratedMSBuildEditorConfig.editorconfig
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.AssemblyInfoInputs.cache
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.AssemblyInfo.cs
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.csproj.CoreCompileInputs.cache
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.MvcApplicationPartsAssemblyInfo.cs
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.MvcApplicationPartsAssemblyInfo.cache
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\staticwebassets\ConsentCollector.API.StaticWebAssets.Manifest.cache
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\staticwebassets\ConsentCollector.API.StaticWebAssets.xml
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\scopedcss\bundle\ConsentCollector.API.styles.css
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.RazorTargetAssemblyInfo.cache
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.csproj.CopyComplete
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ref\ConsentCollector.API.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.pdb
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.genruntimeconfig.cache
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\appsettings.Development.json
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\appsettings.json
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.exe
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.deps.json
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.runtimeconfig.json
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.runtimeconfig.dev.json
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ref\ConsentCollector.API.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.pdb
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\AutoMapper.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Newtonsoft.Json.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.Runtime.Caching.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Business.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Entities.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Persistence.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Business.pdb
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Entities.pdb
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Persistence.pdb
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.csproj.AssemblyReference.cache
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.GeneratedMSBuildEditorConfig.editorconfig
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.AssemblyInfoInputs.cache
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.AssemblyInfo.cs
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.csproj.CoreCompileInputs.cache
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.MvcApplicationPartsAssemblyInfo.cs
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.MvcApplicationPartsAssemblyInfo.cache
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\staticwebassets\ConsentCollector.API.StaticWebAssets.Manifest.cache
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\staticwebassets\ConsentCollector.API.StaticWebAssets.xml
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\scopedcss\bundle\ConsentCollector.API.styles.css
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.RazorTargetAssemblyInfo.cache
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.csproj.CopyComplete
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ref\ConsentCollector.API.dll
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.pdb
+E:\Centric\Nou\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.genruntimeconfig.cache
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\appsettings.Development.json
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\appsettings.json
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.exe
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.deps.json
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.runtimeconfig.json
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.runtimeconfig.dev.json
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ref\ConsentCollector.API.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.pdb
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\AutoMapper.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.Runtime.Caching.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Business.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Entities.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Persistence.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Business.pdb
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Entities.pdb
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Persistence.pdb
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.csproj.AssemblyReference.cache
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.AssemblyInfoInputs.cache
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.AssemblyInfo.cs
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.csproj.CoreCompileInputs.cache
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.MvcApplicationPartsAssemblyInfo.cs
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.MvcApplicationPartsAssemblyInfo.cache
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\staticwebassets\ConsentCollector.API.StaticWebAssets.Manifest.cache
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\staticwebassets\ConsentCollector.API.StaticWebAssets.xml
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\scopedcss\bundle\ConsentCollector.API.styles.css
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.RazorTargetAssemblyInfo.cache
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.csproj.CopyComplete
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ref\ConsentCollector.API.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.pdb
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.genruntimeconfig.cache
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\appsettings.Development.json
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\appsettings.json
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.exe
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.deps.json
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.runtimeconfig.json
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.runtimeconfig.dev.json
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ref\ConsentCollector.API.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.API.pdb
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\AutoMapper.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Newtonsoft.Json.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.Runtime.Caching.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Business.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Entities.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Persistence.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Business.pdb
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Entities.pdb
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\ConsentCollector.Persistence.pdb
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.csproj.AssemblyReference.cache
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.GeneratedMSBuildEditorConfig.editorconfig
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.AssemblyInfoInputs.cache
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.AssemblyInfo.cs
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.csproj.CoreCompileInputs.cache
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.MvcApplicationPartsAssemblyInfo.cs
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.MvcApplicationPartsAssemblyInfo.cache
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\staticwebassets\ConsentCollector.API.StaticWebAssets.Manifest.cache
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\staticwebassets\ConsentCollector.API.StaticWebAssets.xml
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\scopedcss\bundle\ConsentCollector.API.styles.css
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.RazorTargetAssemblyInfo.cache
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.csproj.CopyComplete
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ref\ConsentCollector.API.dll
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.pdb
+E:\Centric\Proiect_Github\Back\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.genruntimeconfig.cache

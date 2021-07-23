@@ -1,0 +1,21 @@
+<form [formGroup]="formRegister" (ngSubmit)="submitRegister()" class="auth">
+  <label for="register_firstName">First Name</label><br>
+  <input type="text" formControlName="register_firstName" id="register_firstName" placeholder="Your FirstName..."><br>
+  <label for="register_lastName">Last Name</label><br>
+  <input type="text" formControlName="register_lastName" id="register_lastName" placeholder="Your LastName..."><br>
+  <label for="register_email">Email</label><br>
+  <input type="email" formControlName="register_email" id="register_email" placeholder="example@gmail.com"><br>
+  <label for="register_phone">Phone</label><br>
+  <input type="text" formControlName="register_phone" id="register_phone" placeholder="0738684148"><br>
+  <label for="register_username">Username</label><br>
+  <input type="text" formControlName="register_username" id="register_username" placeholder="Your username..."><br>
+  <label for="register_password1">Password</label><br>
+  <input type="password" formControlName="register_password1" id="register_password1" placeholder="Your password..."><br>
+  <label for="register_password2">Confirm Password</label><br>
+  <input type="password" formControlName="register_password2" id="register_password2" placeholder="Confirm password..."><br>
+  <input type="submit" value="Register">
+  <div (click)="redirectToLogin()">
+  <p>Sign in</p>
+  </div>
+</form>
+

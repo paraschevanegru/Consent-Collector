@@ -9,20 +9,14 @@ namespace ConsentCollector.Entities.Consent
 {
     public sealed class Survey:Entity
     {
-
-        //public Survey()
-        //{
-
-        //}
-        //public Survey(Guid idQuestion, string subject, byte[] description, string legalBasis, DateTime launchDate, DateTime expirationDate):base()
-        //{
-        //    Subject = subject;
-        //    Description = description;
-        //    LegalBasis = legalBasis;
-        //    LaunchDate = launchDate;
-        //    ExpirationDate = expirationDate;
-        //    IdQuestion = idQuestion;
-        //}
+        public Survey(string subject,string description,string legalBasis,DateTime launchDate,DateTime expirationDate)
+        {
+            this.Subject = subject;
+            this.Description = description;
+            this.LegalBasis = legalBasis;
+            this.LaunchDate = launchDate;
+            this.ExpirationDate = expirationDate;
+        }
 
         public string Subject { get; set; }
         public string Description { get; set; }
@@ -35,6 +29,7 @@ namespace ConsentCollector.Entities.Consent
         public ICollection<Answer> Answers { get; set; } = new List<Answer>();
 
         public ICollection<Notification> Notifications { get; set; } = new List<Notification>();
+        public ICollection<SurveyQuestion> SurveyQuestion { get; set; } = new List<SurveyQuestion>();
 
         //public Guid IdQuestion { get; set; }
     }

@@ -9,12 +9,12 @@ namespace ConsentCollector.Entities.Consent
 {
     public sealed class Comment:Entity
     {
-        //public Comment(Guid idUser, Guid idSurvey, string text):base()
-        //{
-        //    Text = text;
-        //    IdUser = idUser;
-        //    IdSurvey = idSurvey;
-        //}
+        public Comment(Guid idUser, Guid idSurvey, string text) : base()
+        {
+            Text = text;
+            IdUser = idUser;
+            IdSurvey = idSurvey;
+        }
 
         public string Text { get; set; }
 

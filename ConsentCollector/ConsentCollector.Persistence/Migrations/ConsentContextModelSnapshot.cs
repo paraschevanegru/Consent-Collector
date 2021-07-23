@@ -164,6 +164,29 @@ namespace ConsentCollector.Persistence.Migrations
                     b.ToTable("Survey");
                 });
 
+            modelBuilder.Entity("ConsentCollector.Entities.Consent.SurveyQuestion", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("Id");
+
+                    b.Property<Guid>("IdQuestion")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("IdQuestion");
+
+                    b.Property<Guid>("IdSurvey")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("IdSurvey");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdQuestion");
+
+                    b.HasIndex("IdSurvey");
+
+                    b.ToTable("SurveyQuestion");
+                });
+
             modelBuilder.Entity("ConsentCollector.Entities.Consent.User", b =>
                 {
                     b.Property<Guid>("Id")
@@ -189,6 +212,9 @@ namespace ConsentCollector.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Username")
+                        .IsUnique();
+
                     b.ToTable("User");
                 });
 
@@ -200,7 +226,7 @@ namespace ConsentCollector.Persistence.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasColumnType("nvarchar(450)")
                         .HasColumnName("Email");
 
                     b.Property<string>("Firstname")
@@ -226,7 +252,13 @@ namespace ConsentCollector.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email")
+                        .IsUnique();
+
                     b.HasIndex("IdUser")
+                        .IsUnique();
+
+                    b.HasIndex("Number")
                         .IsUnique();
 
                     b.ToTable("UserDetail");
@@ -297,6 +329,25 @@ namespace ConsentCollector.Persistence.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("ConsentCollector.Entities.Consent.SurveyQuestion", b =>
+                {
+                    b.HasOne("ConsentCollector.Entities.Consent.Question", "Question")
+                        .WithMany("SurveyQuestion")
+                        .HasForeignKey("IdQuestion")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ConsentCollector.Entities.Consent.Survey", "Survey")
+                        .WithMany("SurveyQuestion")
+                        .HasForeignKey("IdSurvey")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Question");
+
+                    b.Navigation("Survey");
+                });
+
             modelBuilder.Entity("ConsentCollector.Entities.Consent.UserDetail", b =>
                 {
                     b.HasOne("ConsentCollector.Entities.Consent.User", "User")
@@ -311,6 +362,8 @@ namespace ConsentCollector.Persistence.Migrations
             modelBuilder.Entity("ConsentCollector.Entities.Consent.Question", b =>
                 {
                     b.Navigation("Answers");
+
+                    b.Navigation("SurveyQuestion");
                 });
 
             modelBuilder.Entity("ConsentCollector.Entities.Consent.Survey", b =>
@@ -320,6 +373,8 @@ namespace ConsentCollector.Persistence.Migrations
                     b.Navigation("Comments");
 
                     b.Navigation("Notifications");
+
+                    b.Navigation("SurveyQuestion");
                 });
 
             modelBuilder.Entity("ConsentCollector.Entities.Consent.User", b =>

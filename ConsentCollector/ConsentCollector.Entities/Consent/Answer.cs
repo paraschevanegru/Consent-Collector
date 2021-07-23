@@ -9,11 +9,11 @@ namespace ConsentCollector.Entities.Consent
 {
     public sealed class Answer : Entity
     {
-        //public Answer(bool agree, DateTime answerDate):base()
-        //{
-        //    Agree = agree;
-        //    AnswerDate = answerDate;
-        //}
+        public Answer(bool agree, DateTime answerDate) : base()
+        {
+            Agree = agree;
+            AnswerDate = answerDate;
+        }
 
         public bool Agree { get; set; }
         public DateTime AnswerDate { get; set; }
