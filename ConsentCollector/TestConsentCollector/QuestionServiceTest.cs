@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,7 +35,7 @@ namespace TestConsentCollector
         }
 
         [Fact]
-        public async void When_GetById_IsCalled_Expect_QuestionToBeReturned()
+        public async void When_GetById_IsCalled_Expect_GetQuestionByIdFromRepositoryToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange
             var question = new Question(false,"Question");
@@ -63,7 +63,7 @@ namespace TestConsentCollector
         }
 
         [Fact]
-        public void When_GetAll_IsCalled_Expect_AllQuestionsToBeReturned()
+        public void When_GetAll_IsCalled_Expect_GetAllFromRepositoryToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange
             var questions = new List<Question>();
@@ -94,11 +94,15 @@ namespace TestConsentCollector
 
 
         [Fact]
-        public async void When_Create_IsCalled_Expect_QuestionToBeCreated()
+        public async void When_Create_IsCalled_Expect_CreateAndSaveChangesFromRepositoryToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange
             var question = new Question(false,"Question");
-            var model = new CreateQuestionModel();
+            var initialModel = new CreateQuestionModel()
+            {
+                Optional = question.Optional,
+                Questions = question.Questions
+            };
 
             var expectedResult = new QuestionModel()
             {
@@ -108,7 +112,7 @@ namespace TestConsentCollector
             };
 
             _mapperMock
-                .Setup(q => q.Map<Question>(model))
+                .Setup(q => q.Map<Question>(initialModel))
                 .Returns(question);
 
             _questionRepositoryMock
@@ -123,7 +127,7 @@ namespace TestConsentCollector
                 .Setup(m => m.Map<QuestionModel>(question))
                 .Returns(expectedResult);
             //Act
-            var result = await sut.Create(model);
+            var result = await sut.Create(initialModel);
 
             //Assert
             result.Should().BeEquivalentTo(expectedResult);

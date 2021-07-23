@@ -1,15 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
-using ConsentCollector.Business.Consent.Models;
 using ConsentCollector.Business.Consent.Models.CommentModel;
-using ConsentCollector.Business.Consent.Services;
 using ConsentCollector.Business.Consent.Services.CommentService;
 using ConsentCollector.Entities.Consent;
-using ConsentCollector.Persistence;
 using ConsentCollector.Persistence.CommentRepository;
 using FluentAssertions;
 using Moq;
@@ -38,7 +35,7 @@ namespace TestConsentCollector
         }
 
         [Fact]
-        public async void When_GetById_IsCalled_Expect_CommentToBeReturned()
+        public async void When_GetById_IsCalled_Expect_GetCommentByIdFromRepositoryToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange
             var comment = new Comment(Guid.NewGuid(), Guid.NewGuid(), "Text");
@@ -48,7 +45,8 @@ namespace TestConsentCollector
                 Id = comment.Id,
                 IdUser = comment.IdUser,
                 IdSurvey = comment.IdSurvey,
-                Text = comment.Text
+                Text = comment.Text,
+
             };
 
             _commentRepositoryMock
@@ -67,7 +65,7 @@ namespace TestConsentCollector
         }
 
         [Fact]
-        public void When_GetAll_IsCalled_Expect_AllCommentsToBeReturned()
+        public void When_GetAll_IsCalled_Expect_GetAllFromRepositoryToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange
             var comments = new List<Comment>();
@@ -99,11 +97,16 @@ namespace TestConsentCollector
 
 
         [Fact]
-        public async void When_Create_IsCalled_Expect_CommentToBeCreated()
+        public async void When_Create_IsCalled_Expect_CreateAndSaveChangesFromRepositoryToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange
             var comment = new Comment(Guid.NewGuid(), Guid.NewGuid(), "Text");
-            var model = new CreateCommentModel();
+            var initialModel = new CreateCommentModel()
+            {
+                IdUser = comment.IdUser,
+                IdSurvey = comment.IdSurvey,
+                Text = comment.Text
+            };
 
             var expectedResult = new CommentModel()
             {
@@ -114,7 +117,7 @@ namespace TestConsentCollector
             };
 
             _mapperMock
-                .Setup(c => c.Map<Comment>(model))
+                .Setup(c => c.Map<Comment>(initialModel))
                 .Returns(comment);
 
             _commentRepositoryMock
@@ -129,7 +132,7 @@ namespace TestConsentCollector
                 .Setup(m => m.Map<CommentModel>(comment))
                 .Returns(expectedResult);
             //Act
-            var result = await sut.Create(model);
+            var result = await sut.Create(initialModel);
 
             //Assert
             result.Should().BeEquivalentTo(expectedResult);

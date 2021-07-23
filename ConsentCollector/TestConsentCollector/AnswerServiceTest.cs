@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,7 +35,7 @@ namespace TestConsentCollector
         }
 
         [Fact]
-        public async void When_GetById_IsCalled_Expect_AnswerToBeReturned()
+        public async void When_GetById_IsCalled_Expect_GetAnswerByIdFromRepositoryToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange
             var answer = new Answer(false, DateTime.Now);
@@ -44,7 +44,10 @@ namespace TestConsentCollector
             {
                 Id = answer.Id,
                 Agree = answer.Agree,
-                AnswerDate = answer.AnswerDate
+                AnswerDate = answer.AnswerDate,
+                IdSurvey = answer.IdSurvey,
+                IdQuestion = answer.IdQuestion,
+                IdUser = answer.IdUser
             };
 
             _answerRepositoryMock
@@ -63,7 +66,7 @@ namespace TestConsentCollector
         }
 
         [Fact]
-        public void When_GetAll_IsCalled_Expect_AllAnswersToBeReturned()
+        public void When_GetAll_IsCalled_Expect_GetAllFromRepositoryToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange
             var answers = new List<Answer>();
@@ -74,7 +77,10 @@ namespace TestConsentCollector
             {
                 Id = a.Id,
                 Agree = a.Agree,
-                AnswerDate = a.AnswerDate
+                AnswerDate = a.AnswerDate,
+                IdSurvey = a.IdSurvey,
+                IdQuestion = a.IdQuestion,
+                IdUser = a.IdUser
             });
 
             _answerRepositoryMock
@@ -94,21 +100,31 @@ namespace TestConsentCollector
 
 
         [Fact]
-        public async void When_Create_IsCalled_Expect_AnswerToBeCreated()
+        public async void When_Create_IsCalled_Expect_CreateAndSaveChangesFromRepositoryToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange
             var answer = new Answer(false, DateTime.Now);
-            var model = new CreateAnswerModel();
+            var initialModel = new CreateAnswerModel()
+            {
+                Agree = answer.Agree,
+                AnswerDate = answer.AnswerDate,
+                IdSurvey = answer.IdSurvey,
+                IdQuestion = answer.IdQuestion,
+                IdUser = answer.IdUser
+            };
 
             var expectedResult = new AnswerModel()
             {
                 Id = answer.Id,
                 Agree = answer.Agree,
-                AnswerDate = answer.AnswerDate
+                AnswerDate = answer.AnswerDate,
+                IdSurvey = answer.IdSurvey,
+                IdQuestion = answer.IdQuestion,
+                IdUser = answer.IdUser
             };
 
             _mapperMock
-                .Setup(a => a.Map<Answer>(model))
+                .Setup(a => a.Map<Answer>(initialModel))
                 .Returns(answer);
 
             _answerRepositoryMock
@@ -123,7 +139,7 @@ namespace TestConsentCollector
                 .Setup(m => m.Map<AnswerModel>(answer))
                 .Returns(expectedResult);
             //Act
-            var result = await sut.Create(model);
+            var result = await sut.Create(initialModel);
 
             //Assert
             result.Should().BeEquivalentTo(expectedResult);
