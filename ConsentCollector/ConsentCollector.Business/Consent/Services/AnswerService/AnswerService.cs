@@ -52,5 +52,12 @@ namespace ConsentCollector.Business.Consent.Services
 
             await answerRepository.SaveChanges();
         }
+
+        public IEnumerable<AnswerModel> GetAll()
+        {
+            var answer = answerRepository.GetAll();
+
+            return mapper.Map<IEnumerable<AnswerModel>>(answer);
+        }
     }
 }

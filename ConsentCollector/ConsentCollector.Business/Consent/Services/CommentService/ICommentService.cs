@@ -9,6 +9,7 @@ namespace ConsentCollector.Business.Consent.Services.CommentService
 {
     public interface ICommentService
     {
+        IEnumerable<CommentModel> GetAll();
         Task<CommentModel> GetById(Guid id);
 
         Task<CommentModel> Create(CreateCommentModel model);

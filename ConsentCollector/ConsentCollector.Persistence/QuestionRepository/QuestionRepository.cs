@@ -25,6 +25,11 @@ namespace ConsentCollector.Persistence.QuestionRepository
             context.Question.Remove(question);
         }
 
+        public IEnumerable<Question> GetAll()
+        {
+            return context.Question;
+        }
+
         public async Task<Question> GetQuestionById(Guid id)
         {
             return await context.Question.FirstAsync(q => q.Id == id);

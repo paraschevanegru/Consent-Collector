@@ -55,5 +55,12 @@ namespace ConsentCollector.Business.Consent.Services.CommentService
 
             await commentRepository.SaveChanges();
         }
+
+        public IEnumerable<CommentModel> GetAll()
+        {
+            var comment = commentRepository.GetAll();
+
+            return mapper.Map<IEnumerable<CommentModel>>(comment);
+        }
     }
 }

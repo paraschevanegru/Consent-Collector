@@ -9,6 +9,7 @@ namespace ConsentCollector.Business.Consent.Services
 {
     public interface IAnswerService
     {
+        IEnumerable<AnswerModel> GetAll();
         Task<AnswerModel> GetById(Guid id);
 
         Task<AnswerModel> Create(CreateAnswerModel model);
