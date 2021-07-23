@@ -11,6 +11,8 @@ namespace ConsentCollector.Persistence
     {
         Task<Notification> GetNotificationById(Guid id);
 
+        IEnumerable<Notification> GetAll();
+
         Task Create(Notification notification);
 
         Task SaveChanges();

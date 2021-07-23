@@ -16,5 +16,7 @@ namespace ConsentCollector.Business.Consent.Services
         Task Delete(Guid notificationId);
 
         Task Update(Guid notificationId, NotificationModel model);
+
+        IEnumerable<NotificationModel> GetAll();
     }
 }
