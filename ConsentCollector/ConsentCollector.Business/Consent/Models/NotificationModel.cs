@@ -12,6 +12,7 @@ namespace ConsentCollector.Business.Consent.Models
         public Guid Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+        public bool Seen { get; set; }
         public Guid IdSurvey { get; set; }
         public Guid IdUser { get; set; }
 
