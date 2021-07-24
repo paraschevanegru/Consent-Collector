@@ -34,10 +34,14 @@ namespace ConsentCollector.Persistence.Mappings
                .IsRequired()
                .ValueGeneratedNever();
 
+                e.HasCheckConstraint("CK_Survey_LegalBasis", "[LegalBasis] = 'Contract' or [LegalBasis] = 'Law' or [LegalBasis] = 'Legitimate Interest'");
+
                 e.Property(c => c.LaunchDate)
                .HasColumnName("LaunchDate")
                .IsRequired()
                .ValueGeneratedNever();
+
+                //e.HasCheckConstraint("CK_Survey_LaunchDate", "Convert([LaunchDate], SYSDATETIME())");
 
                 e.Property(c => c.ExpirationDate)
                .HasColumnName("ExpirationDate")

@@ -36,6 +36,8 @@ namespace ConsentCollector.Persistence.Mappings
                 .IsRequired()
                 .ValueGeneratedNever();
 
+                e.HasCheckConstraint("CK_User_Role", "[Role] = 'admin' or [Role] = 'user'");
+
                 e.HasIndex(c => c.Username)
                     .IsUnique(true);
 
