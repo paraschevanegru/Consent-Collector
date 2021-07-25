@@ -19,7 +19,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ConsentCollector.Business.Consent.Models;
 using ConsentCollector.Business.Consent.Models.UserDetails;
+using ConsentCollector.Business.Consent.Models.Users;
 using ConsentCollector.Business.Consent.Services.UserDetails;
 using ConsentCollector.Business.Consent.Services.Users;
 using ConsentCollector.Business.Consent.Validators;
@@ -98,7 +100,9 @@ namespace ConsentCollector.API
             services.AddScoped<IAnswerService, AnswerService>();
 
             services.AddScoped<IValidator<CreateUserDetailModel>,CreateUserDetailModelValidator>();
-
+            services.AddScoped<IValidator<CreateUserModel>, CreateUserModelValidator>();
+            services.AddScoped<IValidator<CreateSurveyModel>, CreateSurveyModelValidator>();
+            services.AddScoped<IValidator<CreateAnswerModel>, CreateAnswerModelValidator>();
             services.AddSwaggerGen();
 
             services.AddMvc();
