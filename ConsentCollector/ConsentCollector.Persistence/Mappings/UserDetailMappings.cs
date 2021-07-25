@@ -41,14 +41,12 @@ namespace ConsentCollector.Persistence.Mappings
                     .IsRequired()
                     .ValueGeneratedNever();
 
-                //e.HasCheckConstraint("CK_UserDetail_Number", "Len([Number])>=10 and Len([Number])<=10");
 
                 e.Property(c => c.Email)
                 .HasColumnName("Email")
                 .IsRequired()
                 .ValueGeneratedNever();
 
-                //e.HasCheckConstraint("CK_UserDetail_Email", @"[dbo].[REGEXP_LIKE] ([Email],'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$')");
 
                 e.HasIndex(c => c.Email)
                     .IsUnique(true);

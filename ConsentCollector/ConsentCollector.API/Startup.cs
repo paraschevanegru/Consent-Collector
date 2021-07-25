@@ -19,9 +19,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ConsentCollector.Business.Consent.Models.UserDetails;
 using ConsentCollector.Business.Consent.Services.UserDetails;
 using ConsentCollector.Business.Consent.Services.Users;
+using ConsentCollector.Business.Consent.Validators;
 using ConsentCollector.Persistence.UserRepository;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.Net.Http.Headers;
 
 namespace ConsentCollector.API
@@ -40,7 +44,12 @@ namespace ConsentCollector.API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            services.AddControllers()
+                .AddFluentValidation(s =>
+                {
+                    s.RegisterValidatorsFromAssemblyContaining<Startup>();
+                    s.RunDefaultMvcValidationAfterFluentValidationExecutes = false;
+                });
             services.AddCors(options =>
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins,
@@ -88,7 +97,11 @@ namespace ConsentCollector.API
             services.AddScoped<ICommentService, CommentService>();
             services.AddScoped<IAnswerService, AnswerService>();
 
+            services.AddScoped<IValidator<CreateUserDetailModel>,CreateUserDetailModelValidator>();
+
             services.AddSwaggerGen();
+
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
