@@ -39,12 +39,13 @@ namespace TestConsentCollector
         public async void When_GetById_IsCalled_Expect_GetNotificationByIdFromRepositoryToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange
-            var notification = new Notification("Title", "Notificare noua");
+            var notification = new Notification("Title", "Notificare noua", false);
             var expectedResult = new NotificationModel()
             {
                 Id = notification.Id,
                 Title = notification.Title,
                 Description = notification.Description,
+                Seen = notification.Seen,
                 IdSurvey = notification.IdSurvey,
                 IdUser = notification.IdUser
             };
@@ -68,12 +69,13 @@ namespace TestConsentCollector
         public async void When_Create_IsCalled_Expect_CreateAndSaveChangesFromRepositoryToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange
-            var notification = new Notification("Title", "Notificare noua");
+            var notification = new Notification("Title", "Notificare noua", false);
             var expectedResult = new NotificationModel()
             {
                 Id = notification.Id,
                 Title = notification.Title,
                 Description = notification.Description,
+                Seen = notification.Seen,
                 IdSurvey = notification.IdSurvey,
                 IdUser = notification.IdUser
             };
@@ -106,7 +108,7 @@ namespace TestConsentCollector
         public async void When_Delete_IsCalled_Expect_GetAnswerByIdAndDeleteAndSaveChangesFromRepositoryToBeInvoked()
         {
             //Arrange
-            var notification = new Notification("Title", "Notificare noua");
+            var notification = new Notification("Title", "Notificare noua", false);
 
             notificationRepositoryMock
                 .Setup(s => s.GetNotificationById(notification.Id))
@@ -131,12 +133,13 @@ namespace TestConsentCollector
         public async void When_Update_IsCalled_Expect_GetAnswerByIdAndUpdateAndSaveChangesFromRepositoryToBeInvoked()
         {
             //Arrange
-            var notification = new Notification("Title", "Notificare noua");
+            var notification = new Notification("Title", "Notificare noua", false);
             var expectedResult = new NotificationModel()
             {
                 Id = notification.Id,
                 Title = notification.Title,
                 Description = notification.Description,
+                Seen = notification.Seen,
                 IdSurvey = notification.IdSurvey,
                 IdUser = notification.IdUser
             };

@@ -29,6 +29,8 @@ namespace ConsentCollector.Persistence.Mappings
                 .IsRequired()
                 .ValueGeneratedNever();
 
+                e.HasCheckConstraint("CK_Question_Questions", "Len([Questions])>=5 and Len([Questions])<=100");
+
                 e.HasMany(q => q.Answers)
                 .WithOne(a => a.Question)
                 .HasForeignKey(q => q.IdQuestion);

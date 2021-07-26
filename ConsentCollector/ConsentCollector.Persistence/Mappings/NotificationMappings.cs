@@ -28,6 +28,11 @@ namespace ConsentCollector.Persistence.Mappings
                 .HasColumnName("Description")
                 .IsRequired()
                 .ValueGeneratedNever();
+
+                e.Property(c => c.Seen)
+                    .HasColumnName("Seen")
+                    .IsRequired()
+                    .ValueGeneratedNever();
             });
         }
     }
