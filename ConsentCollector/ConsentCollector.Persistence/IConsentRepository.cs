@@ -11,6 +11,8 @@ namespace ConsentCollector.Persistence
     {
         Task<Survey> GetSurveyById(Guid id);
 
+        IEnumerable<Survey> GetAll();
+
         Task Create(Survey survey);
 
         Task SaveChanges();

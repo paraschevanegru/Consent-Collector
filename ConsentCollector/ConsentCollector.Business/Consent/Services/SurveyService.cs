@@ -64,5 +64,12 @@ namespace ConsentCollector.Business.Consent.Services
 
             await consentRepository.SaveChanges();
         }
+
+        public IEnumerable<SurveyModel> GetAll()
+        {
+            var survey = consentRepository.GetAll();
+
+            return mapper.Map<IEnumerable<SurveyModel>>(survey);
+        }
     }
 }

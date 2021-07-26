@@ -69,6 +69,35 @@ namespace TestConsentCollector
             result.Should().BeEquivalentTo(expectedResult);
         }
 
+        [Fact]
+        public async void When_GetByUsernameAndPassword_IsCalled_Expect_GetUserByUsernameAndPasswordToBeInvoked_And_UserToBeReturned()
+        {
+            //Arrange
+            var user = new User("Username", "Password", "Role");
+
+            var expectedResult = new UserModel()
+            {
+                Id = user.Id,
+                Password = user.Password,
+                Username = user.Username,
+                Role = user.Role
+            };
+
+            usersRepositoryMock
+                .Setup(u => u.GetUserByUsernameAndPassword(user.Username,user.Password))
+                .ReturnsAsync(user);
+
+            mapperMock
+                .Setup(m => m.Map<UserModel>(user))
+                .Returns(expectedResult);
+
+            //Act
+            var result = await sut.GetByUsernameAndPassword(user.Username, user.Password);
+
+            //Assert
+            result.Should().BeEquivalentTo(expectedResult);
+        }
+
 
 
         [Fact]

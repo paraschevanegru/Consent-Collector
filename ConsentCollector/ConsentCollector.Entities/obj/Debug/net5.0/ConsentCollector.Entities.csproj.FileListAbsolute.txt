@@ -88,3 +88,18 @@ E:\Centric\Proiect_Github\Nou\Consent-Collector\ConsentCollector\ConsentCollecto
 E:\Centric\Proiect_Github\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ref\ConsentCollector.Entities.dll
 E:\Centric\Proiect_Github\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.pdb
 E:\Centric\Proiect_Github\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.genruntimeconfig.cache
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Entities\bin\Debug\net5.0\ConsentCollector.Entities.deps.json
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Entities\bin\Debug\net5.0\ConsentCollector.Entities.runtimeconfig.json
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Entities\bin\Debug\net5.0\ConsentCollector.Entities.runtimeconfig.dev.json
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Entities\bin\Debug\net5.0\ConsentCollector.Entities.dll
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Entities\bin\Debug\net5.0\ref\ConsentCollector.Entities.dll
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Entities\bin\Debug\net5.0\ConsentCollector.Entities.pdb
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.csproj.AssemblyReference.cache
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.GeneratedMSBuildEditorConfig.editorconfig
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.AssemblyInfoInputs.cache
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.AssemblyInfo.cs
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.csproj.CoreCompileInputs.cache
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.dll
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ref\ConsentCollector.Entities.dll
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.pdb
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Entities\obj\Debug\net5.0\ConsentCollector.Entities.genruntimeconfig.cache

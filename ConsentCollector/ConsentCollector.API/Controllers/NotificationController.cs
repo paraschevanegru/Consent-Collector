@@ -20,6 +20,15 @@ namespace ConsentCollector.API.Controllers
             this.notificationService = notificationService;
         }
 
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+
+            var notification = notificationService.GetAll();
+
+            return Ok(notification);
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> Get([FromRoute] Guid id)
         {

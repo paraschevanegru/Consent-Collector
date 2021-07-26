@@ -68,6 +68,66 @@ namespace TestConsentCollector
             result.Should().BeEquivalentTo(expectedResult);
         }
 
+        [Fact]
+        public async void When_GetByUserId_IsCalled_Expect_GetUserDetailByUserIdToBeInvoked_And_UserDetailsToBeReturned()
+        {
+            //Arrange
+            var userDetails = new UserDetail(Guid.NewGuid(), "Firstname", "Lastname", "Number", "Email");
+
+            var expectedResult = new UserDetailModel()
+            {
+                Id = userDetails.Id,
+                Firstname = userDetails.Firstname,
+                Lastname = userDetails.Lastname,
+                Number = userDetails.Number,
+                Email = userDetails.Email
+            };
+
+            usersDetailsRepositoryMock
+                .Setup(u => u.GetUserDetailByUserId(userDetails.IdUser))
+                .ReturnsAsync(userDetails);
+
+            mapperMock
+                .Setup(m => m.Map<UserDetailModel>(userDetails))
+                .Returns(expectedResult);
+
+            //Act
+            var result = await sut.GetByUserId(userDetails.IdUser);
+
+            //Assert
+            result.Should().BeEquivalentTo(expectedResult);
+        }
+
+        [Fact]
+        public async void When_GetByEmailAndNumber_IsCalled_Expect_GetUserDetailByEmailAndNumberToBeInvoked_And_UserDetailsToBeReturned()
+        {
+            //Arrange
+            var userDetails = new UserDetail(Guid.NewGuid(), "Firstname", "Lastname", "Number", "Email");
+
+            var expectedResult = new UserDetailModel()
+            {
+                Id = userDetails.Id,
+                Firstname = userDetails.Firstname,
+                Lastname = userDetails.Lastname,
+                Number = userDetails.Number,
+                Email = userDetails.Email
+            };
+
+            usersDetailsRepositoryMock
+                .Setup(u => u.GetUserDetailByEmailAndNumber(userDetails.Email,userDetails.Number))
+                .ReturnsAsync(userDetails);
+
+            mapperMock
+                .Setup(m => m.Map<UserDetailModel>(userDetails))
+                .Returns(expectedResult);
+
+            //Act
+            var result = await sut.GetByEmailAndNumber(userDetails.Email, userDetails.Number);
+
+            //Assert
+            result.Should().BeEquivalentTo(expectedResult);
+        }
+
 
 
         [Fact]
