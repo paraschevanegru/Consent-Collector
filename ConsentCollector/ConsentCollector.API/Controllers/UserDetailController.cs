@@ -27,6 +27,18 @@ namespace ConsentCollector.API.Controllers
             return Ok(details);
         }
 
+        [HttpGet("email/{email}/number/{number}")]
+        public async Task<IActionResult> GetUserId([FromRoute] string email, [FromRoute] string number)
+        {
+            var result = await userDetailService.GetByEmailAndNumber(email, number);
+            return Ok(result);
+        }
+        [HttpGet("user/{userId}")]
+        public async Task<IActionResult> GetUserId([FromRoute] Guid userId)
+        {
+            var result = await userDetailService.GetByUserId(userId);
+            return Ok(result);
+        }
         [HttpGet("{id}")]
         public async Task<IActionResult> Get([FromRoute] Guid id)
         {

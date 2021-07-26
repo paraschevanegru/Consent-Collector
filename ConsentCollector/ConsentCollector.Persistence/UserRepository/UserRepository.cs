@@ -37,6 +37,11 @@ namespace ConsentCollector.Persistence.UserRepository
                 .FirstAsync(u => u.Id == id);
         }
 
+        public async Task<User> GetUserByUsernameAndPassword(string username, string password)
+        {
+            return await context.User.FirstAsync(u => u.Username == username && u.Password == password);
+        }
+
         public async Task SaveChanges()
         {
             await this.context.SaveChangesAsync();

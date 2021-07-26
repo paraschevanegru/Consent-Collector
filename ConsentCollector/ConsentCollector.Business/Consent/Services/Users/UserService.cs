@@ -54,6 +54,13 @@ namespace ConsentCollector.Business.Consent.Services.Users
             return mapper.Map<UserModel>(user);
         }
 
+        public async Task<UserModel> GetByUsernameAndPassword(string username, string password)
+        {
+            var user = await userRepository.GetUserByUsernameAndPassword(username, password);
+
+            return mapper.Map<UserModel>(user);
+        }
+
         public async Task Update(Guid userId, CreateUserModel model)
         {
             var user = await userRepository.GetUserById(userId);

@@ -22,6 +22,20 @@ namespace ConsentCollector.Business.Consent.Services.UserDetails
             this.mapper = mapper;
         }
 
+        public async Task<UserDetailModel> GetByUserId(Guid userId)
+        {
+            var detail = await userDetailRepository.GetUserDetailByUserId(userId);
+
+            return mapper.Map<UserDetailModel>(detail);
+        }
+
+        public async Task<UserDetailModel> GetByEmailAndNumber(string email, string number)
+        {
+            var detail = await userDetailRepository.GetUserDetailByEmailAndNumber(email,number);
+
+            return mapper.Map<UserDetailModel>(detail);
+        }
+
         public async Task<UserDetailModel> Create(CreateUserDetailModel model)
         {
             var detail = this.mapper.Map<UserDetail>(model);
