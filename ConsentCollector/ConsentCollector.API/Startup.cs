@@ -103,6 +103,7 @@ namespace ConsentCollector.API
             services.AddScoped<IValidator<CreateUserModel>, CreateUserModelValidator>();
             services.AddScoped<IValidator<CreateSurveyModel>, CreateSurveyModelValidator>();
             services.AddScoped<IValidator<CreateAnswerModel>, CreateAnswerModelValidator>();
+            services.AddScoped<IValidator<NotificationModel>,CreateNotificationModelValidator>();
             services.AddSwaggerGen();
 
             services.AddMvc();
