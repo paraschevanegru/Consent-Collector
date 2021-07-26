@@ -19,6 +19,13 @@ namespace ConsentCollector.Business.Consent.Services
             this.notificationRepository = notificationRepository;
             this.mapper = mapper;
         }
+
+        public  IEnumerable<NotificationModel> GetByUserId(Guid userId)
+        {
+            var notification = notificationRepository.GetNotificationByUserId(userId);
+            return mapper.Map<IEnumerable<NotificationModel>>(notification);
+        }
+
         public async Task<NotificationModel> Create(NotificationModel model)
         {
             var notification = this.mapper.Map<Notification>(model);

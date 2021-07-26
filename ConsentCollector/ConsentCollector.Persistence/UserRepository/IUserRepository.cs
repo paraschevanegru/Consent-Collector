@@ -12,6 +12,8 @@ namespace ConsentCollector.Persistence.UserRepository
         IEnumerable<User> GetAll();
         Task<User> GetUserById(Guid id);
 
+        Task<User> GetUserByUsernameAndPassword(string username, string password);
+
         Task Create(User user);
 
         Task SaveChanges();

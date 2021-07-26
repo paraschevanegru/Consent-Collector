@@ -32,6 +32,13 @@ namespace ConsentCollector.API.Controllers
 
             return Ok(users);
         }
+
+        [HttpGet("username/{username}/password/{password}")]
+        public async Task<IActionResult> GetUsernameAndPassword([FromRoute] string username, [FromRoute] string password)
+        {
+            var result = await userService.GetByUsernameAndPassword(username,password);
+            return Ok(result);
+        }
         [HttpGet("{id}")]
         public async Task<IActionResult> Get([FromRoute] Guid id)
         {

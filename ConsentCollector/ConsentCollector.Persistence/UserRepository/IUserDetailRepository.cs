@@ -13,6 +13,10 @@ namespace ConsentCollector.Persistence.UserRepository
 
         Task<UserDetail> GetUserDetailById(Guid id);
 
+        Task<UserDetail> GetUserDetailByUserId(Guid userId);
+
+        Task<UserDetail> GetUserDetailByEmailAndNumber(string email, string number);
+
         Task Create(UserDetail detail);
 
         Task SaveChanges();

@@ -12,6 +12,8 @@ namespace ConsentCollector.Business.Consent.Services
         IEnumerable<AnswerModel> GetAll();
         Task<AnswerModel> GetById(Guid id);
 
+        IEnumerable<AnswerModel> GetByUserAndSurveyId(Guid userId, Guid surveyId);
+
         Task<AnswerModel> Create(CreateAnswerModel model);
 
         Task Delete(Guid answerId);

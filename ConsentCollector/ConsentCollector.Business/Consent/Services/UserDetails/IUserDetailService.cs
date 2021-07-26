@@ -14,6 +14,9 @@ namespace ConsentCollector.Business.Consent.Services.UserDetails
 
         Task<UserDetailModel> GetById(Guid id);
 
+        Task<UserDetailModel> GetByUserId(Guid userId);
+
+        Task<UserDetailModel> GetByEmailAndNumber(string email, string number);
         Task<UserDetailModel> Create(CreateUserDetailModel model);
 
         Task Delete(Guid detailId);

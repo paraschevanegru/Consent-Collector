@@ -17,6 +17,16 @@ namespace ConsentCollector.Persistence.UserRepository
             this.context = context;
         }
 
+        public async Task<UserDetail> GetUserDetailByUserId(Guid userId)
+        {
+            return await context.UserDetail.FirstAsync(d => d.IdUser == userId);
+        }
+
+        public async Task<UserDetail> GetUserDetailByEmailAndNumber(string email, string number)
+        {
+            return await context.UserDetail.FirstAsync(d => d.Email == email && d.Number == number);
+        }
+
         public async Task Create(UserDetail detail)
         {
             await this.context.UserDetail.AddAsync(detail);

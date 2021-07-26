@@ -19,6 +19,13 @@ namespace ConsentCollector.Business.Consent.Services
             this.mapper = mapper;
             this.answerRepository = answerRepository;
         }
+
+        public IEnumerable<AnswerModel> GetByUserAndSurveyId(Guid userId, Guid surveyId)
+        {
+            var answer = answerRepository.GetAnswerByUserAndSurveyId(userId, surveyId);
+            return mapper.Map<IEnumerable<AnswerModel>>(answer);
+        }
+
         public async Task<AnswerModel> Create(CreateAnswerModel model)
         {
             var answer = this.mapper.Map<Answer>(model);

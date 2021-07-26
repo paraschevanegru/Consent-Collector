@@ -13,6 +13,8 @@ namespace ConsentCollector.Business.Consent.Services.Users
         IEnumerable<UserModel> GetAll();
         Task<UserModel> GetById(Guid id);
 
+        Task<UserModel> GetByUsernameAndPassword(string username, string password);
+
         Task<UserModel> Create(CreateUserModel model);
 
         Task Delete(Guid userId);
