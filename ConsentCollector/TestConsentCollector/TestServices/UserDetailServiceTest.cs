@@ -68,6 +68,7 @@ namespace TestConsentCollector
             result.Should().BeEquivalentTo(expectedResult);
         }
 
+
         [Fact]
         public async void When_GetByUserId_IsCalled_Expect_GetUserDetailByUserIdToBeInvoked_And_UserDetailsToBeReturned()
         {

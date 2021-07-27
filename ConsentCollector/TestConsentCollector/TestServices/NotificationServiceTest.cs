@@ -36,6 +36,7 @@ namespace TestConsentCollector
         }
 
         [Fact]
+
         public void When_GetByUserId_IsCalled_Expect_GetNotificationByUserIdToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange

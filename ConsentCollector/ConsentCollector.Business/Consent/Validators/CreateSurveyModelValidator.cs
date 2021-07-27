@@ -14,35 +14,34 @@ namespace ConsentCollector.Business.Consent.Validators
         {
             List<string> legalBasis = new List<string>() { "Contract", "Law", "Legitimate Interest" };
 
-
             RuleFor(x => x.LegalBasis)
-                .Cascade(CascadeMode.StopOnFirstFailure)
+                .Cascade(CascadeMode.Stop)
                 .NotEmpty()
                 .WithMessage("{PropertyName} should be not empty.")
                 .Must(x => legalBasis.Contains(x))
                 .WithMessage("Please only use: " + String.Join(",", legalBasis));
 
             RuleFor(x => x.Subject)
-                .Cascade(CascadeMode.StopOnFirstFailure)
+                .Cascade(CascadeMode.Stop)
                 .NotEmpty()
                 .WithMessage("{PropertyName} should be not empty.")
                 .Length(3, 50);
 
             RuleFor(x => x.Description)
-                .Cascade(CascadeMode.StopOnFirstFailure)
+                .Cascade(CascadeMode.Stop)
                 .NotEmpty()
                 .WithMessage("{PropertyName} should be not empty.")
                 .Length(3, 150);
 
             RuleFor(x => x.LaunchDate)
-                .Cascade(CascadeMode.StopOnFirstFailure)
+                .Cascade(CascadeMode.Stop)
                 .NotEmpty()
                 .WithMessage("{PropertyName} should be not empty.")
                 .GreaterThanOrEqualTo(x => DateTime.Now.Date)
                 .WithMessage("{PropertyName} must be equal or greater than current date!");
 
             RuleFor(x => x.ExpirationDate)
-                .Cascade(CascadeMode.StopOnFirstFailure)
+                .Cascade(CascadeMode.Stop)
                 .NotEmpty()
                 .WithMessage("{PropertyName} should be not empty.")
                 .GreaterThan(x => x.LaunchDate)

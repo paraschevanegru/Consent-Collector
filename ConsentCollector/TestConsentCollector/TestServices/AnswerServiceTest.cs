@@ -66,6 +66,7 @@ namespace TestConsentCollector
         }
 
         [Fact]
+
         public void When_GetByUserAndSurveyId_IsCalled_Expect_GetAnswerByUserAndSurveyIdToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange

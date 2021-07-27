@@ -10,11 +10,10 @@ namespace ConsentCollector.Business.Consent.Validators
 {
     public sealed class CreateUserModelValidator : AbstractValidator<CreateUserModel>
     {
-
         public CreateUserModelValidator()
         {
             RuleFor(x => x.Username)
-                .Cascade(CascadeMode.StopOnFirstFailure)
+                .Cascade(CascadeMode.Stop)
                 .NotEmpty()
                 .WithMessage("{PropertyName} should be not empty.")
                 .Length(3, 20)
@@ -25,7 +24,7 @@ namespace ConsentCollector.Business.Consent.Validators
 
 
             RuleFor(x => x.Role)
-                .Cascade(CascadeMode.StopOnFirstFailure)
+                .Cascade(CascadeMode.Stop)
                 .NotEmpty()
                 .WithMessage("{PropertyName} should be not empty.")
                 .Must(x => role.Contains(x))
