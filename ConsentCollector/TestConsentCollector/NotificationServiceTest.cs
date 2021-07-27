@@ -39,6 +39,7 @@ namespace TestConsentCollector
         public void When_GetByUserId_IsCalled_Expect_GetNotificationByUserIdToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange
+            var IdUser = Guid.NewGuid();
             var notifications = new List<Notification>();
             notifications.Add(new Notification("Title", "Notificare noua", false));
             notifications.Add(new Notification("Title1", "Notificare noua1", true));
@@ -53,15 +54,20 @@ namespace TestConsentCollector
                 Title = n.Title
             });
 
+            notifications.ForEach(notification =>
+            {
+                notification.IdUser = IdUser;
+            });
+
             notificationRepositoryMock
-                .Setup(repository => repository.GetNotificationByUserId(notifications[0].IdUser))
+                .Setup(repository => repository.GetNotificationByUserId(IdUser))
                 .Returns(notifications);
 
             mapperMock
                 .Setup(mapper => mapper.Map<IEnumerable<NotificationModel>>(notifications))
                 .Returns(expectedResult);
             //Act
-            var result = sut.GetByUserId(notifications[0].IdUser);
+            var result = sut.GetByUserId(IdUser);
             
             //Assert
             result.Should().BeEquivalentTo(expectedResult);

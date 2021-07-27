@@ -69,9 +69,17 @@ namespace TestConsentCollector
         public void When_GetByUserAndSurveyId_IsCalled_Expect_GetAnswerByUserAndSurveyIdToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange
+            var IdUser = Guid.NewGuid();
+            var IdSurvey = Guid.NewGuid();
             var answers = new List<Answer>();
             answers.Add(new Answer(true, DateTime.Today));
             answers.Add(new Answer(false, DateTime.Now));
+
+            answers.ForEach(answer =>
+            {
+                answer.IdUser = IdUser;
+                answer.IdSurvey = IdSurvey;
+            });
 
             var expectedResult = answers.Select(a => new AnswerModel()
             {
@@ -82,16 +90,16 @@ namespace TestConsentCollector
                 IdQuestion = a.IdQuestion,
                 IdUser = a.IdUser
             });
-
+            
             _answerRepositoryMock
-                .Setup(a => a.GetAnswerByUserAndSurveyId(answers[0].IdUser,answers[0].IdSurvey))
+                .Setup(a => a.GetAnswerByUserAndSurveyId(IdUser,IdSurvey))
                 .Returns(answers);
 
             _mapperMock
                 .Setup(m => m.Map<IEnumerable<AnswerModel>>(answers))
                 .Returns(expectedResult);
             //Act
-            var result = sut.GetByUserAndSurveyId(answers[0].IdUser, answers[0].IdSurvey);
+            var result = sut.GetByUserAndSurveyId(IdUser, IdSurvey);
 
             //Assert
             result.Should().BeEquivalentTo(expectedResult);
