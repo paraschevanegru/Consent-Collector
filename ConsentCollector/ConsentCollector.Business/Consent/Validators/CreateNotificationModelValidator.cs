@@ -13,13 +13,13 @@ namespace ConsentCollector.Business.Consent.Validators
         public CreateNotificationModelValidator()
         {
             RuleFor(x => x.Title)
-                .Cascade(CascadeMode.StopOnFirstFailure)
+                .Cascade(CascadeMode.Stop)
                 .NotEmpty()
                 .WithMessage("{PropertyName} should be not empty.")
                 .Length(3, 50);
 
             RuleFor(x => x.Description)
-                .Cascade(CascadeMode.StopOnFirstFailure)
+                .Cascade(CascadeMode.Stop)
                 .NotEmpty()
                 .WithMessage("{PropertyName} should be not empty.")
                 .Length(3, 150);

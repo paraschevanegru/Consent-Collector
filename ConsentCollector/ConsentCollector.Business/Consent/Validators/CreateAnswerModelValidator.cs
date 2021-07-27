@@ -13,8 +13,8 @@ namespace ConsentCollector.Business.Consent.Validators
         public CreateAnswerModelValidator()
         {
             RuleFor(x => x.AnswerDate)
-                .Cascade(CascadeMode.StopOnFirstFailure)
-                .NotEmpty()
+                .Cascade(CascadeMode.Stop)
+                .NotNull()
                 .WithMessage("{PropertyName} should be not empty.")
                 .GreaterThanOrEqualTo(x => DateTime.Now.Date)
                 .WithMessage("{PropertyName} must be equal or greater than current date!");

@@ -18,30 +18,31 @@ namespace ConsentCollector.Business.Consent.Validators
             return name.All(Char.IsLetter);
         }
 
+        [Obsolete]
         public CreateUserDetailModelValidator()
         {
             RuleFor(x => x.Firstname)
-                .Cascade(CascadeMode.StopOnFirstFailure)
+                .Cascade(CascadeMode.Stop)
                 .NotEmpty()
                 .WithMessage("{PropertyName} should be not empty.")
                 .Length(3,30)
                 .Must(IsValidName).WithMessage("{PropertyName} should be all letters.");
 
             RuleFor(x => x.Lastname)
-                .Cascade(CascadeMode.StopOnFirstFailure)
+                .Cascade(CascadeMode.Stop)
                 .NotEmpty()
                 .WithMessage("{PropertyName} should be not empty.")
                 .Length(3, 30)
                 .Must(IsValidName).WithMessage("{PropertyName} should be all letters.");
 
             RuleFor(x => x.Email)
-                .Cascade(CascadeMode.StopOnFirstFailure)
+                .Cascade(CascadeMode.Stop)
                 .NotEmpty()
                 .WithMessage("{PropertyName} should be not empty.")
                 .EmailAddress();
 
             RuleFor(x => x.Number)
-                .Cascade(CascadeMode.StopOnFirstFailure)
+                .Cascade(CascadeMode.Stop)
                 .NotEmpty()
                 .WithMessage("{PropertyName} should be not empty.")
                 .Length(10)
