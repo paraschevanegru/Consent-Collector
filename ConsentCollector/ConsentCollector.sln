@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsentCollector.Entities",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.Tests", "04.Tests", "{E9DDE950-2F24-4769-8D7B-87A448ADFEE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsentCollector", "TestConsentCollector\TestConsentCollector.csproj", "{D5D3E928-8FD3-427D-9D14-488FB2A2E151}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestConsentCollector", "TestConsentCollector\TestConsentCollector.csproj", "{D5D3E928-8FD3-427D-9D14-488FB2A2E151}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
