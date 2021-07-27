@@ -26,7 +26,7 @@ namespace ConsentCollector.API.Controllers
             var result = await notificationService.GetById(id);
             return Ok(result);
         }
-        [HttpGet("user/{userId}")]
+        [HttpGet("user/{id}")]
         public  IActionResult GetUserId([FromRoute] Guid userId)
         {
             var result = notificationService.GetByUserId(userId);
