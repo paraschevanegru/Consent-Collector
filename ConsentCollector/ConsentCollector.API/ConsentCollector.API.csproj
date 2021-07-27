@@ -6,11 +6,13 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ConsentCollector.Business\ConsentCollector.Business.csproj" />
+    <ProjectReference Include="..\ConsentCollector.Persistence\ConsentCollector.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

@@ -24,6 +24,7 @@
   text-transform: uppercase;
   outline: 0;
   background: #4CAF50;
+  margin-top: 10px;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -33,6 +34,8 @@
   transition: all 0.3 ease;
   cursor: pointer;
 }
+
+
 .auth label{
   float: left;
   margin-left: 10px;
@@ -48,6 +51,10 @@ div>p{
 }
 div>p:hover{
   cursor: pointer;
+}
+.auth .invalid-data{
+  color:red;
+  font-size: 12px;
 }
 
 

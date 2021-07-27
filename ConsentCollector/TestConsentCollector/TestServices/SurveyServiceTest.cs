@@ -36,6 +36,38 @@ namespace TestConsentCollector
         }
 
         [Fact]
+        public void When_GetAll_IsCalled_Expect_GetAllToBeInvoked_And_MappedResponseToBeReturned()
+        {
+            //Arrange
+            var surveys = new List<Survey>();
+            surveys.Add(new Survey("Party", "New Year Ave", "Law", new DateTime(2021, 8, 12), new DateTime(2022, 4, 15)));
+            surveys.Add(new Survey("Party1", "New Year Ave1", "Contract", new DateTime(2021, 9, 12), new DateTime(2022, 4, 15)));
+
+            var expectedResult = surveys.Select(s => new SurveyModel()
+            {
+                Id = s.Id,
+                Description = s.Description,
+                ExpirationDate = s.ExpirationDate,
+                LaunchDate = s.LaunchDate,
+                LegalBasis = s.LegalBasis,
+                Subject = s.Subject
+            });
+
+            surveyRepositoryMock
+                .Setup(repository => repository.GetAll())
+                .Returns(surveys);
+
+            mapperMock
+                .Setup(mapper => mapper.Map<IEnumerable<SurveyModel>>(surveys))
+                .Returns(expectedResult);
+            //Act
+            var result = sut.GetAll();
+
+            //Assert
+            result.Should().BeEquivalentTo(expectedResult);
+        }
+
+        [Fact]
         public async void When_GetById_IsCalled_Expect_GetNotificationByIdFromRepositoryToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange

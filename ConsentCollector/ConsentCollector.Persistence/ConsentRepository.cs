@@ -41,5 +41,10 @@ namespace ConsentCollector.Persistence
         {
             this.context.Survey.Update(survey);
         }
+
+        public IEnumerable<Survey> GetAll()
+        {
+            return context.Survey;
+        }
     }
 }
