@@ -1,8 +1,8 @@
-<form action="" class="auth">
+<form class="auth" [formGroup]="formLogin" (ngSubmit)="submitLogin()">
   <label for="username">Username</label><br>
-  <input type="text" name="username" id="username" placeholder="Your username"><br>
+  <input type="text" formControlName="username" id="username" placeholder="Your username"><br>
   <label for="password">Password</label><br>
-  <input type="password" name="password" id="password" placeholder="Your password"><br><br>
+  <input type="password" formControlName="password" id="password" placeholder="Your password"><br><br>
   <input type="submit" value="Login">
   <div>
     <p>Forgot your password?</p>
@@ -11,4 +11,3 @@
     <p>Create an account</p>
   </div>
 </form>
-

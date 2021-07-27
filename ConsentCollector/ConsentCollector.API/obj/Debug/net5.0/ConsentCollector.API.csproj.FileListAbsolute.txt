@@ -436,3 +436,6 @@ F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.API\
 F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ref\ConsentCollector.API.dll
 F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.pdb
 F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.API\obj\Debug\net5.0\ConsentCollector.API.genruntimeconfig.cache
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\FluentValidation.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
