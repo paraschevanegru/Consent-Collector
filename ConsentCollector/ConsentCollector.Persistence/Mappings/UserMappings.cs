@@ -27,7 +27,7 @@ namespace ConsentCollector.Persistence.Mappings
 
                 e.Property(c => c.Password)
                 .HasColumnName("Password")
-                .HasMaxLength(20)
+                .HasMaxLength(2000)
                 .IsRequired()
                 .ValueGeneratedNever();
 

@@ -13,12 +13,8 @@ namespace ConsentCollector.Business.Consent.Validators
 {
     public sealed class CreateUserDetailModelValidator : AbstractValidator<CreateUserDetailModel>
     {
-        private bool IsValidName(string name)
-        {
-            return name.All(Char.IsLetter);
-        }
 
-        [Obsolete]
+
         public CreateUserDetailModelValidator()
         {
             RuleFor(x => x.Firstname)
@@ -26,14 +22,16 @@ namespace ConsentCollector.Business.Consent.Validators
                 .NotEmpty()
                 .WithMessage("{PropertyName} should be not empty.")
                 .Length(3,30)
-                .Must(IsValidName).WithMessage("{PropertyName} should be all letters.");
+                .Matches(@"^[A-Z][-a-zA-Z]+$")
+                .WithMessage("{PropertyName} should have a specific format!");
 
             RuleFor(x => x.Lastname)
                 .Cascade(CascadeMode.Stop)
                 .NotEmpty()
                 .WithMessage("{PropertyName} should be not empty.")
                 .Length(3, 30)
-                .Must(IsValidName).WithMessage("{PropertyName} should be all letters.");
+                .Matches(@"^[A-Z][-a-zA-Z]+$")
+                .WithMessage("{PropertyName} should have a specific format!");
 
             RuleFor(x => x.Email)
                 .Cascade(CascadeMode.Stop)
