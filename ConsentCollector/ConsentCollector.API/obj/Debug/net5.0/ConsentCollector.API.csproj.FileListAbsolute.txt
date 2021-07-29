@@ -439,3 +439,4 @@ F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.API\
 D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\FluentValidation.dll
 D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
 D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\BCrypt.Net-Next.dll

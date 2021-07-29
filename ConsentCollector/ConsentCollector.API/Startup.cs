@@ -29,6 +29,8 @@ using ConsentCollector.Persistence.UserRepository;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.Net.Http.Headers;
+using ConsentCollector.Persistence.SurveyQuestionRepository;
+using ConsentCollector.Business.Consent.Services.SurveyQuestionService;
 
 namespace ConsentCollector.API
 {
@@ -84,9 +86,11 @@ namespace ConsentCollector.API
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserDetailRepository, UserDetailRepository>();
+            services.AddScoped<ISurveyQuestionRepository, SurveyQuestionRepository>();
 
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUserDetailService, UserDetailService>();
+            services.AddScoped<ISurveyQuestionService, SurveyQuestionService>();
 
             services.AddScoped<INotificationRepository, NotificationRepository>();
             services.AddScoped<IQuestionRepository, QuestionRepository>();

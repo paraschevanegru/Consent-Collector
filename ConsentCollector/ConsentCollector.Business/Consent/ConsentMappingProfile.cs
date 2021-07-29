@@ -6,6 +6,7 @@ using ConsentCollector.Entities.Consent;
 using System;
 using ConsentCollector.Business.Consent.Models.UserDetails;
 using ConsentCollector.Business.Consent.Models.Users;
+using ConsentCollector.Business.Consent.Models.SurveyQuestionModel;
 
 namespace ConsentCollector.Business
 {
@@ -40,6 +41,10 @@ namespace ConsentCollector.Business
 
             CreateMap<Answer, AnswerModel>();
             CreateMap<CreateAnswerModel, Answer>();
+
+            CreateMap<SurveyQuestion, SurveyQuestionModel>();
+
+            CreateMap<CreateSurveyQuestionModel, SurveyQuestion>();
 
         }
     }
