@@ -12,7 +12,7 @@ namespace ConsentCollector.Persistence.UserRepository
         IEnumerable<User> GetAll();
         Task<User> GetUserById(Guid id);
 
-        Task<User> GetUserByUsernameAndPassword(string username, string password);
+        Task<User> GetUserByUsername(string username);
 
         Task Create(User user);
 

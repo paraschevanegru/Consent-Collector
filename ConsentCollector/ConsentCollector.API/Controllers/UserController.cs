@@ -36,9 +36,20 @@ namespace ConsentCollector.API.Controllers
         [HttpGet("username/{username}/password/{password}")]
         public async Task<IActionResult> GetUsernameAndPassword([FromRoute] string username, [FromRoute] string password)
         {
-            var result = await userService.GetByUsernameAndPassword(username,password);
-            return Ok(result);
+            var result = await userService.GetByUsername(username);
+            bool verified = BCrypt.Net.BCrypt.Verify(password, result.Password);
+
+            if (verified)
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return StatusCode(403);
+            }
+           
         }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> Get([FromRoute] Guid id)
         {

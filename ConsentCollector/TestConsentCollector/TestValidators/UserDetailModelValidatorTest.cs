@@ -104,10 +104,10 @@ namespace TestConsentCollector.TestValidators
         }
         private bool IsValidName(string name)
         {
-            return name.All(Char.IsLetter);
+            return Regex.Match(name, @"^[A-Z][-a-zA-Z]+$").Success;
         }
         [Fact]
-        public void Firstname_ShouldNotContain_Digits()
+        public void Firstname_ShouldHaveSpecificFormat()
         {
             var userDetail = new CreateUserDetailModel();
             userDetail.Firstname = "1as";
@@ -120,7 +120,7 @@ namespace TestConsentCollector.TestValidators
         }
 
         [Fact]
-        public void Lastname_ShouldNotContain_Digits()
+        public void Lastname_ShouldHaveSpecificFormat()
         {
             var userDetail = new CreateUserDetailModel();
             userDetail.Lastname = "12a3";
