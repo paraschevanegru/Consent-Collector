@@ -1,8 +1,10 @@
+import { AddFormComponent } from './add-form/add-form.component';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../models/user';
 import { UserDetail } from '../models/userDetail';
 import { AdminService } from './admin.service';
+
 
 @Component({
   selector: 'app-admin',
@@ -10,7 +12,7 @@ import { AdminService } from './admin.service';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
-
+  display:boolean = false;
   public nrOfNotification=13;
   public userId!:string;
   public user!:User;
@@ -35,8 +37,11 @@ export class AdminComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.adminService.toggle.subscribe(status=>this.display = status);
   }
-
+  onPress() {
+    this.adminService.toggle.emit(!this.display);
+  }
   public logout():void{
     this.router.navigateByUrl('/authentication/login');
   }

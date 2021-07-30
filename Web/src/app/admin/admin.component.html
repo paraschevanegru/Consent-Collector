@@ -17,12 +17,12 @@
 
 
 <div class="content-body">
-<div id="surveyButtons">
-  <button id="addButton" class="buttonAdminSurvey" name="addButton">Add</button>
-  <button id="editButton" class="buttonAdminSurvey" name="editButton">Edit</button>
-  <button id="deleteButton" class="buttonAdminSurvey" name="deleteButton">Delete</button>
-  <button id="addAdminButton" class="buttonAdminSurvey" name="addAdminButton">Add Admin</button>
-</div>
+  <div id="surveyButtons">
+    <button id="addButton" class="buttonAdminSurvey" name="addButton" (click)="onPress()">Add</button>
+    <button id="editButton" class="buttonAdminSurvey" name="editButton">Edit</button>
+    <button id="deleteButton" class="buttonAdminSurvey" name="deleteButton">Delete</button>
+    <button id="addAdminButton" class="buttonAdminSurvey" name="addAdminButton">Add Admin</button>
+  </div>
 
   <div class="survey-control">
     <div class="search">
@@ -36,8 +36,8 @@
       <option>Launch date</option>
     </datalist>
   </div>
+  <div id="comp-render" *ngIf="display">
+    <app-add-form></app-add-form>
+ </div>
 
-  <div class="content-surveys">
-    <app-survey></app-survey>
-  </div>
 </div>

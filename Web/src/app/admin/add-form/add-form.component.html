@@ -1,0 +1,31 @@
+<!-- <p>add-form works!</p> -->
+<form class="auth" [formGroup]="formAddSurvey" (ngSubmit)="submitAddSurvey()">
+  <label for="subject">Subject</label><br>
+  <input type="text" formControlName="subject" id="subject"><br>
+  <label for="description">Description</label><br>
+  <input type="description" formControlName="description" id="description"><br><br>
+  <label for="legalBasis">Legal Basis</label><br>
+  <select formControlName="legalBasis" id="legalBasis">
+    <option value="Contract">Contract</option>
+    <option value="Law">Law</option>
+    <option value="Legitimate interest">Legitimate interest</option>
+  </select>
+  <div>
+    <p>Choose your questions:</p>
+
+    <div *ngFor="let question of listOfQuestions; let i = index">
+      <input [value]="question.id" (change)="onCheckChange($event)" type="checkbox" id="{{question.id}}" name="{{question.id}}">
+      <label for="{{question.id}}">{{question.questions}} ({{question.optional | optional}})</label>
+    </div>
+
+  </div>
+
+
+  <label for="launchDate">Launch Date</label><br>
+  <input type="date" formControlName="launchDate" min="{{currentDate|date:'yyyy-MM-dd'}}" id="launchDate"><br><br>
+  <label for="expirationDate">Expiration Date</label><br>
+  <input type="date" formControlName="expirationDate" min="{{currentDate|date:'yyyy-MM-dd'}}"
+    id="expirationDate"><br><br>
+  <input type="submit" value="Add Survey">
+
+</form>

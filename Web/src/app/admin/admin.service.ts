@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Question } from '../models/question';
 import { Survey } from '../models/survey';
@@ -11,7 +11,7 @@ import { UserDetail } from '../models/userDetail';
   providedIn: 'root'
 })
 export class AdminService {
-
+  toggle : EventEmitter<boolean> = new EventEmitter<boolean>()
   private api: string = 'https://localhost:44311/api/v1';
   private httpOptions = {
     headers: new HttpHeaders({
@@ -20,7 +20,13 @@ export class AdminService {
   };
   constructor(private readonly httpClient:HttpClient) {
   }
-
+ public postConsent(data: JSON):Observable<Survey>{
+   return this.httpClient.post<Survey>(`${this.api}/consent`,data,this.httpOptions);
+ }
+public postSurveyQuestion(data: JSON):Observable<SurveyQuestion>{
+  return this.httpClient.post<SurveyQuestion>(`${this.api}/surveyQuestion`,data,this.httpOptions);
+}
+//  public postQuestion(){}
   public getUser(idUser:string):Observable<User>{
     return this.httpClient.get<User>(`${this.api}/user/${idUser}`,this.httpOptions);
   }
