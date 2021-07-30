@@ -11,6 +11,8 @@ import { ProfileService } from '../../profile.service';
 })
 export class SurveyListComponent implements OnInit {
   public survey!:Survey[];
+  public surveyIsOpen:boolean=false;
+  public surveyId!:string;
   constructor(private readonly profileService:ProfileService) {}
 
   ngOnInit(): void {
@@ -24,22 +26,26 @@ export class SurveyListComponent implements OnInit {
   }
   public open(id?:string):void{
     console.log("id:",id);
-    var question:Question;
-    this.profileService.getQuestionsBySurveyId(id).subscribe(
-      (data)=>{
-        console.log("data:",data);
-        data.forEach(element=>{
-          this.profileService.getQuestionById(element.idQuestion).subscribe(
-            (data)=>{
-              question=new Question(data.questions);
-              question.id=data.id;
-              this.profileService.activeQuestions.push(question);
-            }
-          )
-        });
-        this.profileService.isOpen=true;
-      },
-      (error)=>{console.log("error:",error)}
-    )
+    //var question:Question;
+    this.surveyId=id?id:"null";
+    this.surveyIsOpen=true;
+    // this.profileService.getQuestionsBySurveyId(id).subscribe(
+    //   (data)=>{
+    //     console.log("data:",data);
+    //     data.forEach(element=>{
+    //       this.profileService.getQuestionById(element.idQuestion).subscribe(
+    //         (data)=>{
+    //           question=new Question(data.questions);
+    //           question.id=data.id;
+    //           this.profileService.activeQuestions.push(question);
+    //         }
+    //       )
+    //     });
+    //     this.profileService.isOpen=true;
+    //     this.surveyIsOpen=true;
+
+    //   },
+    //   (error)=>{console.log("error:",error)}
+    // )
   }
 }

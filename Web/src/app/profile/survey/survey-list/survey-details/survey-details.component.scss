@@ -35,8 +35,10 @@
       padding: 0;
     }
   }
-  input[type="submit"]{
-    margin: 0 auto;
+  .control-btn{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 150px;
   }
 }
 

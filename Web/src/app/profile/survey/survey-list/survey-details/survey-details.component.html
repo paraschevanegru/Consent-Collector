@@ -1,20 +1,25 @@
-<form class="survey-form" id="survey-form" [style.display]="this.profileService.isOpen?'block':'none'">
+<!-- <form class="survey-form" id="survey-form" [style.display]="this.profileService.isOpen?'block':'none'"> -->
+  <!-- [style.display]="this.profileService.isOpen?'block':'none'" -->
+<form  *ngIf="formAnswer" [formGroup]="formAnswer" (ngSubmit)="submitAnswer()" class="survey-form" id="survey-form">
   <ul class="list-question">
     <div class="antet-survey-form">
       <label>Question:</label>
       <label>Yes/No</label>
     </div>
-    <li *ngFor="let item of this.profileService.activeQuestions">
+    <li *ngFor="let item of activeQuestions;let i = index">
       <div class="question">
         <div class="q">
           {{item.questions}}
         </div>
-        <input type="checkbox">
+        <!-- <input type="checkbox"> -->
+        <input type="checkbox" [formControlName]="getCheckBoxName(i.toString())">
       </div>
     </li>
   </ul>
-  <input type="button" value="Back" (click)="back()">
-  <input type="submit" value="Submit">
+  <div class="control-btn">
+    <!-- <input type="button" value="Back" (click)="back()"> -->
+    <input type="submit" value="Submit">
+  </div>
 </form>
 
 

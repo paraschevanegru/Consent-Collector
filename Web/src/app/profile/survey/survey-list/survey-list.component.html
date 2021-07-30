@@ -13,5 +13,6 @@
       <p><b>ExpirationDate:</b> {{s.expirationDate}}</p>
     </div>
 </div>
-
-<app-survey-details></app-survey-details>
+<div *ngIf="surveyIsOpen">
+  <app-survey-details [Id]="surveyId"></app-survey-details>
+</div>

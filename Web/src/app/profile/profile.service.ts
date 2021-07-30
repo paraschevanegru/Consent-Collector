@@ -11,8 +11,8 @@ import { UserDetail } from '../models/userDetail';
   providedIn: 'root'
 })
 export class ProfileService {
-  public isOpen=false;
-  public activeQuestions:Question[]=[];
+  // public isOpen=false;
+  // public activeQuestions:Question[]=[];
   private api: string = 'https://localhost:44311/api/v1';
   private httpOptions = {
     headers: new HttpHeaders({
