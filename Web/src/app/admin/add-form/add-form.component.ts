@@ -13,87 +13,98 @@ import { Question } from 'src/app/models/question';
 })
 
 export class AddFormComponent implements OnInit {
-  display:boolean = false;
-  public formAddSurvey!:FormGroup;
+  display: boolean = false;
+  public formAddSurvey!: FormGroup;
+  public formAddNewQuestion!: FormGroup;
   @Output()
-  public survey!:Survey;
-  currentDate : Date =new Date();
-  public listOfQuestions:Question[]=[];
+  public survey!: Survey;
+  currentDate: Date = new Date();
+  public listOfQuestions: Question[] = [];
 
 
-  constructor(private adminService:AdminService) {
+  constructor(private adminService: AdminService) {
   }
-  initalizeFormGroup():void{
-    this.formAddSurvey=new FormGroup({
-      subject:new FormControl(null),
-      description:new FormControl(null),
-      legalBasis:new FormControl(null),
-      launchDate:new FormControl(null),
-      expirationDate:new FormControl(null),
+  initalizeFormGroup(): void {
+    this.formAddSurvey = new FormGroup({
+      subject: new FormControl(null),
+      description: new FormControl(null),
+      legalBasis: new FormControl(null),
+      launchDate: new FormControl(null),
+      expirationDate: new FormControl(null),
       listOfQuestions: new FormArray([]),
+    })
+  }
+
+  initalizeQuestionFormGroup(): void {
+    this.formAddNewQuestion = new FormGroup({
+      optional: new FormControl(false),
+      questions: new FormControl(null),
     })
   }
   ngOnInit(): void {
     this.adminService.toggle.subscribe(status => this.display = status);
     this.initalizeFormGroup();
+    this.initalizeQuestionFormGroup();
     this.returnAllQuestions();
+  }
+
+  public submitAddNewQuestion(): void {
+    let questionData = this.formAddNewQuestion.value;
+    this.adminService.postQuestion(questionData).subscribe(
+      (result) => {
+        this.listOfQuestions.push({ id: result.id, optional: questionData.optional, questions: questionData.questions });
+      }
+    );
   }
   onCheckChange(event: any) {
     const formArray: FormArray = this.formAddSurvey.get('listOfQuestions') as FormArray;
-
-    /* Selected */
-    if(event.target.checked){
-      // Add a new control in the arrayForm
+    if (event.target.checked) {
       formArray.push(new FormControl(event.target.value));
     }
-    /* unselected */
-    else{
-      // find the unselected element
+    else {
       let i: number = 0;
 
       formArray.controls.forEach((ctrl: any) => {
-        if(ctrl.value == event.target.value) {
-          // Remove the unselected element from the arrayForm
+        if (ctrl.value == event.target.value) {
           formArray.removeAt(i);
           return;
         }
-
         i++;
       });
     }
   }
-  private returnAllQuestions():void{
+  private returnAllQuestions(): void {
     this.adminService.getAllQuestions().subscribe(
-      (data)=>{
+      (data) => {
         data.forEach(question => {
           this.listOfQuestions.push(question);
         })
       },
-  (error)=>{
-    console.log("error:",error);
-  }
+      (error) => {
+        console.log("error:", error);
+      }
     )
   }
-  public submitAddSurvey():void{
+  public submitAddSurvey(): void {
     let consentData = this.formAddSurvey.value;
     let questions = this.formAddSurvey.value.listOfQuestions;
     delete consentData.listOfQuestions;
-    console.log("Survey:",JSON.stringify(consentData));
+    console.log("Survey:", JSON.stringify(consentData));
     this.adminService.postConsent(consentData).subscribe(
-      (data)=>{
-            console.log(data);
-            questions.forEach((question: any)  => {
-              let surveyMap: any = {idSurvey: data.id, idQuestion: question}
-              this.adminService.postSurveyQuestion(surveyMap).subscribe(
-                (result)=>{
-                  console.log(result);
-                }
-              );
-            });
+      (data) => {
+        console.log(data);
+        questions.forEach((question: any) => {
+          let surveyMap: any = { idSurvey: data.id, idQuestion: question }
+          this.adminService.postSurveyQuestion(surveyMap).subscribe(
+            (result) => {
+              console.log(result);
+            }
+          );
+        });
 
       },
-      (error)=>{
-        console.log("error:",error);
+      (error) => {
+        console.log("error:", error);
       }
     )
   }

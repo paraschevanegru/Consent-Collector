@@ -29,3 +29,12 @@
   <input type="submit" value="Add Survey">
 
 </form>
+<form [formGroup]="formAddNewQuestion" (ngSubmit)="submitAddNewQuestion()">
+  <div>
+    <label for="question">Question</label><br>
+    <input formControlName="questions"type="text" id="question"><br>
+    <input formControlName="optional"type="checkbox" id="optionalQuestion" name="optionalQuestion">
+        <label for="optionalQuestion">Required</label>
+    <button type="submit">Add new Question</button>
+  </div>
+</form>
