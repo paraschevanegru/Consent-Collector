@@ -526,3 +526,19 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/aspnetcore,visualstudio
+
+ConsentCollector/ConsentCollector.API/bin/Debug/net5.0/ConsentCollector.API.runtimeconfig.dev.json
+
+ConsentCollector/ConsentCollector.API/obj/Debug/net5.0/ConsentCollector.API.csproj.FileListAbsolute.txt
+
+ConsentCollector/ConsentCollector.Business/obj/Debug/net5.0/ConsentCollector.Business.csproj.FileListAbsolute.txt
+
+ConsentCollector/ConsentCollector.Entities/bin/Debug/net5.0/ConsentCollector.Entities.runtimeconfig.dev.json
+
+ConsentCollector/ConsentCollector.Entities/obj/Debug/net5.0/ConsentCollector.Entities.csproj.FileListAbsolute.txt
+
+ConsentCollector/ConsentCollector.Persistence/bin/Debug/net5.0/ConsentCollector.Persistence.runtimeconfig.dev.json
+
+ConsentCollector/ConsentCollector.Persistence/obj/Debug/net5.0/ConsentCollector.Persistence.csproj.FileListAbsolute.txt
+
+ConsentCollector/TestConsentCollector/TestConsentCollector.csproj
