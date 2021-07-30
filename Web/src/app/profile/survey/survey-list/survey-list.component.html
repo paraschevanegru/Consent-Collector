@@ -1,0 +1,17 @@
+<div class="survey" *ngFor="let s of survey" (click)="open(s.id)" id={{s.id}}>
+    <div class="subject"><b>Subject:</b> {{s.subject}}</div>
+    <div class="survey-description">
+      <b>Description: </b>{{s.description}}
+    </div>
+    <div class="subject">
+      <p><b>LegalBasis:</b> {{s.legalBasis}}</p>
+    </div>
+
+    <div class="survey-footer">
+
+      <p><b>LaunchDate:</b> {{s.launchDate}}</p>
+      <p><b>ExpirationDate:</b> {{s.expirationDate}}</p>
+    </div>
+</div>
+
+<app-survey-details></app-survey-details>

@@ -4,6 +4,7 @@
   background: #FFFFFF;
   max-width: 360px;
   margin: 0 auto 100px;
+  margin-top: 50px;
   padding:60px 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -33,6 +34,9 @@
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
+}
+.auth input[type=submit]:disabled{
+  background: gray;
 }
 
 

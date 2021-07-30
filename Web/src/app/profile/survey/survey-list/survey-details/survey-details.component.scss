@@ -1,0 +1,42 @@
+.survey-form{
+  :hover{
+    cursor: pointer;
+  }
+  display: block;
+  border: 1px solid #000;
+  width: 500px;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 9;
+  background: darkgrey;
+  .list-question{
+    .antet-survey-form{
+      margin-right: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .question{
+      display: flex;
+    // display: none;
+      justify-content: space-between;
+      margin-right: 20px;
+      z-index: 22;
+      background: blueviolet;
+      .q{
+        overflow-y: hidden;
+        overflow-x: auto;
+      }
+    }
+    li{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  input[type="submit"]{
+    margin: 0 auto;
+  }
+}
+

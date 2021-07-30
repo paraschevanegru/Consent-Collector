@@ -1,5 +1,5 @@
 import { JsonpClientBackend } from '@angular/common/http';
-import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { User } from 'src/app/models/user';
 import { UserDetail } from 'src/app/models/userDetail';
@@ -13,9 +13,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit, OnChanges, OnDestroy {
-
-  //registerService:RegisterService;
-
+  @Input()
+  public invalidCredentials:boolean=false;
   public formRegister!: FormGroup;
   public user!:User;
   public user_detail!: UserDetail;
@@ -96,10 +95,11 @@ export class RegisterComponent implements OnInit, OnChanges, OnDestroy {
       console.log(this.user_detail);
       return this.registerService.createDetailUser(this.user_detail);
     })).subscribe(
-          (data)=>console.log("end:",data),
+          (data)=>this.redirectToLogin(),
           (error)=>{
-            console.log("err:",error);
-            this.registerService.deleteUser(this.user).subscribe()}
-          );
+            this.registerService.deleteUser(this.user).subscribe()
+            this.invalidCredentials=true;
+          }
+        );
   }
 }

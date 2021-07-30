@@ -1,0 +1,23 @@
+.survey{
+  width: 600px;
+  margin: 0 auto;
+  background: wheat;
+  margin-bottom: 10px;
+  .subject{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+  .survey-description{
+    margin: 10px;
+  }
+  .survey-footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+  }
+  :hover{
+    cursor: pointer;
+  }
+}

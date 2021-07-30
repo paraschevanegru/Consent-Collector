@@ -1,0 +1,20 @@
+<form class="survey-form" id="survey-form" [style.display]="this.profileService.isOpen?'block':'none'">
+  <ul class="list-question">
+    <div class="antet-survey-form">
+      <label>Question:</label>
+      <label>Yes/No</label>
+    </div>
+    <li *ngFor="let item of this.profileService.activeQuestions">
+      <div class="question">
+        <div class="q">
+          {{item.questions}}
+        </div>
+        <input type="checkbox">
+      </div>
+    </li>
+  </ul>
+  <input type="button" value="Back" (click)="back()">
+  <input type="submit" value="Submit">
+</form>
+
+
