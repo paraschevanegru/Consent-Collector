@@ -68,7 +68,7 @@ namespace TestConsentCollector
         }
 
         [Fact]
-        public async void When_GetById_IsCalled_Expect_GetNotificationByIdFromRepositoryToBeInvoked_And_MappedResponseToBeReturned()
+        public async void When_GetById_IsCalled_Expect_GetSurveyByIdFromRepositoryToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange
             var survey = new Survey("Party", "New Year Ave","Contract", new DateTime(2021, 4, 12), new DateTime(2021, 4, 15));
@@ -143,7 +143,7 @@ namespace TestConsentCollector
         }
 
         [Fact]
-        public async void When_Delete_IsCalled_Expect_GetAnswerByIdAndDeleteAndSaveChangesFromRepositoryToBeInvoked()
+        public async void When_Delete_IsCalled_Expect_GetSurveyByIdAndDeleteAndSaveChangesFromRepositoryToBeInvoked()
         {
             //Arrange
             var survey = new Survey("Party", "New Year Ave", "Contract", new DateTime(2021, 4, 12), new DateTime(2021, 4, 15));
@@ -168,7 +168,7 @@ namespace TestConsentCollector
         }
 
         [Fact]
-        public async void When_Update_IsCalled_Expect_GetAnswerByIdAndUpdateAndSaveChangesFromRepositoryToBeInvoked()
+        public async void When_Update_IsCalled_Expect_GetSurveyByIdAndUpdateAndSaveChangesFromRepositoryToBeInvoked()
         {
             //Arrange
             var survey = new Survey("Party", "New Year Ave", "Contract", new DateTime(2021, 4, 12), new DateTime(2021, 4, 15));

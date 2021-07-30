@@ -104,7 +104,6 @@ namespace TestConsentCollector
 
             //Assert
             result.Should().BeEquivalentTo(expectedResult);
-
         }
 
         [Fact]
