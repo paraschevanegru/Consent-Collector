@@ -1,1 +1,48 @@
-<p>profile works!</p>
+<div class="header">
+  <div class="home">
+    <span class="material-icons">home</span>
+  </div>
+  <div class="logo"><img src="./../../assets/consent.png" alt=""></div>
+  <div class="from-user">
+    <div class="notification">
+      <span class="material-icons">notifications</span>
+      <sup class="number-of-notification">{{nrOfNotification}}</sup>
+    </div>
+    <div class="user">
+      <div *ngIf="userDetail?.firstname" class="user-fl" >{{userDetail.firstname}} {{userDetail.lastname}}</div>
+      <span class="material-icons">account_circle</span>
+    </div>
+    <div class="logout" (click)="logout()">
+      <span class="material-icons">logout</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="content-body">
+  <div class="survey-control">
+    <div class="search">
+      <input type="text" name="search-survey" placeholder="Search survey...">
+      <span class="material-icons">search</span>
+    </div>
+
+    <input type="text" list="test" placeholder="SortBy"><br><br>
+      <datalist id="test">
+        <option>Name</option>
+        <option>Launch date</option>
+      </datalist>
+
+    <input type="text" list="filter" placeholder="FilterBy"><br><br>
+      <datalist id="filter">
+        <option>Subject</option>
+        <option>Launch date</option>
+      </datalist>
+  </div>
+
+  <div class="content-surveys">
+    <app-survey></app-survey>
+  </div>
+</div>
+
+
+

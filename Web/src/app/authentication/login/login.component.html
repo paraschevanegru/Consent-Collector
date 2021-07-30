@@ -4,6 +4,9 @@
   <label for="password">Password</label><br>
   <input type="password" formControlName="password" id="password" placeholder="Your password"><br><br>
   <input type="submit" value="Login">
+  <div class="invalid-data" *ngIf="invalidCredentials">
+    Invalid username and/or password
+  </div>
   <div>
     <p>Forgot your password?</p>
   </div>

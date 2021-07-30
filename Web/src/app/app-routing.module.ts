@@ -4,9 +4,11 @@ import { LoginComponent } from './authentication/login/login.component';
 import { RegisterComponent } from './authentication/register/register.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/authentication/login', pathMatch: 'full' },
+  { path: 'profile', redirectTo: '/authentication/login', pathMatch: 'full' },
   {
     path: 'authentication',
     component: AuthenticationComponent,
@@ -16,7 +18,8 @@ const routes: Routes = [
       { path: 'register', component: RegisterComponent }
     ]
   },
-  {path:'profile',component:ProfileComponent}
+  { path:'profile/:id',component:ProfileComponent },
+  { path:'admin/:id',component:AdminComponent }
 
 ];
 

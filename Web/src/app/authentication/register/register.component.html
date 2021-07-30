@@ -70,7 +70,10 @@
   <div class="invalid-data" *ngIf="formRegister.get('register_password2')?.value!=formRegister.get('register_password1')?.value">
     Passwords are different
   </div>
-  <input type="submit" value="Register">
+  <input type="submit" value="Register" [disabled]="formRegister.invalid">
+  <div class="invalid-data" *ngIf="invalidCredentials">
+    Phone, email or username already exists
+  </div>
   <div (click)="redirectToLogin()">
   <p>Sign in</p>
   </div>

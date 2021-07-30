@@ -8,7 +8,6 @@ import { User } from '../models/user';
   styleUrls: ['./authentication.component.scss']
 })
 export class AuthenticationComponent implements OnInit {
-  @Output() press:EventEmitter<string>=new EventEmitter<string>();
 
   constructor() { }
 
