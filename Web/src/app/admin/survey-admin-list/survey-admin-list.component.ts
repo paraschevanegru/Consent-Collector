@@ -8,21 +8,34 @@ import { Survey } from 'src/app/models/survey';
   styleUrls: ['./survey-admin-list.component.scss']
 })
 export class SurveyAdminListComponent implements OnInit {
-  public survey!:Survey[];
-  public surveyIsOpen:boolean=false;
-  public surveyId!:string;
-  constructor(private readonly adminService:AdminService) { }
+  public survey!: Survey[];
+  surveyId!: string;
+  currentSurvey!: string;
+  displayEditSurvey: boolean = false;
+  constructor(private readonly adminService: AdminService) { }
 
   ngOnInit(): void {
     this.adminService.getAllSurveys().subscribe(
-      (data)=>{
-        this.survey=data;
+      (data) => {
+        this.survey = data;
       }
     )
   }
+  onPressEditSurvey(id?: string) {
+    if(this.displayEditSurvey){
+      this.displayEditSurvey = false;
+    }
+    this.displayEditSurvey = !this.displayEditSurvey;
+    this.adminService.showEditSurvey(this.displayEditSurvey);
+    if (id != undefined) {
+      this.surveyId = id;
+      this.currentSurvey = id;
+      this.adminService.shareSurveyId(this.surveyId);
+    }
 
-  public deleteSurvey(id?:string):void{
-    console.log("id:",id);
+  }
+  public deleteSurvey(id?: string): void {
+    console.log("id:", id);
     this.adminService.deleteBySurveyId(id).subscribe(
       () => {
         console.log("delete from SurveyQuestion");
@@ -32,7 +45,7 @@ export class SurveyAdminListComponent implements OnInit {
       () => {
         console.log("delete from Survey");
       }
-    );;
+    );
   }
 
 }

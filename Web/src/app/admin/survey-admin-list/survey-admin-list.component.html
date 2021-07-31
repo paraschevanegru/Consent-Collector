@@ -1,5 +1,5 @@
 <div class="survey" *ngFor="let s of survey"  id={{s.id}}>
-  <button id="editButton" class="buttonAdminSurvey" name="editButton">Edit</button>
+  <button id="editButton" class="buttonAdminSurvey" name="editButton" (click)="onPressEditSurvey(s.id)">Edit</button>
   <button id="deleteButton" class="buttonAdminSurvey" name="deleteButton"(click)="deleteSurvey(s.id)">Delete</button>
   <div class="subject"><b>Subject:</b> {{s.subject}}</div>
   <div class="survey-description">
@@ -11,8 +11,11 @@
 
   <div class="survey-footer">
 
-    <p><b>LaunchDate:</b> {{s.launchDate}}</p>
-    <p><b>ExpirationDate:</b> {{s.expirationDate}}</p>
+    <p><b>LaunchDate:</b> {{s.launchDate |date:'yyyy-MM-dd'}}</p>
+    <p><b>ExpirationDate:</b> {{s.expirationDate |date:'yyyy-MM-dd'}}</p>
+  </div>
+  <div id="comp-render" *ngIf="displayEditSurvey && currentSurvey == s.id">
+    <app-edit-survey></app-edit-survey>
   </div>
 </div>
 

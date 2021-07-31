@@ -19,6 +19,7 @@ import { AddFormComponent } from './admin/add-form/add-form.component';
 import { OptionalPipe } from './admin/optional.pipe';
 import { AddAdminComponent } from './admin/add-admin/add-admin.component';
 import { SurveyAdminListComponent } from './admin/survey-admin-list/survey-admin-list.component';
+import { EditSurveyComponent } from './admin/edit-survey/edit-survey.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { SurveyAdminListComponent } from './admin/survey-admin-list/survey-admin
     AddFormComponent,
     OptionalPipe,
     AddAdminComponent,
-    SurveyAdminListComponent
+    SurveyAdminListComponent,
+    EditSurveyComponent
   ],
   imports: [
     BrowserModule,

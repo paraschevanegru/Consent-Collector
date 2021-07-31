@@ -13,35 +13,40 @@ import { Survey } from '../models/survey';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
-  public survey!:Survey[];
-  display:boolean = false;
+  surveyId!: string;
+  public survey!: Survey[];
+  display: boolean = false;
   displayAdmin: boolean = false;
-  public nrOfNotification=13;
-  public userId!:string;
-  public user!:User;
-  public userDetail!:UserDetail;
+  displayEditSurvey: boolean = false;
+  public nrOfNotification = 13;
+  public userId!: string;
+  public user!: User;
+  public userDetail!: UserDetail;
 
-  constructor(public readonly router:Router,private activatedRoute: ActivatedRoute,private readonly adminService:AdminService) {
+  constructor(public readonly router: Router, private activatedRoute: ActivatedRoute, private readonly adminService: AdminService) {
     this.activatedRoute.params.subscribe(params => {
-      this.userId= params['id'];
+      this.userId = params['id'];
       this.adminService.getUser(this.userId).subscribe(
-        (data)=>{
-          this.user=data;
+        (data) => {
+          this.user = data;
           this.adminService.getUserDetail(this.userId).subscribe(
-            (data)=>{
-              this.userDetail=data;
+            (data) => {
+              this.userDetail = data;
             }
           )
         },
-        (error)=>{this.router.navigateByUrl("authentication/login")}
+        (error) => { this.router.navigateByUrl("authentication/login") }
       );
     });
   }
 
 
   ngOnInit(): void {
-    this.adminService.toggleAddNewSurvey.subscribe(status=>this.display = status);
-    this.adminService.toggleAddAdmin.subscribe(status=>this.displayAdmin = status);
+    this.adminService.toggleAddNewSurvey.subscribe(status => this.display = status);
+    this.adminService.toggleAddAdmin.subscribe(status => this.displayAdmin = status);
+    this.adminService.sharedDisplayEdit.subscribe(status => this.displayEditSurvey = status);
+    this.adminService.sharedMessage.subscribe(status => this.surveyId = status);
+
   }
   onPress() {
     this.adminService.toggleAddNewSurvey.emit(!this.display);
@@ -49,7 +54,8 @@ export class AdminComponent implements OnInit {
   onPressAddAdmin() {
     this.adminService.toggleAddAdmin.emit(!this.displayAdmin);
   }
-  public logout():void{
+
+  public logout(): void {
     this.router.navigateByUrl('/authentication/login');
   }
 

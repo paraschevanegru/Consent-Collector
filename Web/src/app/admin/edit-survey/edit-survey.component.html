@@ -1,4 +1,4 @@
-<form class="auth" [formGroup]="formAddSurvey" (ngSubmit)="submitAddSurvey()">
+<form class="auth" [formGroup]="formEditSurvey" (ngSubmit)="submitEditSurvey()">
   <label for="subject">Subject</label><br>
   <input type="text" formControlName="subject" id="subject"><br>
   <label for="description">Description</label><br>
@@ -10,30 +10,35 @@
     <option value="Legitimate interest">Legitimate interest</option>
   </select>
   <div>
-    <p>Choose your questions:</p>
-
-    <div *ngFor="let question of listOfQuestions; let i = index">
-      <input [value]="question.id" (change)="onCheckChange($event)" type="checkbox" id="{{question.id}}" name="{{question.id}}">
-      <label for="{{question.id}}">{{question.questions}} ({{question.optional | optional}})</label>
+    <div *ngIf="listOfQuestions.length == 0">
+      <p>Currently there are no questions</p>
     </div>
+    <div *ngIf="listOfQuestions.length > 0">
+      <p>Add new questions:</p>
 
+      <div *ngFor="let question of listOfQuestions; let i = index">
+        <input [value]="question.id" (change)="onCheckChange($event)" type="checkbox" id="{{question.id}}"
+          name="{{question.id}}" checked>
+        <label for="{{question.id}}">{{question.questions}} ({{question.optional | optional}})</label>
+      </div>
+    </div>
   </div>
 
 
   <label for="launchDate">Launch Date</label><br>
-  <input type="date" formControlName="launchDate" min="{{currentDate|date:'yyyy-MM-dd'}}" id="launchDate"><br><br>
+  <input type="date" formControlName="launchDate" min="{{currentDate |date:'yyyy-MM-dd'}}" id="launchDate"><br><br>
   <label for="expirationDate">Expiration Date</label><br>
   <input type="date" formControlName="expirationDate" min="{{currentDate|date:'yyyy-MM-dd'}}"
     id="expirationDate"><br><br>
-  <input type="submit" value="Add Survey">
+  <input type="submit" value="Edit Survey">
 
 </form>
 <form [formGroup]="formAddNewQuestion" (ngSubmit)="submitAddNewQuestion()">
   <div>
     <label for="question">Question</label><br>
-    <input formControlName="questions"type="text" id="question"><br>
-    <input formControlName="optional"type="checkbox" id="optionalQuestion" name="optionalQuestion">
-        <label for="optionalQuestion">Required</label>
+    <input formControlName="questions" type="text" id="question"><br>
+    <input formControlName="optional" type="checkbox" id="optionalQuestion" name="optionalQuestion">
+    <label for="optionalQuestion">Required</label>
     <button type="submit">Add new Question</button>
   </div>
 </form>

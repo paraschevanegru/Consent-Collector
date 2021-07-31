@@ -1,7 +1,7 @@
 import { Survey } from 'src/app/models/survey';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Question } from '../models/question';
 import { SurveyQuestion } from '../models/surveyQuestion';
 import { User } from '../models/user';
@@ -11,6 +11,11 @@ import { UserDetail } from '../models/userDetail';
   providedIn: 'root'
 })
 export class AdminService {
+
+  private surveyId = new BehaviorSubject('First Message');
+  sharedMessage = this.surveyId.asObservable();
+  private displayEdit = new BehaviorSubject(false);
+  sharedDisplayEdit = this.displayEdit.asObservable();
   toggleAddNewSurvey: EventEmitter<boolean> = new EventEmitter<boolean>()
   toggleAddAdmin: EventEmitter<boolean> = new EventEmitter<boolean>()
   private api: string = 'https://localhost:44311/api/v1';
@@ -20,6 +25,13 @@ export class AdminService {
     })
   };
   constructor(private readonly httpClient: HttpClient) {
+  }
+
+  shareSurveyId(sharedSurveyId: string) {
+    this.surveyId.next(sharedSurveyId)
+  }
+  showEditSurvey(displayEdit: boolean) {
+    this.displayEdit.next(displayEdit);
   }
   public postConsent(data: JSON): Observable<Survey> {
     return this.httpClient.post<Survey>(`${this.api}/consent`, data, this.httpOptions);
@@ -53,8 +65,8 @@ export class AdminService {
     return this.httpClient.get<Survey>(`${this.api}/consent/${id}`, this.httpOptions);
   }
 
-  public updateSurvey(id?: string): Observable<Survey> {
-    return this.httpClient.put<Survey>(`${this.api}/consent/${id}`, this.httpOptions);
+  public updateSurvey(id?: string,data?: JSON): Observable<Survey> {
+    return this.httpClient.put<Survey>(`${this.api}/consent/${id}`,data, this.httpOptions);
   }
 
   public getAllQuestions(): Observable<Question[]> {
