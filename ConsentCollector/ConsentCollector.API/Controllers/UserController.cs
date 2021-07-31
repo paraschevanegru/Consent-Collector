@@ -4,8 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using ConsentCollector.Business.Consent.Models.Users;
 using ConsentCollector.Business.Consent.Services.Users;
+using ConsentCollector.Entities.Consent;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace ConsentCollector.API.Controllers
 {
@@ -79,6 +82,22 @@ namespace ConsentCollector.API.Controllers
             await userService.Update(id, model);
 
             return NoContent();
+        }
+
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> Patch([FromRoute] Guid id, [FromBody] JsonPatchDocument<UserModel> userPatchDocument)
+        {
+            var result = await userService.GetById(id);
+            userPatchDocument.ApplyTo(result);
+            CreateUserModel user = new CreateUserModel(){
+                Username = result.Username, 
+                Password = result.Password, 
+                Role = result.Role
+            };
+
+            await userService.Update(id, user);
+
+            return Ok(result);
         }
 
     }

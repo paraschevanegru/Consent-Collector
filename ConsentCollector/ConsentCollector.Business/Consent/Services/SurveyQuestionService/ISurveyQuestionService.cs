@@ -18,6 +18,8 @@ namespace ConsentCollector.Business.Consent.Services.SurveyQuestionService
 
         Task Delete(Guid surveyQuestionId);
 
+        Task DeleteBySurvey(Guid surveyId);
+
         Task Update(Guid surveyQuestionId, CreateSurveyQuestionModel model);
     }
 }

@@ -1,1 +1,47 @@
-<p>admin works!</p>
+<div class="header">
+  <div class="home">
+    <span class="material-icons">home</span>
+  </div>
+  <div class="logo"><img src="./../../assets/consent.png" alt=""></div>
+  <div class="from-user">
+
+    <div class="user">
+      <div *ngIf="userDetail?.firstname" class="user-fl">{{userDetail.firstname}} {{userDetail.lastname}}</div>
+      <span class="material-icons">account_circle</span>
+    </div>
+    <div class="logout" (click)="logout()">
+      <span class="material-icons">logout</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="content-body">
+  <div id="surveyButtons">
+    <button id="addButton" class="buttonAdminSurvey" name="addButton" (click)="onPress()">Add</button>
+    <button id="addAdminButton" class="buttonAdminSurvey" name="addAdminButton" (click)="onPressAddAdmin()">Add Admin</button>
+  </div>
+
+  <div class="survey-control">
+    <div class="search">
+      <input type="text" name="search-survey" placeholder="Search survey...">
+      <span class="material-icons">search</span>
+    </div>
+
+    <input type="text" list="filter" placeholder="FilterBy"><br><br>
+    <datalist id="filter">
+      <option>Subject</option>
+      <option>Launch date</option>
+    </datalist>
+  </div>
+  <div id="comp-render" *ngIf="display">
+    <app-add-form></app-add-form>
+ </div>
+ <div id="comp-render" *ngIf="displayAdmin">
+  <app-add-admin></app-add-admin>
+</div>
+ <div class="content-surveys">
+  <app-survey-admin-list></app-survey-admin-list>
+</div>
+
+</div>

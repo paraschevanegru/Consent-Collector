@@ -34,6 +34,12 @@ namespace ConsentCollector.Business.Consent.Services.SurveyQuestionService
             await surveyQuestionRepository.SaveChanges();
         }
 
+        public async Task DeleteBySurvey(Guid surveyId)
+        {
+            surveyQuestionRepository.DeleteBySurveyId(surveyId);
+            await surveyQuestionRepository.SaveChanges();
+        }
+
         public IEnumerable<SurveyQuestionModel> GetAll()
         {
             var surveyQuestion = surveyQuestionRepository.GetAll();

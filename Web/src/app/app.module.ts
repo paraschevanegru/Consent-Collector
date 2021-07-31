@@ -15,6 +15,11 @@ import { SurveyComponent } from './profile/survey/survey.component';
 import { SurveyListComponent } from './profile/survey/survey-list/survey-list.component';
 import { SurveyDetailsComponent } from './profile/survey/survey-list/survey-details/survey-details.component';
 import { AdminComponent } from './admin/admin.component';
+import { AddFormComponent } from './admin/add-form/add-form.component';
+import { OptionalPipe } from './admin/optional.pipe';
+import { AddAdminComponent } from './admin/add-admin/add-admin.component';
+import { SurveyAdminListComponent } from './admin/survey-admin-list/survey-admin-list.component';
+import { EditSurveyComponent } from './admin/edit-survey/edit-survey.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +30,12 @@ import { AdminComponent } from './admin/admin.component';
     SurveyComponent,
     SurveyListComponent,
     SurveyDetailsComponent,
-    AdminComponent
+    AdminComponent,
+    AddFormComponent,
+    OptionalPipe,
+    AddAdminComponent,
+    SurveyAdminListComponent,
+    EditSurveyComponent
   ],
   imports: [
     BrowserModule,

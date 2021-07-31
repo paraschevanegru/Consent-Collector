@@ -25,6 +25,16 @@ namespace ConsentCollector.Persistence.SurveyQuestionRepository
             context.SurveyQuestion.Remove(surveyQuestion);
         }
 
+        public void DeleteBySurveyId(Guid surveyId)
+        {
+            var idList = context.SurveyQuestion.Where(a => a.IdSurvey == surveyId).ToList();
+            foreach (var survey in idList)
+            {
+                context.SurveyQuestion.Remove(survey);
+            }
+           
+        }
+
         public IEnumerable<SurveyQuestion> GetAll()
         {
             return context.SurveyQuestion;
