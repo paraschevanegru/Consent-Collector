@@ -17,6 +17,7 @@ namespace ConsentCollector.Persistence.SurveyQuestionRepository
         Task SaveChanges();
 
         void Delete(SurveyQuestion surveyQuestion);
+        void DeleteBySurveyId(Guid surveyId);
         void Update(SurveyQuestion surveyQuestion);
     }
 }

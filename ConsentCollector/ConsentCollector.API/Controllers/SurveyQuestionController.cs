@@ -33,6 +33,13 @@ namespace ConsentCollector.API.Controllers
             var result = surveyQuestionService.GetBySurveyId(surveyId);
             return Ok(result);
         }
+
+        [HttpDelete("survey/{surveyId}")]
+        public async Task<IActionResult> DeleteBySurveyId([FromRoute] Guid surveyId)
+        {
+            await surveyQuestionService.DeleteBySurvey(surveyId);
+            return NoContent();
+        }
         [HttpGet("{id}")]
         public async Task<IActionResult> Get([FromRoute] Guid id)
         {
