@@ -27,6 +27,12 @@ namespace ConsentCollector.API.Controllers
 
             return Ok(comments);
         }
+        [HttpGet("user/{userId}/survey/{surveyId}")]
+        public async Task<IActionResult> GetUserAndSurveyId([FromRoute] Guid userId, [FromRoute] Guid surveyId)
+        {
+            var result = await commentService.GetByUserAndSurveyId(userId, surveyId);
+            return Ok(result);
+        }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get([FromRoute] Guid id)

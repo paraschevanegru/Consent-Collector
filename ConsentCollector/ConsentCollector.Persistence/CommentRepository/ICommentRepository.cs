@@ -13,6 +13,7 @@ namespace ConsentCollector.Persistence.CommentRepository
         Task<Comment> GetCommentById(Guid id);
         Task Create(Comment comment);
         Task SaveChanges();
+        Task<Comment> GetAnswerByUserAndSurveyId(Guid userId, Guid surveyId);
         void Delete(Comment comment);
         void Update(Comment comment);
     }

@@ -25,6 +25,12 @@ namespace ConsentCollector.Business.Consent.Services.CommentService
             return mapper.Map<CommentModel>(comment);
         }
 
+        public async Task<CommentModel> GetByUserAndSurveyId(Guid userId, Guid surveyId)
+        {
+            var comment = await commentRepository.GetAnswerByUserAndSurveyId(userId, surveyId);
+            return mapper.Map<CommentModel>(comment);
+        }
+
         public async Task<CommentModel> Create(CreateCommentModel model)
         {
             var comment = this.mapper.Map<Comment>(model);

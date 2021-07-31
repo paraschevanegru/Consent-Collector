@@ -15,7 +15,7 @@ namespace ConsentCollector.Business.Consent.Services.CommentService
         Task<CommentModel> Create(CreateCommentModel model);
 
         Task Delete(Guid commentId);
-
+        Task<CommentModel> GetByUserAndSurveyId(Guid userId, Guid surveyId);
         Task Update(Guid commentId, CreateCommentModel model);
     }
 }
