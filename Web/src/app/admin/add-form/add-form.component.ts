@@ -42,7 +42,7 @@ export class AddFormComponent implements OnInit {
     })
   }
   ngOnInit(): void {
-    this.adminService.toggle.subscribe(status => this.display = status);
+    this.adminService.toggleAddNewSurvey.subscribe(status => this.display = status);
     this.initalizeFormGroup();
     this.initalizeQuestionFormGroup();
     this.returnAllQuestions();

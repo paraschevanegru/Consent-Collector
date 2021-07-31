@@ -1,8 +1,8 @@
+import { Survey } from 'src/app/models/survey';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Question } from '../models/question';
-import { Survey } from '../models/survey';
 import { SurveyQuestion } from '../models/surveyQuestion';
 import { User } from '../models/user';
 import { UserDetail } from '../models/userDetail';
@@ -11,7 +11,8 @@ import { UserDetail } from '../models/userDetail';
   providedIn: 'root'
 })
 export class AdminService {
-  toggle: EventEmitter<boolean> = new EventEmitter<boolean>()
+  toggleAddNewSurvey: EventEmitter<boolean> = new EventEmitter<boolean>()
+  toggleAddAdmin: EventEmitter<boolean> = new EventEmitter<boolean>()
   private api: string = 'https://localhost:44311/api/v1';
   private httpOptions = {
     headers: new HttpHeaders({
@@ -29,6 +30,14 @@ export class AdminService {
   public postQuestion(data: JSON): Observable<Question> {
     return this.httpClient.post<Question>(`${this.api}/question`, data, this.httpOptions);
   }
+
+  public getAllUsers(): Observable<User[]> {
+    return this.httpClient.get<User[]>(`${this.api}/user`, this.httpOptions);
+  }
+
+  public updateUser(idUser: string): Observable<User> {
+    return this.httpClient.put<User>(`${this.api}/user/${idUser}`, this.httpOptions);
+  }
   public getUser(idUser: string): Observable<User> {
     return this.httpClient.get<User>(`${this.api}/user/${idUser}`, this.httpOptions);
   }
@@ -38,6 +47,14 @@ export class AdminService {
 
   public getAllSurveys(): Observable<Survey[]> {
     return this.httpClient.get<Survey[]>(`${this.api}/consent`, this.httpOptions);
+  }
+
+  public getSurvey(id?: string): Observable<Survey> {
+    return this.httpClient.get<Survey>(`${this.api}/consent/${id}`, this.httpOptions);
+  }
+
+  public updateSurvey(id?: string): Observable<Survey> {
+    return this.httpClient.put<Survey>(`${this.api}/consent/${id}`, this.httpOptions);
   }
 
   public getAllQuestions(): Observable<Question[]> {
@@ -51,5 +68,12 @@ export class AdminService {
     var path = this.api + "/surveyQuestion/survey/" + id;
     //var path=`${this.api}​/surveyQuestion/survey​/${id}`;
     return this.httpClient.get<SurveyQuestion[]>(path, this.httpOptions);
+  }
+  public deleteBySurveyId(id?: string):Observable<SurveyQuestion>{
+    var path = this.api + "/surveyQuestion/survey/" + id;
+    return this.httpClient.delete<SurveyQuestion>(path, this.httpOptions);
+  }
+  public deleteSurvey(id?: string):Observable<Survey>{
+    return this.httpClient.delete<Survey>(`${this.api}/consent/${id}`, this.httpOptions);
   }
 }

@@ -1,0 +1,13 @@
+<form class="auth" [formGroup]="formAddAdmin" (ngSubmit)="submitAddAdmin()">
+  <div>
+    <p>Choose an User to change his role to Admin:</p>
+
+    <div *ngFor="let user of listOfUsers; let i = index">
+      <input [value]="user.id" type="checkbox" id="{{user.id}}" name="{{user.id}}">
+      <label for="{{user.id}}">{{user.username}} ({{user.role}})</label>
+    </div>
+
+  </div>
+  <input type="submit" value="Add Admin">
+
+</form>
