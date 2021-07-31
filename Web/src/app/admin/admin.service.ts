@@ -69,11 +69,16 @@ export class AdminService {
     //var path=`${this.api}​/surveyQuestion/survey​/${id}`;
     return this.httpClient.get<SurveyQuestion[]>(path, this.httpOptions);
   }
-  public deleteBySurveyId(id?: string):Observable<SurveyQuestion>{
+  public deleteBySurveyId(id?: string): Observable<SurveyQuestion> {
     var path = this.api + "/surveyQuestion/survey/" + id;
     return this.httpClient.delete<SurveyQuestion>(path, this.httpOptions);
   }
-  public deleteSurvey(id?: string):Observable<Survey>{
+  public deleteSurvey(id?: string): Observable<Survey> {
     return this.httpClient.delete<Survey>(`${this.api}/consent/${id}`, this.httpOptions);
+  }
+
+  public patchUserRole(id?: string, role?: string): Observable<User> {
+    let data = [{ op: "replace", path: "/role", value: role }];
+    return this.httpClient.patch<User>(`${this.api}/user/${id}`, data, this.httpOptions);
   }
 }

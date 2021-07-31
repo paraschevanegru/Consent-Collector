@@ -3,7 +3,7 @@
     <p>Choose an User to change his role to Admin:</p>
 
     <div *ngFor="let user of listOfUsers; let i = index">
-      <input [value]="user.id" type="checkbox" id="{{user.id}}" name="{{user.id}}">
+      <input [value]="user.id" (change)="onCheckChange($event)" type="checkbox" id="{{user.id}}" name="{{user.id}}">
       <label for="{{user.id}}">{{user.username}} ({{user.role}})</label>
     </div>
 
