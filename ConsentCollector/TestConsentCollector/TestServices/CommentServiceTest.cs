@@ -65,6 +65,36 @@ namespace TestConsentCollector
         }
 
         [Fact]
+        public async void When_GetByUserAndSurveyId_IsCalled_Expect_GetAnswerByUserAndSurveyIdFromRepositoryToBeInvoked_And_MappedResponseToBeReturned()
+        {
+            //Arrange
+            var comment = new Comment(Guid.NewGuid(), Guid.NewGuid(), "Text");
+
+            var expectedResult = new CommentModel()
+            {
+                Id = comment.Id,
+                IdUser = comment.IdUser,
+                IdSurvey = comment.IdSurvey,
+                Text = comment.Text,
+
+            };
+
+            _commentRepositoryMock
+                .Setup(c => c.GetAnswerByUserAndSurveyId(comment.IdUser,comment.IdSurvey))
+                .ReturnsAsync(comment);
+
+            _mapperMock
+                .Setup(m => m.Map<CommentModel>(comment))
+                .Returns(expectedResult);
+
+            //Act
+            var result = await sut.GetByUserAndSurveyId(comment.IdUser, comment.IdSurvey);
+
+            //Assert
+            result.Should().BeEquivalentTo(expectedResult);
+        }
+
+        [Fact]
         public void When_GetAll_IsCalled_Expect_GetAllFromRepositoryToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange

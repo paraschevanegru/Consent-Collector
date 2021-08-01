@@ -440,3 +440,10 @@ D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\
 D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
 D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\Practica\Proiect\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\BCrypt.Net-Next.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\BCrypt.Net-Next.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\FluentValidation.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+F:\Centric\Consent Collector\Consent-Collector\ConsentCollector\ConsentCollector.API\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

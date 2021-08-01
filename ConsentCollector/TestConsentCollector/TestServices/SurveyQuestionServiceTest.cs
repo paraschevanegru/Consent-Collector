@@ -163,6 +163,26 @@ namespace TestConsentCollector.TestServices
         }
 
         [Fact]
+        public async void When_DeleteBySurvey_IsCalled_Expect_DeleteBySurveyIdAndSaveChangesFromRepositoryToBeInvoked()
+        {
+            //Arrange
+            var surveyQuestion = new SurveyQuestion(Guid.NewGuid(), Guid.NewGuid());
+
+            surveyQuestionRepositoryMock
+                .Setup(s => s.DeleteBySurveyId(surveyQuestion.IdSurvey));
+
+            surveyQuestionRepositoryMock
+                .Setup(n => n.SaveChanges())
+                .Returns(Task.CompletedTask);
+
+            //Act
+            await sut.DeleteBySurvey(surveyQuestion.IdSurvey);
+
+            //Assert
+            //result.Should().BeEquivalentTo(expectedResult);
+        }
+
+        [Fact]
         public async void When_Update_IsCalled_Expect_GetSurveyQuestionByIdAndUpdateAndSaveChangesFromRepositoryToBeInvoked()
         {
             //Arrange
