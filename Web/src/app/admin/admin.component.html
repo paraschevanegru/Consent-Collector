@@ -1,47 +1,59 @@
-<div class="header">
-  <div class="home">
-    <span class="material-icons">home</span>
-  </div>
-  <div class="logo"><img src="./../../assets/consent.png" alt=""></div>
-  <div class="from-user">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <div class="user">
-      <div *ngIf="userDetail?.firstname" class="user-fl">{{userDetail.firstname}} {{userDetail.lastname}}</div>
-      <span class="material-icons">account_circle</span>
+<nav class="navbar navbar-light bg-light sticky-top">
+  <div class="container-fluid"><a class="navbar-brand mx-auto" href="#">
+      <img src="./../../assets/consent.png" width="200" alt="">
+    </a>
+
+
+    <div class="separate">
+      <div *ngIf="userDetail?.firstname" class="user-fl">{{userDetail.firstname}} {{userDetail.lastname}} <span
+          class="material-icons">account_circle</span></div>
+
     </div>
-    <div class="logout" (click)="logout()">
-      <span class="material-icons">logout</span>
+    <div class="separate" (click)="logout()">
+      <div> Logout <span class="material-icons">logout</span></div>
+
     </div>
   </div>
-</div>
+
+</nav>
 
 
-<div class="content-body">
-  <div id="surveyButtons">
-    <button id="addButton" class="buttonAdminSurvey" name="addButton" (click)="onPress()">Add</button>
-    <button id="addAdminButton" class="buttonAdminSurvey" name="addAdminButton" (click)="onPressAddAdmin()">Add Admin</button>
+
+<div class="container" id="adminContent">
+  <div class="row" id="surveyButtons">
+
+    <div class="col-md"><button id="addButton" class="btn btn-outline-primary" data-mdb-ripple-color="dark"
+        name="addButton" (click)="onPress()">Add
+        New Survey</button></div>
+    <div class="col-md"> <button id="addAdminButton" class="btn btn-outline-primary" data-mdb-ripple-color="dark"
+        name="addAdminButton" (click)="onPressAddAdmin()">Add Admin</button></div>
+
   </div>
-
-  <div class="survey-control">
-    <div class="search">
-      <input type="text" name="search-survey" placeholder="Search survey...">
-      <span class="material-icons">search</span>
-    </div>
-
-    <input type="text" list="filter" placeholder="FilterBy"><br><br>
-    <datalist id="filter">
-      <option>Subject</option>
-      <option>Launch date</option>
-    </datalist>
-  </div>
-  <div id="comp-render" *ngIf="display">
+  <div class="row" *ngIf="display">
     <app-add-form></app-add-form>
- </div>
- <div id="comp-render" *ngIf="displayAdmin">
-  <app-add-admin></app-add-admin>
-</div>
- <div class="content-surveys">
-  <app-survey-admin-list></app-survey-admin-list>
-</div>
+  </div>
+  <div class="row" *ngIf="displayAdmin">
+    <app-add-admin></app-add-admin>
+  </div>
+  <div class="row">
+    <div>
+      <div class="input-group input-group-lg">
+        <input type="text" class="form-control" placeholder="Search survey" aria-label="Recipient's username"
+          aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-primary btn-lg" type="button">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-surveys row">
+    <app-survey-admin-list></app-survey-admin-list>
+  </div>
 
 </div>

@@ -1,39 +1,90 @@
-<form class="auth" [formGroup]="formAddSurvey" (ngSubmit)="submitAddSurvey()">
-  <label for="subject">Subject</label><br>
-  <input type="text" formControlName="subject" id="subject"><br>
-  <label for="description">Description</label><br>
-  <input type="description" formControlName="description" id="description"><br><br>
-  <label for="legalBasis">Legal Basis</label><br>
-  <select formControlName="legalBasis" id="legalBasis">
-    <option value="Contract">Contract</option>
-    <option value="Law">Law</option>
-    <option value="Legitimate interest">Legitimate interest</option>
-  </select>
-  <div>
-    <p>Choose your questions:</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <form class="auth" [formGroup]="formAddSurvey" (ngSubmit)="submitAddSurvey()">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="subject">Subject</span>
+          </div>
+          <input formControlName="subject" type="text" class="form-control" placeholder="Subject" aria-label="Subject"
+            aria-describedby="subject">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="description">Description</span>
+          </div>
+          <input formControlName="description" type="text" class="form-control" placeholder="Description"
+            aria-label="Subject" aria-describedby="description">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="legalBasis">Legal Basis</label>
+          </div>
+          <select class="custom-select" formControlName="legalBasis" id="legalBasis">
+            <option value="Contract">Contract</option>
+            <option value="Law">Law</option>
+            <option value="Legitimate Interest">Legitimate Interest</option>
+          </select>
+        </div>
+        <div>
+          <div *ngIf="listOfQuestions.length == 0">
+            <p>Currently there are no questions</p>
+          </div>
+          <div *ngIf="listOfQuestions.length > 0">
+            <p>Add new questions:</p>
 
-    <div *ngFor="let question of listOfQuestions; let i = index">
-      <input [value]="question.id" (change)="onCheckChange($event)" type="checkbox" id="{{question.id}}" name="{{question.id}}">
-      <label for="{{question.id}}">{{question.questions}} ({{question.optional | optional}})</label>
+            <div *ngFor="let question of listOfQuestions; let i = index">
+              <div class="form-check">
+
+                <input [value]="question.id" (change)="onCheckChange($event)" type="checkbox" id="{{question.id}}"
+                  name="{{question.id}}" class="form-check-input" aria-label="Optional or Requierd Question">
+                <label class="form-check-label" for="{{question.id}}">{{question.questions}} ({{question.optional |
+                  optional}})</label>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="launchDate">Launch Date</span>
+          </div>
+          <input min="{{currentDate |date:'yyyy-MM-dd'}}" formControlName="launchDate" type="date" class="form-control"
+            placeholder="Launch Date" aria-label="Launch Date" aria-describedby="launchDate">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="expirationDate">Expiration Date</span>
+          </div>
+          <input min="{{currentDate |date:'yyyy-MM-dd'}}" formControlName="expirationDate" type="date"
+            class="form-control" placeholder="Expiration Date" aria-label="Expiration Date"
+            aria-describedby="expirationDate">
+        </div>
+        <button type="submit" class="btn btn-secondary">Add new Survey</button>
+
+      </form>
+    </div>
+    <div class="col-md">
+      <form [formGroup]="formAddNewQuestion" (ngSubmit)="submitAddNewQuestion()">
+        <div class="input-group mb-3">
+          <input formControlName="questions" type="text" class="form-control" placeholder="Add your question"
+            aria-label="Add your question" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit">Add question</button>
+          </div>
+
+        </div>
+        <div class="form-check">
+
+          <input class="form-check-input" id="optionalQuestion" name="optionalQuestion" formControlName="optional"
+            type="checkbox" aria-label="Optional or Requierd Question">
+          <label class="form-check-label" for="optionalQuestion">Required Question</label>
+
+        </div>
+      </form>
     </div>
 
   </div>
-
-
-  <label for="launchDate">Launch Date</label><br>
-  <input type="date" formControlName="launchDate" min="{{currentDate|date:'yyyy-MM-dd'}}" id="launchDate"><br><br>
-  <label for="expirationDate">Expiration Date</label><br>
-  <input type="date" formControlName="expirationDate" min="{{currentDate|date:'yyyy-MM-dd'}}"
-    id="expirationDate"><br><br>
-  <input type="submit" value="Add Survey">
-
-</form>
-<form [formGroup]="formAddNewQuestion" (ngSubmit)="submitAddNewQuestion()">
-  <div>
-    <label for="question">Question</label><br>
-    <input formControlName="questions"type="text" id="question"><br>
-    <input formControlName="optional"type="checkbox" id="optionalQuestion" name="optionalQuestion">
-        <label for="optionalQuestion">Required</label>
-    <button type="submit">Add new Question</button>
-  </div>
-</form>
+</div>

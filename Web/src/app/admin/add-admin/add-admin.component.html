@@ -1,13 +1,26 @@
-<form class="auth" [formGroup]="formAddAdmin" (ngSubmit)="submitAddAdmin()">
-  <div>
-    <p>Choose an User to change his role to Admin:</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <form class="auth" [formGroup]="formAddAdmin" (ngSubmit)="submitAddAdmin()">
+        <div>
+          <div *ngIf="listOfUsers.length == 0">
+            <p>Currently there are no users or all users are admins</p>
+          </div>
+          <div *ngIf="listOfUsers.length > 0">
+          <p>Choose an User to change his role to Admin:</p>
 
-    <div *ngFor="let user of listOfUsers; let i = index">
-      <input [value]="user.id" (change)="onCheckChange($event)" type="checkbox" id="{{user.id}}" name="{{user.id}}">
-      <label for="{{user.id}}">{{user.username}} ({{user.role}})</label>
+          <div *ngFor="let user of listOfUsers; let i = index">
+            <input [value]="user.id" (change)="onCheckChange($event)" type="checkbox" id="{{user.id}}" name="{{user.id}}" class="form-check-input" aria-label="Make user admin">
+            <label class="form-check-label" for="{{user.id}}">{{user.username}} ({{user.role}})</label>
+          </div>
+        </div>
+        </div>
+
+        <button type="submit" class="btn btn-secondary">Add Admin</button>
+
+      </form>
     </div>
-
   </div>
-  <input type="submit" value="Add Admin">
+</div>
 
-</form>
+
