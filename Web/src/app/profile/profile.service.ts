@@ -1,6 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Answer } from '../models/answer';
+import { Comments } from '../models/comment';
 import { Question } from '../models/question';
 import { Survey } from '../models/survey';
 import { SurveyQuestion } from '../models/surveyQuestion';
@@ -13,6 +15,7 @@ import { UserDetail } from '../models/userDetail';
 export class ProfileService {
   // public isOpen=false;
   // public activeQuestions:Question[]=[];
+  public currentIdUser!:string;
   private api: string = 'https://localhost:44311/api/v1';
   private httpOptions = {
     headers: new HttpHeaders({
@@ -44,5 +47,20 @@ export class ProfileService {
     var path=this.api+"/surveyQuestion/survey/"+id;
     //var path=`${this.api}​/surveyQuestion/survey​/${id}`;
     return this.httpClient.get<SurveyQuestion[]>(path,this.httpOptions);
+  }
+  public CreateAnswer(answer:Answer):Observable<Answer>{
+    return this.httpClient.post<Answer>(`${this.api}/answer`,answer, this.httpOptions);
+  }
+  public CreateComment(comment:Comments):Observable<Comments>{
+    return this.httpClient.post<Comments>(`${this.api}/comment`,comment, this.httpOptions);
+  }
+
+  public GetAnswersByUserIdAndSurveyId(idUser:string, idSurvey:string):Observable<Answer[]>{
+    var path=this.api+"/answer/user/"+idUser+"/survey/"+idSurvey;
+    return this.httpClient.get<Answer[]>(path,this.httpOptions);
+  }
+  public GetCommentByUserIdAndSurveyId(idUser:string, idSurvey:string):Observable<Comments>{
+    var path=this.api+"/comment/user/"+idUser+"/survey/"+idSurvey;
+    return this.httpClient.get<Comments>(path,this.httpOptions);
   }
 }

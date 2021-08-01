@@ -26,6 +26,7 @@ export class ProfileComponent implements OnInit {
           this.profileService.getUserDetail(this.userId).subscribe(
             (data)=>{
               this.userDetail=data;
+              this.profileService.currentIdUser=this.user.id?this.user.id:"null";
             }
           )
         },

@@ -15,11 +15,15 @@ import { SurveyComponent } from './profile/survey/survey.component';
 import { SurveyListComponent } from './profile/survey/survey-list/survey-list.component';
 import { SurveyDetailsComponent } from './profile/survey/survey-list/survey-details/survey-details.component';
 import { AdminComponent } from './admin/admin.component';
+<<<<<<< HEAD
 import { AddFormComponent } from './admin/add-form/add-form.component';
 import { OptionalPipe } from './admin/optional.pipe';
 import { AddAdminComponent } from './admin/add-admin/add-admin.component';
 import { SurveyAdminListComponent } from './admin/survey-admin-list/survey-admin-list.component';
 import { EditSurveyComponent } from './admin/edit-survey/edit-survey.component';
+=======
+import { DatePipe } from '@angular/common';
+>>>>>>> 6f26481 (add answer request)
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +50,7 @@ import { EditSurveyComponent } from './admin/edit-survey/edit-survey.component';
     MatIconModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

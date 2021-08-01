@@ -8,16 +8,22 @@
     </div>
     <li *ngFor="let item of activeQuestions;let i = index">
       <div class="question">
-        <div class="q">
+        <label class="q">
           {{item.questions}}
-        </div>
-        <!-- <input type="checkbox"> -->
-        <input type="checkbox" [formControlName]="getCheckBoxName(i.toString())">
+        </label>
+        <input type="checkbox" [formControlName]="getCheckBoxName(item.id)">
       </div>
     </li>
   </ul>
+
+  <div class="comment-survey">
+    <label for="">Comment (optional)</label><br>
+    <!-- <input type="text" name="comment" id=""> -->
+    <textarea formControlName="comment" id="" cols="58" rows="5"></textarea>
+  </div>
+
   <div class="control-btn">
-    <!-- <input type="button" value="Back" (click)="back()"> -->
+    <input type="button" value="Back" (click)="back()">
     <input type="submit" value="Submit">
   </div>
 </form>
