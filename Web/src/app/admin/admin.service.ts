@@ -1,5 +1,5 @@
 import { Survey } from 'src/app/models/survey';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Question } from '../models/question';
@@ -57,8 +57,33 @@ export class AdminService {
     return this.httpClient.get<UserDetail>(`${this.api}/detail/user/${idUser}`, this.httpOptions);
   }
 
-  public getAllSurveys(): Observable<Survey[]> {
-    return this.httpClient.get<Survey[]>(`${this.api}/consent`, this.httpOptions);
+  public getAllSurveys(launchDate: string = "", expirationDate:string = ""): Observable<Survey[]> {
+    // Initialize Params Object
+    let params = new HttpParams();
+
+    // Begin assigning parameters
+    params = params.append('launchDateTime', launchDate);
+    params = params.append('expirationDateTime', expirationDate);
+
+    var httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      }),
+       params: params ? params.keys().reduce((queryParams: any, key) => {
+
+        let value: any = params.get(key);
+
+        value = Array.isArray(value) ? value[0] : value;
+
+        // adding only defined values to the params
+        if (value !== "" && value !== null) {
+          queryParams[key] = value;
+        }
+
+        return queryParams;
+      }, {}) : {},
+    };
+    return this.httpClient.get<Survey[]>(`${this.api}/consent`, httpOptions);
   }
 
   public getSurvey(id?: string): Observable<Survey> {

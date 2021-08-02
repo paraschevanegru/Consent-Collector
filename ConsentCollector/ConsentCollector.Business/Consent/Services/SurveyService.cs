@@ -65,9 +65,9 @@ namespace ConsentCollector.Business.Consent.Services
             await consentRepository.SaveChanges();
         }
 
-        public IEnumerable<SurveyModel> GetAll()
+        public IEnumerable<SurveyModel> GetAll(DateTime? launchDateTime = null, DateTime? expirationDateTime = null)
         {
-            var survey = consentRepository.GetAll();
+            var survey = consentRepository.GetAll(launchDateTime, expirationDateTime);
 
             return mapper.Map<IEnumerable<SurveyModel>>(survey);
         }

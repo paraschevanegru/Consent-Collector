@@ -11,7 +11,7 @@ namespace ConsentCollector.Persistence
     {
         Task<Survey> GetSurveyById(Guid id);
 
-        IEnumerable<Survey> GetAll();
+        IEnumerable<Survey> GetAll(DateTime? launchDateTime = null, DateTime? expirationDateTime = null);
 
         Task Create(Survey survey);
 
