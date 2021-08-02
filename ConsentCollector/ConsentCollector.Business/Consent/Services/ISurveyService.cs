@@ -17,6 +17,6 @@ namespace ConsentCollector.Business.Consent.Services
 
         Task Update(Guid surveyId, CreateSurveyModel model);
 
-        IEnumerable<SurveyModel> GetAll();
+        IEnumerable<SurveyModel> GetAll(DateTime? launchDateTime = null, DateTime? expirationDateTime =null);
     }
 }

@@ -20,12 +20,22 @@ namespace ConsentCollector.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public IActionResult GetAll(string launchDateTime = "", string expirationDateTime ="")
         {
+            try
+            {
+                var survey = surveyService.GetAll(launchDateTime != "" ? DateTime.Parse(launchDateTime) : null,
+                    expirationDateTime != "" ? DateTime.Parse(expirationDateTime) : null);
+                return Ok(survey);
+            }
+            // Least specific:
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
+           
 
-            var survey = surveyService.GetAll();
-
-            return Ok(survey);
+            
         }
 
         [HttpGet("{id}")]

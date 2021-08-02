@@ -1,3 +1,4 @@
+import { HelpComponent } from './help/help.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './authentication/login/login.component';
@@ -18,8 +19,9 @@ const routes: Routes = [
       { path: 'register', component: RegisterComponent }
     ]
   },
-  { path:'profile/:id',component:ProfileComponent },
-  { path:'admin/:id',component:AdminComponent }
+  { path: 'profile/:id', component: ProfileComponent },
+  { path: 'admin/:id', component: AdminComponent },
+  { path: 'help', component: HelpComponent }
 
 ];
 

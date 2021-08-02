@@ -54,7 +54,7 @@ namespace TestConsentCollector
             });
 
             surveyRepositoryMock
-                .Setup(repository => repository.GetAll())
+                .Setup(repository => repository.GetAll(null,null))
                 .Returns(surveys);
 
             mapperMock

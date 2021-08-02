@@ -22,6 +22,7 @@ import { SurveyAdminListComponent } from './admin/survey-admin-list/survey-admin
 import { EditSurveyComponent } from './admin/edit-survey/edit-survey.component';
 import { DatePipe } from '@angular/common';
 import { NotificationsComponent } from './profile/notifications/notifications.component';
+import { HelpComponent } from './help/help.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { NotificationsComponent } from './profile/notifications/notifications.co
     AddAdminComponent,
     SurveyAdminListComponent,
     EditSurveyComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,

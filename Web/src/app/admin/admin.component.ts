@@ -18,6 +18,7 @@ export class AdminComponent implements OnInit {
   display: boolean = false;
   displayAdmin: boolean = false;
   displayEditSurvey: boolean = false;
+  displayRefreshedTable: boolean = false;
   public nrOfNotification = 13;
   public userId!: string;
   public user!: User;
@@ -46,6 +47,7 @@ export class AdminComponent implements OnInit {
     this.adminService.toggleAddAdmin.subscribe(status => this.displayAdmin = status);
     this.adminService.sharedDisplayEdit.subscribe(status => this.displayEditSurvey = status);
     this.adminService.sharedMessage.subscribe(status => this.surveyId = status);
+    this.adminService.getRefresh().subscribe(status => this.displayRefreshedTable = status);
 
   }
   onPress() {

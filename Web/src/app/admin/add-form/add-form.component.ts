@@ -16,6 +16,7 @@ export class AddFormComponent implements OnInit {
   public alertPopupAddSurvey: boolean = false;
   public dangerPopupAddSurvey: boolean = false;
   display: boolean = false;
+  displayRefreshedTable: boolean = false;
   public formAddSurvey!: FormGroup;
   public formAddNewQuestion!: FormGroup;
   @Output()
@@ -93,7 +94,7 @@ export class AddFormComponent implements OnInit {
   public submitAddSurvey(): void {
     let consentData = this.formAddSurvey.value;
     let questions = this.formAddSurvey.value.listOfQuestions;
-    delete consentData.listOfQuestions;
+    // delete consentData.listOfQuestions;
     console.log("Survey:", JSON.stringify(consentData));
     this.adminService.postConsent(consentData).subscribe(
       (data) => {
@@ -103,6 +104,7 @@ export class AddFormComponent implements OnInit {
           this.adminService.postSurveyQuestion(surveyMap).subscribe(
             (result) => {
               console.log(result);
+              this.adminService.refreshTableContent(true);
             }
           );
         });
