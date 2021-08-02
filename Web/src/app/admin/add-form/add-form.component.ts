@@ -93,7 +93,7 @@ export class AddFormComponent implements OnInit {
   public submitAddSurvey(): void {
     let consentData = this.formAddSurvey.value;
     let questions = this.formAddSurvey.value.listOfQuestions;
-    delete consentData.listOfQuestions;
+    // delete consentData.listOfQuestions;
     console.log("Survey:", JSON.stringify(consentData));
     this.adminService.postConsent(consentData).subscribe(
       (data) => {
