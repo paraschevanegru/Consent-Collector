@@ -10,6 +10,8 @@ import { AdminService } from '../admin.service';
   styleUrls: ['./edit-survey.component.scss']
 })
 export class EditSurveyComponent implements OnInit {
+  public alertPopupEdit: boolean = false;
+  public dangerPopupEdit: boolean = false;
   displayEditSurvey: boolean = false;
   surveyId!: string;
   public formEditSurvey!: FormGroup;
@@ -48,7 +50,10 @@ export class EditSurveyComponent implements OnInit {
     this.returnQuestionsBySurveyId(this.surveyId);
 
   }
-
+  close() {
+    this.alertPopupEdit = false;
+    this.dangerPopupEdit = false;
+  }
   onCheckChange(event: any) {
     const formArray: FormArray = this.formEditSurvey.get('listOfQuestions') as FormArray;
     if (event.target.checked) {
@@ -80,6 +85,7 @@ export class EditSurveyComponent implements OnInit {
       },
       (error) => {
         console.log("error:", error);
+
       }
     )
   }
@@ -88,7 +94,7 @@ export class EditSurveyComponent implements OnInit {
     let questions = this.formEditSurvey.value.listOfQuestions;
     delete consentData.listOfQuestions;
     console.log("Survey:", JSON.stringify(consentData));
-    this.adminService.updateSurvey(this.surveyId,consentData).subscribe(
+    this.adminService.updateSurvey(this.surveyId, consentData).subscribe(
       (data) => {
         console.log(data);
         questions.forEach((question: any) => {
@@ -99,12 +105,14 @@ export class EditSurveyComponent implements OnInit {
             }
           );
         });
-
+        this.alertPopupEdit = true;
       },
       (error) => {
         console.log("error:", error);
+        this.dangerPopupEdit = true;
       }
-    )
+    );
+
   }
   public submitAddNewQuestion(): void {
     let questionData = this.formAddNewQuestion.value;
