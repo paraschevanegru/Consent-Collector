@@ -1,0 +1,9 @@
+<div class="notification" *ngFor="let n of notifications" (click)="sendNotification(n.id)">
+  <div class="title">
+    {{n.title}}
+  </div>
+  <div class="description">
+    {{n.description}}
+  </div>
+</div>
+

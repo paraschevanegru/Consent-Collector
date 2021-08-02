@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Answer } from '../models/answer';
 import { Comments } from '../models/comment';
+import { Notifications } from '../models/notification';
 import { Question } from '../models/question';
 import { Survey } from '../models/survey';
 import { SurveyQuestion } from '../models/surveyQuestion';
@@ -69,5 +70,13 @@ export class ProfileService {
   public GetCommentByUserIdAndSurveyId(idUser:string, idSurvey:string):Observable<Comments>{
     var path=this.api+"/comment/user/"+idUser+"/survey/"+idSurvey;
     return this.httpClient.get<Comments>(path,this.httpOptions);
+  }
+
+  public GetAllNotificationOfUser(idUser?:string):Observable<Notifications[]>{
+    return this.httpClient.get<Notifications[]>(`${this.api}/notification/user/${idUser}/seen/false`,this.httpOptions);
+  }
+
+  public ReadNotification(idNotification:string, notification:Notifications):Observable<Notifications>{
+    return this.httpClient.put<Notifications>(`${this.api}/notification/${idNotification}`,notification, this.httpOptions);
   }
 }

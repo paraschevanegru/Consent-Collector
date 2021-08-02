@@ -4,7 +4,7 @@
       <img src="./../../assets/consent.png" width="200" alt="">
     </a>
     <div class="separate">
-      <div class="notification">
+      <div class="notification" (click)="clickNotification()">
         <span class="material-icons">notifications</span>
         <sup class="number-of-notification">{{nrOfNotification}}</sup>
       </div>
@@ -46,3 +46,8 @@
     <app-survey></app-survey>
   </div>
 </div>
+
+<div *ngIf="displayNotifications" class="notifications">
+  <app-notifications></app-notifications>
+</div>
+
