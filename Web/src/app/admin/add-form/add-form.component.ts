@@ -13,6 +13,8 @@ import { Question } from 'src/app/models/question';
 })
 
 export class AddFormComponent implements OnInit {
+  public alertPopupAddSurvey: boolean = false;
+  public dangerPopupAddSurvey: boolean = false;
   display: boolean = false;
   public formAddSurvey!: FormGroup;
   public formAddNewQuestion!: FormGroup;
@@ -47,7 +49,10 @@ export class AddFormComponent implements OnInit {
     this.initalizeQuestionFormGroup();
     this.returnAllQuestions();
   }
-
+  close() {
+    this.alertPopupAddSurvey = false;
+    this.dangerPopupAddSurvey = false;
+  }
   public submitAddNewQuestion(): void {
     let questionData = this.formAddNewQuestion.value;
     this.adminService.postQuestion(questionData).subscribe(
@@ -101,12 +106,12 @@ export class AddFormComponent implements OnInit {
             }
           );
         });
-
+        this.alertPopupAddSurvey = true;
       },
       (error) => {
         console.log("error:", error);
+        this.dangerPopupAddSurvey = true;
       }
     )
   }
-
 }

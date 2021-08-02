@@ -1,3 +1,4 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { AdminService } from './../admin.service';
 import { Component, OnInit } from '@angular/core';
 import { Survey } from 'src/app/models/survey';
@@ -8,6 +9,7 @@ import { Survey } from 'src/app/models/survey';
   styleUrls: ['./survey-admin-list.component.scss']
 })
 export class SurveyAdminListComponent implements OnInit {
+  public alertPopup: boolean = false;
   public survey!: Survey[];
   surveyId!: string;
   currentSurvey!: string;
@@ -19,12 +21,13 @@ export class SurveyAdminListComponent implements OnInit {
       (data) => {
         this.survey = data;
       }
-    )
+    );
+  }
+
+  close() {
+    this.alertPopup = false;
   }
   onPressEditSurvey(id?: string) {
-    if(this.displayEditSurvey){
-      this.displayEditSurvey = false;
-    }
     this.displayEditSurvey = !this.displayEditSurvey;
     this.adminService.showEditSurvey(this.displayEditSurvey);
     if (id != undefined) {
@@ -37,15 +40,19 @@ export class SurveyAdminListComponent implements OnInit {
   public deleteSurvey(id?: string): void {
     console.log("id:", id);
     this.adminService.deleteBySurveyId(id).subscribe(
-      () => {
+      (data) => {
         console.log("delete from SurveyQuestion");
+        window.location.reload();
       }
+
     );
     this.adminService.deleteSurvey(id).subscribe(
       () => {
         console.log("delete from Survey");
       }
     );
+    this.alertPopup = true;
+
   }
 
 }

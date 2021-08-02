@@ -13,11 +13,15 @@
 }
 .separate {
   margin: 0px 5px;
+  :hover {
+    cursor: pointer;
+  }
   div {
     display: flex;
     align-items: center;
   }
   span {
     padding: 0px 5px;
+
   }
 }

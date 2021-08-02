@@ -10,6 +10,8 @@ import { AdminService } from '../admin.service';
   styleUrls: ['./add-admin.component.scss']
 })
 export class AddAdminComponent implements OnInit {
+  public alertPopupAddAdmin: boolean = false;
+  public dangerPopupAddAdmin: boolean = false;
   displayAdmin: boolean = false;
   public formAddAdmin!: FormGroup;
   @Output()
@@ -27,7 +29,10 @@ export class AddAdminComponent implements OnInit {
     this.initalizeFormGroup();
     this.returnAllUsers();
   }
-
+  close() {
+    this.alertPopupAddAdmin = false;
+    this.dangerPopupAddAdmin = false;
+  }
   private returnAllUsers(): void {
     this.adminService.getAllUsers().subscribe(
       (data) => {
@@ -44,6 +49,9 @@ export class AddAdminComponent implements OnInit {
 
   public submitAddAdmin(): void {
     console.log(this.listOfNewAdmins);
+    if (this.listOfNewAdmins.length == 0) {
+      this.dangerPopupAddAdmin = true;
+    }
     const formArray: FormArray = this.formAddAdmin.get('listOfUsers') as FormArray;
     this.listOfNewAdmins.forEach(user => {
       this.adminService.patchUserRole(user, "admin").subscribe(
@@ -51,6 +59,12 @@ export class AddAdminComponent implements OnInit {
           console.log("update to Admin");
           const indx = this.listOfUsers.findIndex(u => u.id == data.id);
           this.listOfUsers.splice(indx, indx >= 0 ? 1 : 0);
+          this.alertPopupAddAdmin = true;
+        },
+        (error) => {
+          console.log("error:", error);
+
+
         }
       );
 
