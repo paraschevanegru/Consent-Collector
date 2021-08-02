@@ -53,7 +53,14 @@ namespace ConsentCollector.API.Controllers
            
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("username/{username}")]
+        public async Task<IActionResult> GetUsername([FromRoute] string username)
+        {
+            var result = await userService.GetByUsername(username);
+            return Ok(result);
+        }
+
+            [HttpGet("{id}")]
         public async Task<IActionResult> Get([FromRoute] Guid id)
         {
             var result = await userService.GetById(id);

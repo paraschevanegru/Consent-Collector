@@ -28,6 +28,7 @@ namespace ConsentCollector.Business
             CreateMap<CreateUserDetailModel, UserDetail>();
             
             CreateMap<Notification, NotificationModel>();
+            CreateMap<CreateNotificationModel, NotificationModel>();
 
             CreateMap<NotificationModel, Notification>();
 
