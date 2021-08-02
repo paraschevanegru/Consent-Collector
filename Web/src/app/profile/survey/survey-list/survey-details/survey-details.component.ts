@@ -19,6 +19,10 @@ export class SurveyDetailsComponent implements OnInit, OnDestroy {
   public activeQuestions:Question[]=[];
   public currentSurveyId!:string;
   public formAnswer!:FormGroup;
+  public checkComment=false;
+  public checkSurvey=false;
+  public idComment!:string;
+  public idAnswers:string[]=[];
   constructor(public readonly profileService:ProfileService,private datePipe: DatePipe) { }
   ngOnDestroy(): void {
   }
@@ -72,13 +76,17 @@ export class SurveyDetailsComponent implements OnInit, OnDestroy {
     this.profileService.GetAnswersByUserIdAndSurveyId(idUser, questions[0].idSurvey).subscribe(
       (data)=>{
         if(data.length>0){
+          this.checkSurvey=true;
           for(let i=0;i<data.length;++i){
+            this.idAnswers[i]=data[i].id??"null";
             this.formAnswer.get(`ans${questions[i].idQuestion}`)?.setValue(data[i].agree)
           }
         };
         this.profileService.GetCommentByUserIdAndSurveyId(idUser,questions[0].idSurvey).subscribe(
           (data)=>{
             if(data!=null){
+              this.checkComment=true;
+              this.idComment=data.id??"null";
               this.formAnswer.get("comment")?.setValue(data.text);
             }
           }
@@ -88,6 +96,15 @@ export class SurveyDetailsComponent implements OnInit, OnDestroy {
   }
 
   public submitAnswer():void{
+    if(this.formAnswer.get("comment")?.value){
+      var comment=new Comments(this.formAnswer.get("comment")?.value,this.profileService.currentIdUser,this.currentSurveyId)
+      if(this.checkComment){
+        this.profileService.UpdateComment(this.idComment,comment).subscribe();
+      }else{
+        this.profileService.CreateComment(comment).subscribe()
+      }
+    }
+
     for(let i=0;i<this.activeQuestions.length;++i){
       console.log("index:",this.formAnswer.get(`ans${i}`)?.value);
       var yesNo:boolean;
@@ -103,15 +120,19 @@ export class SurveyDetailsComponent implements OnInit, OnDestroy {
         this.profileService.currentIdUser,
         this.currentSurveyId,
         this.activeQuestions[i].id??"null"
-      );
-      this.profileService.CreateAnswer(answer).subscribe(
-        (data)=>{console.log("answ:",data)},
-        (error)=>{console.log(error)}
       )
-    }
-    if(this.formAnswer.get("comment")?.value){
-      var comment=new Comments(this.formAnswer.get("comment")?.value,this.profileService.currentIdUser,this.currentSurveyId)
-      this.profileService.CreateComment(comment).subscribe()
+      if(this.checkSurvey){
+        this.profileService.UpdateAnswer(this.idAnswers[i],answer).subscribe(
+          (data)=>{window.location.reload();}
+        );
+      }
+      else{
+        this.profileService.CreateAnswer(answer).subscribe(
+          (data)=>{window.location.reload();},
+          (error)=>{console.log(error)}
+        )
+      }
+
     }
   }
   public getCheckBoxName(index?:string){
@@ -119,6 +140,6 @@ export class SurveyDetailsComponent implements OnInit, OnDestroy {
   }
 
   public back():void{
-    this.activeQuestions=[];
+    window.location.reload();
   }
 }

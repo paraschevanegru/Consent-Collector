@@ -1,6 +1,7 @@
 import { DatePipe } from "@angular/common";
 
 export class Answer{
+  id?:string;
   agree: boolean;
   answerDate: string;
   idUser: string;

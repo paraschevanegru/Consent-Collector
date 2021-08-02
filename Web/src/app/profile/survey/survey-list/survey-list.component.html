@@ -1,18 +1,39 @@
-<div class="survey" *ngFor="let s of survey" (click)="open(s.id)" id={{s.id}}>
-    <div class="subject"><b>Subject:</b> {{s.subject}}</div>
-    <div class="survey-description">
-      <b>Description: </b>{{s.description}}
-    </div>
-    <div class="subject">
-      <p><b>LegalBasis:</b> {{s.legalBasis}}</p>
-    </div>
+<div class="container">
+  <div class="row">
+    <table class="table table-hover  table-borderless tableSurvey">
+      <thead>
+        <tr>
+          <th scope="col" class="text-center">Subject</th>
+          <th scope="col" class="text-center">Description</th>
+          <th scope="col" class="text-center">Legal Basis</th>
+          <th scope="col" class="text-center">Launch Date</th>
+          <th scope="col" class="text-center">Expiration Date</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let s of survey" id={{s.id}} (click)="open(s.id)">
+        <tr>
+          <td class="text-center">
+            {{s.subject}}
+          </td>
+          <td class="text-center">
+            {{s.description}}
+          </td>
+          <td class="text-center">
+            {{s.legalBasis}}
+          </td>
+          <td class="text-center">
+            {{s.launchDate |date:'yyyy-MM-dd'}}
+          </td>
+          <td class="text-center">
+            {{s.expirationDate |date:'yyyy-MM-dd'}}
+          </td>
+        </tr>
 
-    <div class="survey-footer">
-
-      <p><b>LaunchDate:</b> {{s.launchDate}}</p>
-      <p><b>ExpirationDate:</b> {{s.expirationDate}}</p>
-    </div>
+      </tbody>
+    </table>
+  </div>
 </div>
+
 <div *ngIf="surveyIsOpen">
   <app-survey-details [Id]="surveyId"></app-survey-details>
 </div>

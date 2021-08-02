@@ -55,6 +55,13 @@ export class ProfileService {
     return this.httpClient.post<Comments>(`${this.api}/comment`,comment, this.httpOptions);
   }
 
+  public UpdateAnswer(idAnswer:string,answer:Answer):Observable<Answer>{
+    return this.httpClient.put<Answer>(`${this.api}/answer/${idAnswer}`,answer, this.httpOptions);
+  }
+  public UpdateComment(idComment:string,comment:Comments):Observable<Comments>{
+    return this.httpClient.put<Comments>(`${this.api}/comment/${idComment}`,comment, this.httpOptions);
+  }
+
   public GetAnswersByUserIdAndSurveyId(idUser:string, idSurvey:string):Observable<Answer[]>{
     var path=this.api+"/answer/user/"+idUser+"/survey/"+idSurvey;
     return this.httpClient.get<Answer[]>(path,this.httpOptions);
