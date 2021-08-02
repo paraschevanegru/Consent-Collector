@@ -10,6 +10,7 @@ import { Survey } from 'src/app/models/survey';
 })
 export class SurveyAdminListComponent implements OnInit {
   public alertPopup: boolean = false;
+  pOpened:boolean = false;
   public survey!: Survey[];
   surveyId!: string;
   currentSurvey!: string;
@@ -42,6 +43,7 @@ export class SurveyAdminListComponent implements OnInit {
     this.adminService.deleteBySurveyId(id).subscribe(
       (data) => {
         console.log("delete from SurveyQuestion");
+        this.alertPopup = true;
         window.location.reload();
       }
 
@@ -51,8 +53,6 @@ export class SurveyAdminListComponent implements OnInit {
         console.log("delete from Survey");
       }
     );
-    this.alertPopup = true;
-
   }
 
 }
