@@ -14,8 +14,12 @@ export class AdminService {
 
   private surveyId = new BehaviorSubject('First Message');
   sharedMessage = this.surveyId.asObservable();
+
   private displayEdit = new BehaviorSubject(false);
   sharedDisplayEdit = this.displayEdit.asObservable();
+
+  private refreshTable = new BehaviorSubject(false);
+
   toggleAddNewSurvey: EventEmitter<boolean> = new EventEmitter<boolean>()
   toggleAddAdmin: EventEmitter<boolean> = new EventEmitter<boolean>()
   private api: string = 'https://localhost:44311/api/v1';
@@ -26,12 +30,18 @@ export class AdminService {
   };
   constructor(private readonly httpClient: HttpClient) {
   }
+  public getRefresh(): Observable<boolean> {
 
-  shareSurveyId(sharedSurveyId: string) {
-    this.surveyId.next(sharedSurveyId)
+    return this.refreshTable.asObservable();
+ }
+  refreshTableContent(value: boolean) {
+    this.refreshTable.next(value);
   }
-  showEditSurvey(displayEdit: boolean) {
-    this.displayEdit.next(displayEdit);
+  shareSurveyId(value: string) {
+    this.surveyId.next(value)
+  }
+  showEditSurvey(value: boolean) {
+    this.displayEdit.next(value);
   }
   public postConsent(data: JSON): Observable<Survey> {
     return this.httpClient.post<Survey>(`${this.api}/consent`, data, this.httpOptions);
@@ -57,7 +67,7 @@ export class AdminService {
     return this.httpClient.get<UserDetail>(`${this.api}/detail/user/${idUser}`, this.httpOptions);
   }
 
-  public getAllSurveys(launchDate: string = "", expirationDate:string = ""): Observable<Survey[]> {
+  public getAllSurveys(launchDate: string = "", expirationDate: string = ""): Observable<Survey[]> {
     // Initialize Params Object
     let params = new HttpParams();
 
@@ -69,7 +79,7 @@ export class AdminService {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       }),
-       params: params ? params.keys().reduce((queryParams: any, key) => {
+      params: params ? params.keys().reduce((queryParams: any, key) => {
 
         let value: any = params.get(key);
 
@@ -90,8 +100,8 @@ export class AdminService {
     return this.httpClient.get<Survey>(`${this.api}/consent/${id}`, this.httpOptions);
   }
 
-  public updateSurvey(id?: string,data?: JSON): Observable<Survey> {
-    return this.httpClient.put<Survey>(`${this.api}/consent/${id}`,data, this.httpOptions);
+  public updateSurvey(id?: string, data?: JSON): Observable<Survey> {
+    return this.httpClient.put<Survey>(`${this.api}/consent/${id}`, data, this.httpOptions);
   }
 
   public getAllQuestions(): Observable<Question[]> {

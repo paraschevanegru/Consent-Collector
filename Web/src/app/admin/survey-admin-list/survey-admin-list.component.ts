@@ -28,6 +28,12 @@ export class SurveyAdminListComponent implements OnInit {
     })
   }
   ngOnInit(): void {
+    this.adminService.getRefresh().subscribe((status: boolean) =>{
+      console.log(status);
+      if(status){
+        this.refresh();
+      }
+    });
     this.refresh();
     this.initalizeFormGroup();
   }
