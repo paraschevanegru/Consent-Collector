@@ -41,7 +41,7 @@ namespace ConsentCollector.API.Controllers
             var result = notificationService.GetByUserId(userId);
             return Ok(result);
         }
-        [HttpGet("user/{userId}/seen{seen}")]
+        [HttpGet("user/{userId}/seen/{seen}")]
         public IActionResult GetUserIdAndSeen([FromRoute] Guid userId, [FromRoute] bool seen)
         {
             var result = notificationService.GetByUserIdAndSeen(userId, seen);
