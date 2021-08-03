@@ -31,6 +31,8 @@ using FluentValidation.AspNetCore;
 using Microsoft.Net.Http.Headers;
 using ConsentCollector.Persistence.SurveyQuestionRepository;
 using ConsentCollector.Business.Consent.Services.SurveyQuestionService;
+using ConsentCollector.Persistence.HistoryRepository;
+using ConsentCollector.Business.Consent.Services.HistoryService;
 
 namespace ConsentCollector.API
 {
@@ -83,6 +85,8 @@ namespace ConsentCollector.API
             });
 
             services.AddScoped<IConsentRepository, ConsentRepository>();
+            services.AddScoped<IHistoryRepository, HistoryRepository>();
+            services.AddScoped<IHistoryService, HistoryService>();
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserDetailRepository, UserDetailRepository>();

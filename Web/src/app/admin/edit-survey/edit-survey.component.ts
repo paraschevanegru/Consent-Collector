@@ -1,8 +1,11 @@
 import { Survey } from './../../models/survey';
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Question } from 'src/app/models/question';
 import { AdminService } from '../admin.service';
+import { Notifications } from 'src/app/models/notification';
+import { combineAll } from 'rxjs/operators';
+import { Historys } from 'src/app/models/history';
 
 @Component({
   selector: 'app-edit-survey',
@@ -24,8 +27,16 @@ export class EditSurveyComponent implements OnInit {
 
   initalizeFormGroup(): void {
     this.formEditSurvey = new FormGroup({
-      subject: new FormControl(null),
-      description: new FormControl(null),
+      subject: new FormControl(null,[
+        Validators.required,
+        Validators.maxLength(50),
+        Validators.minLength(3)
+      ]),
+      description: new FormControl(null,[
+        Validators.required,
+        Validators.maxLength(150),
+        Validators.minLength(3)
+      ]),
       legalBasis: new FormControl(null),
       launchDate: new FormControl(null),
       expirationDate: new FormControl(null),
@@ -96,7 +107,26 @@ export class EditSurveyComponent implements OnInit {
     console.log("Survey:", JSON.stringify(consentData));
     this.adminService.updateSurvey(this.surveyId, consentData).subscribe(
       (data) => {
-        console.log(data);
+        var history=`Updated survey with id [${this.surveyId}]`;
+        this.adminService.CreateHistory(new Historys(history)).subscribe();
+        this.adminService.getSurvey(this.surveyId).subscribe(
+          (data)=>{
+            var surveyName=data.subject;
+            this.adminService.getAllUsers().subscribe(
+              (data)=>{
+                data.forEach(el=>{
+                  if(el.role=="user"){
+                    var notification=new Notifications("Update survey",`Survey: ${surveyName} has been modified`,el.id??"null",this.surveyId,false);
+                    this.adminService.CreateNotification(notification).subscribe(
+                      (data)=>console.log("n:",data),
+                      (error)=>console.log("ne:",error)
+                    );
+                  }
+                })
+              }
+            )
+          }
+        )
         questions.forEach((question: any) => {
           let surveyMap: any = { idSurvey: data.id, idQuestion: question }
           this.adminService.postSurveyQuestion(surveyMap).subscribe(
@@ -118,6 +148,8 @@ export class EditSurveyComponent implements OnInit {
     let questionData = this.formAddNewQuestion.value;
     this.adminService.postQuestion(questionData).subscribe(
       (result) => {
+        var history=`Added new question with id [${result.id}]`;
+        this.adminService.CreateHistory(new Historys(history)).subscribe();
         this.listOfQuestions.push({ id: result.id, optional: questionData.optional, questions: questionData.questions });
       }
     );

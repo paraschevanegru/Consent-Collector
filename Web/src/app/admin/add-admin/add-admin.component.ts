@@ -1,6 +1,7 @@
 import { LEADING_TRIVIA_CHARS } from '@angular/compiler/src/render3/view/template';
 import { Component, OnInit, Output } from '@angular/core';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { Historys } from 'src/app/models/history';
 import { User } from 'src/app/models/user';
 import { AdminService } from '../admin.service';
 
@@ -57,6 +58,8 @@ export class AddAdminComponent implements OnInit {
       this.adminService.patchUserRole(user, "admin").subscribe(
         (data) => {
           console.log("update to Admin");
+          var history=`User with id[${user} has become an admin]`;
+          this.adminService.CreateHistory(new Historys(history)).subscribe();//
           const indx = this.listOfUsers.findIndex(u => u.id == data.id);
           this.listOfUsers.splice(indx, indx >= 0 ? 1 : 0);
           this.alertPopupAddAdmin = true;

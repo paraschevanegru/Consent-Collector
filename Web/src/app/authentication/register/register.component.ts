@@ -6,6 +6,7 @@ import { UserDetail } from 'src/app/models/userDetail';
 import { RegisterService } from './register.service';
 import {concatMap} from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { Historys } from 'src/app/models/history';
 
 @Component({
   selector: 'app-register',
@@ -95,7 +96,11 @@ export class RegisterComponent implements OnInit, OnChanges, OnDestroy {
       console.log(this.user_detail);
       return this.registerService.createDetailUser(this.user_detail);
     })).subscribe(
-          (data)=>this.redirectToLogin(),
+          (data)=>{
+            var history=`A new user with id [${this.user.id}] has been registered`;
+            this.registerService.CreateHistory(new Historys(history)).subscribe();
+            this.redirectToLogin()
+          },
           (error)=>{
             this.registerService.deleteUser(this.user).subscribe()
             this.invalidCredentials=true;

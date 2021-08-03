@@ -4,6 +4,7 @@ import { AdminService } from './../admin.service';
 import { Component, OnInit } from '@angular/core';
 import { Survey } from 'src/app/models/survey';
 import { delay } from 'rxjs/operators';
+import { Notifications } from 'src/app/models/notification';
 
 @Component({
   selector: 'app-survey-admin-list',
@@ -56,7 +57,9 @@ export class SurveyAdminListComponent implements OnInit {
 
   }
   public  deleteSurvey(id?: string): void {
+    var surveyName:string;
     console.log("id:", id);
+    this.adminService.getSurvey(id).subscribe((data)=>{surveyName=data.subject});
     this.adminService.deleteBySurveyId(id).subscribe(
       () => {
         console.log("delete from SurveyQuestion");

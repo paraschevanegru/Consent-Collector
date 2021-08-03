@@ -37,14 +37,27 @@
             <span class="input-group-text" id="subject">Subject</span>
           </div>
           <input formControlName="subject" type="text" class="form-control" placeholder="Subject" aria-label="Subject"
-            aria-describedby="subject">
+            aria-describedby="subject"><br><br>
+
+            <div class="invalid-data" *ngIf="(formEditSurvey.get('subject')?.errors?.required)">
+              This input is required
+            </div>
+            <div class="invalid-data" *ngIf="formEditSurvey.get('subject')?.errors?.minlength || formEditSurvey.get('subject')?.errors?.maxlength">
+              First name must be at least 3 and must not exceed 50
+            </div>
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="description">Description</span>
           </div>
           <input formControlName="description" type="text" class="form-control" placeholder="Description"
-            aria-label="Subject" aria-describedby="description">
+            aria-label="Subject" aria-describedby="description"><br><br>
+            <div class="invalid-data" *ngIf="(formEditSurvey.get('description')?.errors?.required)">
+              This input is required
+            </div>
+            <div class="invalid-data" *ngIf="formEditSurvey.get('description')?.errors?.minlength || formEditSurvey.get('description')?.errors?.maxlength">
+              First name must be at least 3 and must not exceed 150
+            </div>
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">

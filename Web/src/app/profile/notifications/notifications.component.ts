@@ -11,6 +11,7 @@ import { ProfileService } from '../profile.service';
 export class NotificationsComponent implements OnInit {
   public notifications:Notifications[]=[];
   public cloneNotifications:Notifications[]=[];
+  @Output() notificationEvent = new EventEmitter<number>();
   constructor(private readonly profileService:ProfileService) { }
 
   ngOnInit(): void {
@@ -35,6 +36,7 @@ export class NotificationsComponent implements OnInit {
         )
       }
     })
+    this.notificationEvent.emit(1);
   }
 
 }

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Answer } from '../models/answer';
 import { Comments } from '../models/comment';
+import { Historys } from '../models/history';
 import { Notifications } from '../models/notification';
 import { Question } from '../models/question';
 import { Survey } from '../models/survey';
@@ -78,5 +79,11 @@ export class ProfileService {
 
   public ReadNotification(idNotification:string, notification:Notifications):Observable<Notifications>{
     return this.httpClient.put<Notifications>(`${this.api}/notification/${idNotification}`,notification, this.httpOptions);
+  }
+  public CreateHistory(history:Historys):Observable<Historys>{
+    return this.httpClient.post<Historys>(`${this.api}/history`,history,this.httpOptions);
+  }
+  public getAllHistorys():Observable<Historys[]>{
+    return this.httpClient.get<Historys[]>(`${this.api}/history`, this.httpOptions);
   }
 }

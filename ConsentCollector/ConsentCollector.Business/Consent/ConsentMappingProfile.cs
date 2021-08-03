@@ -7,6 +7,7 @@ using System;
 using ConsentCollector.Business.Consent.Models.UserDetails;
 using ConsentCollector.Business.Consent.Models.Users;
 using ConsentCollector.Business.Consent.Models.SurveyQuestionModel;
+using ConsentCollector.Business.Consent.Models.HistoryModel;
 
 namespace ConsentCollector.Business
 {
@@ -17,6 +18,8 @@ namespace ConsentCollector.Business
             CreateMap<Survey, SurveyModel>();
 
             CreateMap<CreateSurveyModel, Survey>();
+            CreateMap<History, HistoryModel>();
+            CreateMap<CreateHistoryModel, History>();
 
             CreateMap<User, UserModel>();
 
@@ -28,7 +31,7 @@ namespace ConsentCollector.Business
             CreateMap<CreateUserDetailModel, UserDetail>();
             
             CreateMap<Notification, NotificationModel>();
-            CreateMap<CreateNotificationModel, NotificationModel>();
+            CreateMap<CreateNotificationModel, Notification>();
 
             CreateMap<NotificationModel, Notification>();
 

@@ -3,6 +3,7 @@ import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angu
 import { ControlContainer, FormControl, FormGroup } from '@angular/forms';
 import { Answer } from 'src/app/models/answer';
 import { Comments } from 'src/app/models/comment';
+import { Historys } from 'src/app/models/history';
 import { Question } from 'src/app/models/question';
 import { Survey } from 'src/app/models/survey';
 import { SurveyQuestion } from 'src/app/models/surveyQuestion';
@@ -59,27 +60,28 @@ export class SurveyDetailsComponent implements OnInit, OnDestroy {
     const group: any = {};
 
     for(let i=0;i<questions.length;++i){
-      //this.formAnswer.addControl(i.toString(),new FormControl(null))
-      // group.add(new FormControl(null));
       group[`ans${questions[i].idQuestion}`]=new FormControl(null);
     }
     group["comment"]=new FormControl(null);
     this.formAnswer=new FormGroup(group);
 
-    //
     this.CheckIfIsComplete(this.profileService.currentIdUser,questions)
-    //
-
   }
 
   public CheckIfIsComplete(idUser:string, questions:SurveyQuestion[]):void{
     this.profileService.GetAnswersByUserIdAndSurveyId(idUser, questions[0].idSurvey).subscribe(
       (data)=>{
+
         if(data.length>0){
           this.checkSurvey=true;
           for(let i=0;i<data.length;++i){
             this.idAnswers[i]=data[i].id??"null";
-            this.formAnswer.get(`ans${questions[i].idQuestion}`)?.setValue(data[i].agree)
+
+            var dataFind=data.find((x)=>{
+              x.idQuestion==questions[i].idQuestion;
+            });
+            //this.formAnswer.get(`ans${questions[i].idQuestion}`)?.setValue(dataFind?.agree);
+            this.formAnswer.get(`ans${data[i].idQuestion}`)?.setValue(data[i].agree);
           }
         };
         this.profileService.GetCommentByUserIdAndSurveyId(idUser,questions[0].idSurvey).subscribe(
@@ -96,12 +98,25 @@ export class SurveyDetailsComponent implements OnInit, OnDestroy {
   }
 
   public submitAnswer():void{
+    var idQuestion:string;
+    var idComment:string;
     if(this.formAnswer.get("comment")?.value){
       var comment=new Comments(this.formAnswer.get("comment")?.value,this.profileService.currentIdUser,this.currentSurveyId)
       if(this.checkComment){
-        this.profileService.UpdateComment(this.idComment,comment).subscribe();
+        this.profileService.UpdateComment(this.idComment,comment).subscribe(
+          (data)=>{
+            var history=`User with id [${this.profileService.currentIdUser}] add comment with id [${idComment}] to the survey with id [${this.currentSurveyId}]`;
+            this.profileService.CreateHistory(new Historys(history)).subscribe();
+          }
+        );
       }else{
-        this.profileService.CreateComment(comment).subscribe()
+        this.profileService.CreateComment(comment).subscribe(
+          (data)=>{
+            idComment=data.id??"null";
+            var history=`User with id [${this.profileService.currentIdUser}] updated comment with id [${data.id}] to the survey with id [${this.currentSurveyId}]`;
+            this.profileService.CreateHistory(new Historys(history)).subscribe();
+          }
+        )
       }
     }
 
@@ -123,12 +138,21 @@ export class SurveyDetailsComponent implements OnInit, OnDestroy {
       )
       if(this.checkSurvey){
         this.profileService.UpdateAnswer(this.idAnswers[i],answer).subscribe(
-          (data)=>{window.location.reload();}
+          (data)=>{
+            var history=`User with id [${this.profileService.currentIdUser}] updated question with id [${idQuestion}] in the survey with id [${this.currentSurveyId}]`;
+            this.profileService.CreateHistory(new Historys(history)).subscribe();
+            window.location.reload();
+          }
         );
       }
       else{
         this.profileService.CreateAnswer(answer).subscribe(
-          (data)=>{window.location.reload();},
+          (data)=>{
+            idQuestion=data.id??"null";
+            var history=`User with id [${this.profileService.currentIdUser}] answered question with id [${data.id}] in the survey with id [${this.currentSurveyId}]`;
+            this.profileService.CreateHistory(new Historys(history)).subscribe();
+            window.location.reload();
+          },
           (error)=>{console.log(error)}
         )
       }
