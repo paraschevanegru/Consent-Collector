@@ -75,6 +75,45 @@ namespace TestConsentCollector
         }
 
         [Fact]
+
+        public void When_GetByUserIdAndSeen_IsCalled_Expect_GetNotificationByIdAndSeenToBeInvoked_And_MappedResponseToBeReturned()
+        {
+            //Arrange
+            var IdUser = Guid.NewGuid();
+            var notifications = new List<Notification>();
+            notifications.Add(new Notification("Title", "Notificare noua", false));
+            notifications.Add(new Notification("Title1", "Notificare noua1", true));
+
+            var expectedResult = notifications.Select(n => new NotificationModel()
+            {
+                Id = n.Id,
+                IdSurvey = n.IdSurvey,
+                IdUser = n.IdUser,
+                Description = n.Description,
+                Seen = n.Seen,
+                Title = n.Title
+            });
+
+            notifications.ForEach(notification =>
+            {
+                notification.IdUser = IdUser;
+            });
+
+            notificationRepositoryMock
+                .Setup(repository => repository.GetNotificationByIdAndSeen(IdUser,true))
+                .Returns(notifications);
+
+            mapperMock
+                .Setup(mapper => mapper.Map<IEnumerable<NotificationModel>>(notifications))
+                .Returns(expectedResult);
+            //Act
+            var result = sut.GetByUserIdAndSeen(IdUser,true);
+
+            //Assert
+            result.Should().BeEquivalentTo(expectedResult);
+        }
+
+        [Fact]
         public void When_GetAll_IsCalled_Expect_GetAllToBeInvoked_And_MappedResponseToBeReturned()
         {
             //Arrange
