@@ -2,51 +2,24 @@
   :hover{
     cursor: pointer;
   }
-  .antet-survey-form{
-
-  }
   display: block;
-  border: 1px solid #000;
   width: 500px;
   height: auto;
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 5px;
+  right: 5px;
   z-index: 9;
-  background-color: #e0dde9;
-  .list-question{
-    .antet-survey-form{
-      margin-right: 10px;
-      display: flex;
-      justify-content: space-between;
-    }
-    .question{
-      display: flex;
-    // display: none;
-      justify-content: space-between;
-      margin-right: 20px;
-      z-index: 22;
-      background: blueviolet;
-      .q{
-        overflow-y: hidden;
-        overflow-x: auto;
-      }
-    }
-    li{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-  }
-  .comment-survey{
-    *{
-      margin-left: 32px;
-    }
-  }
-  .control-btn{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 150px;
-  }
+}
+
+.custom-control.custom-checkbox{padding-left: 0;}
+
+label.custom-control-label {
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+label.custom-control-label::before, label.custom-control-label::after{
+  right: 0;
+  left: auto;
 }
 

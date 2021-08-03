@@ -69,15 +69,13 @@
 }
 
 .notifications{
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  right: 0px;
-  top: 95px;
-  width: 300px;
-  height: auto;
-  overflow-x: auto;
-  z-index: 9;
-  background: linear-gradient(to top, #ffefba, #ffffff);
-  border: springgreen 3px solid;
+  margin-top: 85px;
+  .toast{
+    margin-top: 5px;
+  }
+}
+#profileContent {
+  .row {
+    margin-top: 20px;
+  }
 }
