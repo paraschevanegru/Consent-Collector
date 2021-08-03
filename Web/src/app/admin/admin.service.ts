@@ -35,7 +35,7 @@ export class AdminService {
   public getRefresh(): Observable<boolean> {
 
     return this.refreshTable.asObservable();
- }
+  }
   refreshTableContent(value: boolean) {
     this.refreshTable.next(value);
   }
@@ -88,7 +88,7 @@ export class AdminService {
         value = Array.isArray(value) ? value[0] : value;
 
         // adding only defined values to the params
-        if (value !== "" && value !== null) {
+        if (value !== "" && value !== null && value !== "null") {
           queryParams[key] = value;
         }
 
@@ -131,14 +131,14 @@ export class AdminService {
     return this.httpClient.patch<User>(`${this.api}/user/${id}`, data, this.httpOptions);
   }
 
-  public CreateNotification(notification:Notifications):Observable<Notifications>{
-    return this.httpClient.post<Notifications>(`${this.api}/notification`,notification,this.httpOptions);
+  public CreateNotification(notification: Notifications): Observable<Notifications> {
+    return this.httpClient.post<Notifications>(`${this.api}/notification`, notification, this.httpOptions);
   }
 
-  public CreateHistory(history:Historys):Observable<Historys>{
-    return this.httpClient.post<Historys>(`${this.api}/history`,history,this.httpOptions);
+  public CreateHistory(history: Historys): Observable<Historys> {
+    return this.httpClient.post<Historys>(`${this.api}/history`, history, this.httpOptions);
   }
-  public getAllHistorys():Observable<Historys[]>{
+  public getAllHistorys(): Observable<Historys[]> {
     return this.httpClient.get<Historys[]>(`${this.api}/history`, this.httpOptions);
   }
 }
