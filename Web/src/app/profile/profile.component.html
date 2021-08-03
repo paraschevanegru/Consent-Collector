@@ -4,7 +4,7 @@
       <img src="./../../assets/consent.png" width="200" alt="">
     </a>
     <div class="separate">
-      <div class="notification" (click)="clickNotification()" >
+      <div class="notification" (click)="clickNotification()">
         <span class="material-icons">notifications</span>
         <sup class="number-of-notification">{{nrOfNotification}}</sup>
       </div>
@@ -22,29 +22,12 @@
   </div>
 
 </nav>
-<div class="content-body">
-  <div class="survey-control">
-    <input type="text" list="test" placeholder="SortBy"><br><br>
-    <datalist id="test">
-      <option>Name</option>
-      <option>Launch date</option>
-    </datalist>
-
-    <input type="text" list="filter" placeholder="FilterBy"><br><br>
-    <datalist id="filter">
-      <option>Subject</option>
-      <option>Legal Basis (Law)</option>
-      <option>Legal Basis (Contract)</option>
-      <option>Legal Basis (Legitimate Interest)</option>
-    </datalist>
-  </div>
-
-  <div class="content-surveys">
+<div class="container" id="profileContent">
+  <div class="content-surveys row">
     <app-survey></app-survey>
   </div>
 </div>
 
-<div *ngIf="displayNotifications" class="notifications">
+<div *ngIf="displayNotifications" class="notifications toast-container position-absolute top-0 end-0 p-3">
   <app-notifications (notificationEvent)="decrementNotification($event)"></app-notifications>
 </div>
-

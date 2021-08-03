@@ -42,23 +42,24 @@ namespace ConsentCollector.Persistence
             this.context.Survey.Update(survey);
         }
 
-        public IEnumerable<Survey> GetAll(DateTime? launchDateTime = null, DateTime? expirationDateTime = null)
+        public IEnumerable<Survey> GetAll(DateTime? launchDateTime = null, DateTime? expirationDateTime = null, string? legalBasis = "")
         {
             if (launchDateTime!=null&& expirationDateTime != null)
             {
                 return context.Survey.Where(x => x.LaunchDate >= launchDateTime
-                                                 && x.ExpirationDate <= expirationDateTime)
+                                                 && x.ExpirationDate <= expirationDateTime && (legalBasis != "" ? x.LegalBasis == legalBasis : true))
                     .OrderByDescending(x => x.LaunchDate);
             }else if (launchDateTime != null && expirationDateTime == null)
             {
-                return context.Survey.Where(x => x.LaunchDate >= launchDateTime)
+                return context.Survey.Where(x => x.LaunchDate >= launchDateTime && (legalBasis != "" ? x.LegalBasis == legalBasis : true))
                     .OrderByDescending(x => x.LaunchDate);
             }else if (launchDateTime == null && expirationDateTime != null)
             {
-                return context.Survey.Where(x => x.ExpirationDate <= expirationDateTime)
+                return context.Survey.Where(x => x.ExpirationDate <= expirationDateTime && (legalBasis != "" ? x.LegalBasis == legalBasis : true))
                     .OrderByDescending(x => x.ExpirationDate);
-            }            
-           return context.Survey;
+            }
+
+            return context.Survey.Where(x => legalBasis == "" || x.LegalBasis == legalBasis);
         }
     }
 }
