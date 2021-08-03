@@ -31,7 +31,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md">
-      <form class="auth" [formGroup]="formAddAdmin" (ngSubmit)="submitAddAdmin()">
+      <form [formGroup]="formAddAdmin" (ngSubmit)="submitAddAdmin()">
         <div>
 
           <div *ngIf="listOfUsers.length == 0">
