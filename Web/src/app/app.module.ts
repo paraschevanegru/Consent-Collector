@@ -23,6 +23,7 @@ import { EditSurveyComponent } from './admin/edit-survey/edit-survey.component';
 import { DatePipe } from '@angular/common';
 import { NotificationsComponent } from './profile/notifications/notifications.component';
 import { HelpComponent } from './help/help.component';
+import { ForgotPasswordComponent } from './authentication/forgot-password/forgot-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { HelpComponent } from './help/help.component';
     SurveyAdminListComponent,
     EditSurveyComponent,
     NotificationsComponent,
-    HelpComponent
+    HelpComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,

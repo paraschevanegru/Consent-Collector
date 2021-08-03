@@ -6,6 +6,8 @@ import { RegisterComponent } from './authentication/register/register.component'
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AdminComponent } from './admin/admin.component';
+import { ForgotPasswordComponent } from './authentication/forgot-password/forgot-password.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/authentication/login', pathMatch: 'full' },
@@ -16,7 +18,8 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: '/authentication/login', pathMatch: 'full' },
       { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegisterComponent }
+      { path: 'register', component: RegisterComponent },
+      { path: 'forgot_password', component: ForgotPasswordComponent}
     ]
   },
   { path: 'profile/:id', component: ProfileComponent },

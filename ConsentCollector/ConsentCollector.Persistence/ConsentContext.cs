@@ -30,9 +30,9 @@ namespace ConsentCollector.Persistence
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //string connectionString = @"Data Source=DESKTOP-B7LDT20\SQLEXPRESS;Initial Catalog=Consent;Integrated Security=True";
+            string connectionString = @"Data Source=DESKTOP-B7LDT20\SQLEXPRESS;Initial Catalog=Consent;Integrated Security=True";
             //string connectionString = @"Data Source=DESKTOP-VM7UR1F\SQLEXPRESS;Initial Catalog=Consent;Integrated Security=True";
-            string connectionString = @"Data Source=DESKTOP-ML4HKD4\SQLEXPRESS;Initial Catalog=Consent;Integrated Security=True";
+            //string connectionString = @"Data Source=DESKTOP-ML4HKD4\SQLEXPRESS;Initial Catalog=Consent;Integrated Security=True";
 
             optionsBuilder.UseSqlServer(connectionString);
         }
