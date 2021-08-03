@@ -32,7 +32,7 @@ namespace ConsentCollector.Business.Consent.Services
             return mapper.Map<IEnumerable<NotificationModel>>(notification);
         }
 
-        public async Task<NotificationModel> Create(NotificationModel model)
+        public async Task<NotificationModel> Create(CreateNotificationModel model)
         {
             var notification = this.mapper.Map<Notification>(model);
 

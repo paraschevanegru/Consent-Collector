@@ -11,24 +11,25 @@
         </tr>
       </thead>
       <tbody *ngFor="let s of survey" id={{s.id}} (click)="open(s.id)">
-        <tr>
-          <td class="text-center">
-            {{s.subject}}
-          </td>
-          <td class="text-center">
-            {{s.description}}
-          </td>
-          <td class="text-center">
-            {{s.legalBasis}}
-          </td>
-          <td class="text-center">
-            {{s.launchDate |date:'yyyy-MM-dd'}}
-          </td>
-          <td class="text-center">
-            {{s.expirationDate |date:'yyyy-MM-dd'}}
-          </td>
-        </tr>
-
+        <ng-container *ngIf="isExpirate(s.expirationDate)">
+          <tr>
+            <td class="text-center">
+              {{s.subject}}
+            </td>
+            <td class="text-center">
+              {{s.description}}
+            </td>
+            <td class="text-center">
+              {{s.legalBasis}}
+            </td>
+            <td class="text-center">
+              {{s.launchDate |date:'yyyy-MM-dd'}}
+            </td>
+            <td class="text-center">
+              {{s.expirationDate |date:'yyyy-MM-dd'}}
+            </td>
+          </tr>
+        </ng-container>
       </tbody>
     </table>
   </div>

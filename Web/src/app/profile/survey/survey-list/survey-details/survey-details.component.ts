@@ -59,27 +59,28 @@ export class SurveyDetailsComponent implements OnInit, OnDestroy {
     const group: any = {};
 
     for(let i=0;i<questions.length;++i){
-      //this.formAnswer.addControl(i.toString(),new FormControl(null))
-      // group.add(new FormControl(null));
       group[`ans${questions[i].idQuestion}`]=new FormControl(null);
     }
     group["comment"]=new FormControl(null);
     this.formAnswer=new FormGroup(group);
 
-    //
     this.CheckIfIsComplete(this.profileService.currentIdUser,questions)
-    //
-
   }
 
   public CheckIfIsComplete(idUser:string, questions:SurveyQuestion[]):void{
     this.profileService.GetAnswersByUserIdAndSurveyId(idUser, questions[0].idSurvey).subscribe(
       (data)=>{
+
         if(data.length>0){
           this.checkSurvey=true;
           for(let i=0;i<data.length;++i){
             this.idAnswers[i]=data[i].id??"null";
-            this.formAnswer.get(`ans${questions[i].idQuestion}`)?.setValue(data[i].agree)
+
+            var dataFind=data.find((x)=>{
+              x.idQuestion==questions[i].idQuestion;
+            });
+            //this.formAnswer.get(`ans${questions[i].idQuestion}`)?.setValue(dataFind?.agree);
+            this.formAnswer.get(`ans${data[i].idQuestion}`)?.setValue(data[i].agree);
           }
         };
         this.profileService.GetCommentByUserIdAndSurveyId(idUser,questions[0].idSurvey).subscribe(

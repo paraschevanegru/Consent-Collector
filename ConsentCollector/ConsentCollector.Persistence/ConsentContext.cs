@@ -23,6 +23,7 @@ namespace ConsentCollector.Persistence
         public DbSet<Survey> Survey { get; set; }
         public DbSet<UserDetail> UserDetail { get; set; }
         public DbSet<Answer> Answer { get; set; }
+        public DbSet<History> History { get; set; }
         public DbSet<Comment> Comment { get; set; }
         public DbSet<Notification> Notification { get; set; }
         public DbSet<Question> Question { get; set; }

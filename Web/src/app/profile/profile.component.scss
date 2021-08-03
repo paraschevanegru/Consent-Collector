@@ -39,8 +39,9 @@
 
 
 .survey-control{
+  padding: 30px;
   display: flex;
-  align-items: center;
+  justify-content: center;
   .search{
     display: flex;
     border: 2px solid teal;
@@ -71,9 +72,9 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  right: 160px;
+  right: 0px;
   top: 95px;
-  width: 400px;
+  width: 300px;
   height: auto;
   overflow-x: auto;
   z-index: 9;

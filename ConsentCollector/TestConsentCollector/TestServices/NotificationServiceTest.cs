@@ -141,7 +141,16 @@ namespace TestConsentCollector
         {
             //Arrange
             var notification = new Notification("Title", "Notificare noua", false);
-            var expectedResult = new NotificationModel()
+            var expectedResult = new CreateNotificationModel()
+            {
+                Title = notification.Title,
+                Description = notification.Description,
+                Seen = notification.Seen,
+                IdSurvey = notification.IdSurvey,
+                IdUser = notification.IdUser
+            };
+
+            var initialModel = new NotificationModel()
             {
                 Id = notification.Id,
                 Title = notification.Title,
@@ -166,7 +175,7 @@ namespace TestConsentCollector
 
             mapperMock
                 .Setup(m => m.Map<NotificationModel>(notification))
-                .Returns(expectedResult);
+                .Returns(initialModel);
 
             //Act
             var result = await sut.Create(expectedResult);

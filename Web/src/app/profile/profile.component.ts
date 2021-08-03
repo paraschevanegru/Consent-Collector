@@ -56,4 +56,9 @@ export class ProfileComponent implements OnInit {
     this.displayNotifications=!this.displayNotifications;
   }
 
+  public decrementNotification(n:any){
+    this.nrOfNotification-=n;
+    console.log("event:",n);
+  }
+
 }

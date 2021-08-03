@@ -27,4 +27,7 @@ export class SurveyListComponent implements OnInit {
     this.surveyId=id?id:"null";
     this.surveyIsOpen=true;
   }
+  public isExpirate(date:string):boolean{
+    return Date.parse(date)>Date.now();
+  }
 }

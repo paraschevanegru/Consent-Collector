@@ -6,6 +6,7 @@ import { Question } from '../models/question';
 import { SurveyQuestion } from '../models/surveyQuestion';
 import { User } from '../models/user';
 import { UserDetail } from '../models/userDetail';
+import { Notifications } from '../models/notification';
 
 @Injectable({
   providedIn: 'root'
@@ -127,5 +128,9 @@ export class AdminService {
   public patchUserRole(id?: string, role?: string): Observable<User> {
     let data = [{ op: "replace", path: "/role", value: role }];
     return this.httpClient.patch<User>(`${this.api}/user/${id}`, data, this.httpOptions);
+  }
+
+  public CreateNotification(notification:Notifications):Observable<Notifications>{
+    return this.httpClient.post<Notifications>(`${this.api}/notification`,notification,this.httpOptions);
   }
 }

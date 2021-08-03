@@ -3,8 +3,9 @@ import { LoginComponent } from './../../authentication/login/login.component';
 import { Survey } from 'src/app/models/survey';
 import { AdminService } from './../admin.service';
 import { Component, OnInit, Output } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Question } from 'src/app/models/question';
+import { Notifications } from 'src/app/models/notification';
 
 @Component({
   selector: 'app-add-form',
@@ -29,8 +30,16 @@ export class AddFormComponent implements OnInit {
   }
   initalizeFormGroup(): void {
     this.formAddSurvey = new FormGroup({
-      subject: new FormControl(null),
-      description: new FormControl(null),
+      subject: new FormControl(null,[
+        Validators.required,
+        Validators.maxLength(50),
+        Validators.minLength(3)
+      ]),
+      description: new FormControl(null,[
+        Validators.required,
+        Validators.maxLength(150),
+        Validators.minLength(3)
+      ]),
       legalBasis: new FormControl(null),
       launchDate: new FormControl(null),
       expirationDate: new FormControl(null),
@@ -98,6 +107,19 @@ export class AddFormComponent implements OnInit {
     console.log("Survey:", JSON.stringify(consentData));
     this.adminService.postConsent(consentData).subscribe(
       (data) => {
+        var surveyName=data.subject;
+        var surveyId=data.id;
+        this.adminService.getAllUsers().subscribe(
+          (data)=>{
+            data.forEach(el=>{
+              if(el.role=="user"){
+                var notification=new Notifications("New survey",`Survey: ${surveyName} has been created`,el.id??"null",surveyId??"null",false);
+                this.adminService.CreateNotification(notification).subscribe();
+              }
+            })
+          }
+        )
+
         console.log(data);
         questions.forEach((question: any) => {
           let surveyMap: any = { idSurvey: data.id, idQuestion: question }

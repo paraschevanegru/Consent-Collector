@@ -1,56 +1,3 @@
-<!-- <form class="survey-form" id="survey-form" [style.display]="this.profileService.isOpen?'block':'none'"> -->
-<!-- [style.display]="this.profileService.isOpen?'block':'none'" -->
-
-<!-- <div class="container">
-  <div class="row">
-    <table class="table table-hover  table-borderless tableSurvey">
-      <thead>
-        <tr>
-          <th scope="col" class="text-center">Question</th>
-          <th scope="col" class="text-center">Yes/No</th>
-        </tr>
-      </thead>
-
-      <form *ngIf="formAnswer" [formGroup]="formAnswer" (ngSubmit)="submitAnswer()" class="survey-form" id="survey-form">
-        <tbody *ngFor="let item of activeQuestions;let i = index">
-          <tr>
-            <td class="text-center">
-              {{item.questions}}
-            </td>
-            <td class="text-center">
-              <input type="checkbox" [formControlName]="getCheckBoxName(item.id)">
-          </tr>
-        </tbody>
-        <tbody>
-          <tr>
-            <td class="text-center" colspan="2">
-              Comment (optional)
-            </td>
-          </tr>
-        </tbody>
-        <tbody>
-          <tr>
-            <td class="text-center" colspan="2">
-              <textarea formControlName="comment" id="" cols="58" rows="5"></textarea>
-            </td>
-          </tr>
-        </tbody>
-
-        <tbody>
-          <tr>
-            <td class="text-center">
-              <input type="button" value="Back" (click)="back()">
-            </td>
-            <td class="text-center">
-              <input type="submit" value="Submit">
-          </tr>
-        </tbody>
-      </form>
-    </table>
-  </div>
-</div> -->
-
-
 <form  *ngIf="formAnswer" [formGroup]="formAnswer" (ngSubmit)="submitAnswer()" class="survey-form" id="survey-form">
   <ul class="list-question">
     <div class="antet-survey-form">
@@ -69,8 +16,7 @@
 
   <div class="comment-survey">
     <label for="">Comment (optional)</label><br>
-    <!-- <input type="text" name="comment" id=""> -->
-    <textarea formControlName="comment" id="" cols="58" rows="5"></textarea>
+    <textarea formControlName="comment" id="" cols="59" rows="5"></textarea>
   </div>
 
   <div class="control-btn">
