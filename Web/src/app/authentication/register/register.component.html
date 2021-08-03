@@ -1,19 +1,23 @@
 <form [formGroup]="formRegister" (ngSubmit)="submitRegister()" class="auth">
   <label for="register_firstName">First Name</label><br>
-  <input type="text" formControlName="register_firstName" id="register_firstName" placeholder="Your FirstName..." required><br>
+  <input type="text" formControlName="register_firstName" id="register_firstName" placeholder="Your FirstName..."
+    required><br>
   <div class="invalid-data" *ngIf="(formRegister.get('register_firstName')?.errors?.required)">
     This input is required
   </div>
-  <div class="invalid-data" *ngIf="formRegister.get('register_firstName')?.errors?.minlength || formRegister.get('register_firstName')?.errors?.maxlength">
+  <div class="invalid-data"
+    *ngIf="formRegister.get('register_firstName')?.errors?.minlength || formRegister.get('register_firstName')?.errors?.maxlength">
     First name must be at least 3 and must not exceed 30
   </div>
 
   <label for="register_lastName">Last Name</label><br>
-  <input type="text" formControlName="register_lastName" id="register_lastName" placeholder="Your LastName..." required><br>
+  <input type="text" formControlName="register_lastName" id="register_lastName" placeholder="Your LastName..."
+    required><br>
   <div class="invalid-data" *ngIf="(formRegister.get('register_lastName')?.errors?.required)">
     This input is required
   </div>
-  <div class="invalid-data" *ngIf="formRegister.get('register_lastName')?.errors?.minlength || formRegister.get('register_lastName')?.errors?.maxlength">
+  <div class="invalid-data"
+    *ngIf="formRegister.get('register_lastName')?.errors?.minlength || formRegister.get('register_lastName')?.errors?.maxlength">
     Last name must be at least 3 and must not exceed 30
   </div>
 
@@ -31,7 +35,8 @@
   <div class="invalid-data" *ngIf="(formRegister.get('register_phone')?.errors?.required)">
     This input is required
   </div>
-  <div class="invalid-data" *ngIf="formRegister.get('register_phone')?.errors?.minlength || formRegister.get('register_phone')?.errors?.maxlength">
+  <div class="invalid-data"
+    *ngIf="formRegister.get('register_phone')?.errors?.minlength || formRegister.get('register_phone')?.errors?.maxlength">
     The phone must contain 10 digits
   </div>
   <div class="invalid-data" *ngIf="formRegister.get('register_phone')?.errors?.pattern">
@@ -39,11 +44,13 @@
   </div>
 
   <label for="register_username">Username</label><br>
-  <input type="text" formControlName="register_username" id="register_username" placeholder="Your username..." required><br>
+  <input type="text" formControlName="register_username" id="register_username" placeholder="Your username..."
+    required><br>
   <div class="invalid-data" *ngIf="(formRegister.get('register_username')?.errors?.required)">
     This input is required
   </div>
-  <div class="invalid-data" *ngIf="formRegister.get('register_username')?.errors?.minlength || formRegister.get('register_username')?.errors?.maxlength">
+  <div class="invalid-data"
+    *ngIf="formRegister.get('register_username')?.errors?.minlength || formRegister.get('register_username')?.errors?.maxlength">
     First name must be at least 3 and must not exceed 20
   </div>
   <div class="invalid-data" *ngIf="formRegister.get('register_username')?.errors?.pattern">
@@ -51,23 +58,27 @@
   </div>
 
   <label for="register_password1">Password</label><br>
-  <input type="password" formControlName="register_password1" id="register_password1" placeholder="Your password..." required><br>
+  <input type="password" formControlName="register_password1" id="register_password1" placeholder="Your password..."
+    required><br>
   <div class="invalid-data" *ngIf="(formRegister.get('register_password1')?.errors?.required)">
     This input is required
   </div>
-  <div class="invalid-data" *ngIf="formRegister.get('register_password1')?.errors?.minlength || formRegister.get('register_password1')?.errors?.maxlength">
+  <div class="invalid-data"
+    *ngIf="formRegister.get('register_password1')?.errors?.minlength || formRegister.get('register_password1')?.errors?.maxlength">
     First name must be at least 8 and must not exceed 16
   </div>
   <div class="invalid-data" *ngIf="formRegister.get('register_password1')?.errors?.pattern">
-    Password  must contain at least one uppercase letter,one lowercase letter,one number and one (!?*.)
+    Password must contain at least one uppercase letter,one lowercase letter,one number and one (!?*.)
   </div>
 
   <label for="register_password2">Confirm Password</label><br>
-  <input type="password" formControlName="register_password2" id="register_password2" placeholder="Confirm password..." required><br>
+  <input type="password" formControlName="register_password2" id="register_password2" placeholder="Confirm password..."
+    required><br>
   <div class="invalid-data" *ngIf="(formRegister.get('register_password2')?.errors?.required)">
     This input is required
   </div>
-  <div class="invalid-data" *ngIf="formRegister.get('register_password2')?.value!=formRegister.get('register_password1')?.value">
+  <div class="invalid-data"
+    *ngIf="formRegister.get('register_password2')?.value!=formRegister.get('register_password1')?.value">
     Passwords are different
   </div>
   <input type="submit" value="Register" [disabled]="formRegister.invalid">
@@ -75,7 +86,6 @@
     Phone, email or username already exists
   </div>
   <div (click)="redirectToLogin()">
-  <p>Sign in</p>
+    <p>Sign in</p>
   </div>
 </form>
-
