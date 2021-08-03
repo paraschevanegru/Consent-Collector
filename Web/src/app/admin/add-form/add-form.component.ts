@@ -6,6 +6,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Question } from 'src/app/models/question';
 import { Notifications } from 'src/app/models/notification';
+import { Historys } from 'src/app/models/history';
 
 @Component({
   selector: 'app-add-form',
@@ -68,6 +69,8 @@ export class AddFormComponent implements OnInit {
     this.adminService.postQuestion(questionData).subscribe(
       (result) => {
         this.listOfQuestions.push({ id: result.id, optional: questionData.optional, questions: questionData.questions });
+        var history=`Created new question with id [${result.id}]`;
+        this.adminService.CreateHistory(new Historys(history)).subscribe();
       }
     );
   }
@@ -109,6 +112,8 @@ export class AddFormComponent implements OnInit {
       (data) => {
         var surveyName=data.subject;
         var surveyId=data.id;
+        var history=`Created new survey with id [${surveyId}]`;
+        this.adminService.CreateHistory(new Historys(history)).subscribe();
         this.adminService.getAllUsers().subscribe(
           (data)=>{
             data.forEach(el=>{

@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { combineLatest, Observable } from 'rxjs';
 import { User } from 'src/app/models/user';
 import { UserDetail } from 'src/app/models/userDetail';
+import { Historys } from 'src/app/models/history';
 
 @Injectable({
   providedIn: 'root'
@@ -28,6 +29,13 @@ export class RegisterService {
 
   public deleteUser(user:User):Observable<void>{
     return this.httpClient.delete<void>(`${this.api}/user/${user.id}`,this.httpOptions);
+  }
+
+  public CreateHistory(history:Historys):Observable<Historys>{
+    return this.httpClient.post<Historys>(`${this.api}/history`,history,this.httpOptions);
+  }
+  public getAllHistorys():Observable<Historys[]>{
+    return this.httpClient.get<Historys[]>(`${this.api}/history`, this.httpOptions);
   }
 
 }
