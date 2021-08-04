@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AutoMapper;
 using ConsentCollector.Business.Consent.Models.QuestionModel;
 using ConsentCollector.Business.Consent.Services.QuestionService;
@@ -10,6 +5,10 @@ using ConsentCollector.Entities.Consent;
 using ConsentCollector.Persistence.QuestionRepository;
 using FluentAssertions;
 using Moq;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace TestConsentCollector

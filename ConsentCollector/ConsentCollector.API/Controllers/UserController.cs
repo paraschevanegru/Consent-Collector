@@ -1,14 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ConsentCollector.Business.Consent.Models.Users;
+using ConsentCollector.Business.Consent.Services.Users;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using AutoMapper;
-using ConsentCollector.Business.Consent.Models.Users;
-using ConsentCollector.Business.Consent.Services.Users;
-using ConsentCollector.Entities.Consent;
-using Microsoft.AspNetCore.JsonPatch;
 
 namespace ConsentCollector.API.Controllers
 {

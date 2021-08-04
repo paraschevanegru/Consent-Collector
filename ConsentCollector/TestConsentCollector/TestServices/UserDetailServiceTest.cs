@@ -1,17 +1,14 @@
-﻿using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using ConsentCollector.Business.Consent.Models.UserDetails;
-using ConsentCollector.Business.Consent.Models.Users;
 using ConsentCollector.Business.Consent.Services.UserDetails;
-using ConsentCollector.Business.Consent.Services.Users;
 using ConsentCollector.Entities.Consent;
 using ConsentCollector.Persistence.UserRepository;
 using FluentAssertions;
+using Moq;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace TestConsentCollector

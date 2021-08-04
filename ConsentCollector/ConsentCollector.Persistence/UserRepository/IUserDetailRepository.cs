@@ -1,9 +1,7 @@
-﻿using System;
+﻿using ConsentCollector.Entities.Consent;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using ConsentCollector.Entities.Consent;
 
 namespace ConsentCollector.Persistence.UserRepository
 {

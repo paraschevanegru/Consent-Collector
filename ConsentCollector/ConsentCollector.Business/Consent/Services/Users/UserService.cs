@@ -1,12 +1,10 @@
-﻿using ConsentCollector.Business.Consent.Models.Users;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
+using ConsentCollector.Business.Consent.Models.Users;
 using ConsentCollector.Entities.Consent;
 using ConsentCollector.Persistence.UserRepository;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ConsentCollector.Business.Consent.Services.Users
 {

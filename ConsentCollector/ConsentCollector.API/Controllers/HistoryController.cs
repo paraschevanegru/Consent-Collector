@@ -1,9 +1,6 @@
 ﻿using ConsentCollector.Business.Consent.Models.HistoryModel;
 using ConsentCollector.Business.Consent.Services.HistoryService;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ConsentCollector.API.Controllers

@@ -1,19 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
-using ConsentCollector.Business.Consent.Models.CommentModel;
 using ConsentCollector.Business.Consent.Models.Users;
-using ConsentCollector.Business.Consent.Services.CommentService;
 using ConsentCollector.Business.Consent.Services.Users;
 using ConsentCollector.Entities.Consent;
-using ConsentCollector.Persistence.CommentRepository;
 using ConsentCollector.Persistence.UserRepository;
 using FluentAssertions;
-using Microsoft.VisualStudio.TestPlatform.CoreUtilities.Extensions;
 using Moq;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace TestConsentCollector
