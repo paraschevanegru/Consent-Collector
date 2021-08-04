@@ -1,11 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ConsentCollector.Business.Consent.Models.UserDetails;
+using ConsentCollector.Business.Consent.Services.UserDetails;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using ConsentCollector.Business.Consent.Models.UserDetails;
-using ConsentCollector.Business.Consent.Services.UserDetails;
 
 namespace ConsentCollector.API.Controllers
 {

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ConsentCollector.Business.Consent.Models;
+﻿using ConsentCollector.Business.Consent.Models;
 using FluentValidation;
+using System;
+using System.Collections.Generic;
 
 namespace ConsentCollector.Business.Consent.Validators
 {

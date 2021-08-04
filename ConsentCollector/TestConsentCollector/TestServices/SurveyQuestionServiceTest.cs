@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
-using ConsentCollector.Business.Consent.Models;
+﻿using AutoMapper;
 using ConsentCollector.Business.Consent.Models.SurveyQuestionModel;
-using ConsentCollector.Business.Consent.Services;
 using ConsentCollector.Business.Consent.Services.SurveyQuestionService;
 using ConsentCollector.Entities.Consent;
-using ConsentCollector.Persistence;
 using ConsentCollector.Persistence.SurveyQuestionRepository;
 using FluentAssertions;
 using Moq;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace TestConsentCollector.TestServices

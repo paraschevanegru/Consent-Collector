@@ -1,13 +1,12 @@
 ﻿using AutoMapper;
 using ConsentCollector.Business.Consent.Models;
 using ConsentCollector.Business.Consent.Models.CommentModel;
+using ConsentCollector.Business.Consent.Models.HistoryModel;
 using ConsentCollector.Business.Consent.Models.QuestionModel;
-using ConsentCollector.Entities.Consent;
-using System;
+using ConsentCollector.Business.Consent.Models.SurveyQuestionModel;
 using ConsentCollector.Business.Consent.Models.UserDetails;
 using ConsentCollector.Business.Consent.Models.Users;
-using ConsentCollector.Business.Consent.Models.SurveyQuestionModel;
-using ConsentCollector.Business.Consent.Models.HistoryModel;
+using ConsentCollector.Entities.Consent;
 
 namespace ConsentCollector.Business
 {

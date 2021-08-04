@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ConsentCollector.Business.Consent.Models;
+﻿using ConsentCollector.Business.Consent.Models;
 using ConsentCollector.Business.Consent.Validators;
-using ConsentCollector.Entities.Consent;
 using FluentAssertions;
 using FluentValidation.TestHelper;
+using System;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace TestConsentCollector.TestValidators
 {
