@@ -19,10 +19,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ConsentCollector.Business.Consent.Models;
+using ConsentCollector.Business.Consent.Models.UserDetails;
+using ConsentCollector.Business.Consent.Models.Users;
 using ConsentCollector.Business.Consent.Services.UserDetails;
 using ConsentCollector.Business.Consent.Services.Users;
+using ConsentCollector.Business.Consent.Validators;
 using ConsentCollector.Persistence.UserRepository;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.Net.Http.Headers;
+using ConsentCollector.Persistence.SurveyQuestionRepository;
+using ConsentCollector.Business.Consent.Services.SurveyQuestionService;
+using ConsentCollector.Persistence.HistoryRepository;
+using ConsentCollector.Business.Consent.Services.HistoryService;
 
 namespace ConsentCollector.API
 {
@@ -40,7 +50,12 @@ namespace ConsentCollector.API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            services.AddControllers()
+                .AddFluentValidation(s =>
+                {
+                    s.RegisterValidatorsFromAssemblyContaining<Startup>();
+                    s.RunDefaultMvcValidationAfterFluentValidationExecutes = false;
+                });
             services.AddCors(options =>
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins,
@@ -70,12 +85,16 @@ namespace ConsentCollector.API
             });
 
             services.AddScoped<IConsentRepository, ConsentRepository>();
+            services.AddScoped<IHistoryRepository, HistoryRepository>();
+            services.AddScoped<IHistoryService, HistoryService>();
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserDetailRepository, UserDetailRepository>();
+            services.AddScoped<ISurveyQuestionRepository, SurveyQuestionRepository>();
 
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUserDetailService, UserDetailService>();
+            services.AddScoped<ISurveyQuestionService, SurveyQuestionService>();
 
             services.AddScoped<INotificationRepository, NotificationRepository>();
             services.AddScoped<IQuestionRepository, QuestionRepository>();
@@ -88,7 +107,17 @@ namespace ConsentCollector.API
             services.AddScoped<ICommentService, CommentService>();
             services.AddScoped<IAnswerService, AnswerService>();
 
+            services.AddScoped<IValidator<CreateUserDetailModel>,CreateUserDetailModelValidator>();
+            services.AddScoped<IValidator<CreateUserModel>, CreateUserModelValidator>();
+            services.AddScoped<IValidator<CreateSurveyModel>, CreateSurveyModelValidator>();
+            services.AddScoped<IValidator<CreateAnswerModel>, CreateAnswerModelValidator>();
+            services.AddScoped<IValidator<NotificationModel>,CreateNotificationModelValidator>();
             services.AddSwaggerGen();
+
+            services.AddMvc();
+            services
+                .AddControllersWithViews()
+                .AddNewtonsoftJson();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -105,7 +134,11 @@ namespace ConsentCollector.API
 
             app.UseRouting();
 
-            app.UseCors(MyAllowSpecificOrigins);
+            //app.UseCors(MyAllowSpecificOrigins);
+            app.UseCors(options => options
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
 
 
             app.UseAuthorization();

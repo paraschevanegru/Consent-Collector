@@ -42,6 +42,12 @@ namespace ConsentCollector.Persistence.CommentRepository
             await this.context.SaveChangesAsync();
         }
 
+        public async Task<Comment> GetAnswerByUserAndSurveyId(Guid userId, Guid surveyId)
+        {
+            //return context.Comment.Where(a => a.IdUser == userId && a.IdSurvey == surveyId);
+            return await context.Comment.FirstAsync(a => a.IdUser == userId && a.IdSurvey == surveyId);
+        }
+
         public void Update(Comment comment)
         {
             this.context.Comment.Update(comment);

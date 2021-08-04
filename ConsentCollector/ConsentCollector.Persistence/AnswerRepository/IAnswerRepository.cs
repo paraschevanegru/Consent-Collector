@@ -11,6 +11,8 @@ namespace ConsentCollector.Persistence
     {
         IEnumerable<Answer> GetAll();
         Task<Answer> GetAnswerById(Guid id);
+
+        IEnumerable<Answer> GetAnswerByUserAndSurveyId(Guid userId, Guid surveyId);
         Task Create(Answer answer);
 
         Task SaveChanges();

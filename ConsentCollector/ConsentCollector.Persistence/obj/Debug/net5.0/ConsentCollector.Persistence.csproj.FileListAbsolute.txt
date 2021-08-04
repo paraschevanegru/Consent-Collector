@@ -118,3 +118,75 @@ E:\Centric\Proiect_Github\Nou\Consent-Collector\ConsentCollector\ConsentCollecto
 E:\Centric\Proiect_Github\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ref\ConsentCollector.Persistence.dll
 E:\Centric\Proiect_Github\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.pdb
 E:\Centric\Proiect_Github\Nou\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.genruntimeconfig.cache
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.deps.json
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.runtimeconfig.json
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.runtimeconfig.dev.json
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.dll
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ref\ConsentCollector.Persistence.dll
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.pdb
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Entities.dll
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Entities.pdb
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.csproj.AssemblyReference.cache
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.AssemblyInfoInputs.cache
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.AssemblyInfo.cs
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.csproj.CoreCompileInputs.cache
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.csproj.CopyComplete
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.dll
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ref\ConsentCollector.Persistence.dll
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.pdb
+F:\Centric\CC - Cel bun\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.genruntimeconfig.cache
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.deps.json
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.runtimeconfig.json
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.runtimeconfig.dev.json
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.dll
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ref\ConsentCollector.Persistence.dll
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.pdb
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Entities.dll
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Entities.pdb
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.csproj.AssemblyReference.cache
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.AssemblyInfoInputs.cache
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.AssemblyInfo.cs
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.csproj.CoreCompileInputs.cache
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.csproj.CopyComplete
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.dll
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ref\ConsentCollector.Persistence.dll
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.pdb
+E:\Centric\Github_Project\26_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.genruntimeconfig.cache
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.deps.json
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.runtimeconfig.json
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.runtimeconfig.dev.json
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.dll
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ref\ConsentCollector.Persistence.dll
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.pdb
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Entities.dll
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Entities.pdb
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.csproj.AssemblyReference.cache
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.AssemblyInfoInputs.cache
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.AssemblyInfo.cs
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.csproj.CoreCompileInputs.cache
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.csproj.CopyComplete
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.dll
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ref\ConsentCollector.Persistence.dll
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.pdb
+E:\Centric\Github_Project\30_07_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.genruntimeconfig.cache
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.deps.json
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.runtimeconfig.json
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.runtimeconfig.dev.json
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.dll
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ref\ConsentCollector.Persistence.dll
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Persistence.pdb
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Entities.dll
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\bin\Debug\net5.0\ConsentCollector.Entities.pdb
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.csproj.AssemblyReference.cache
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.AssemblyInfoInputs.cache
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.AssemblyInfo.cs
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.csproj.CoreCompileInputs.cache
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.csproj.CopyComplete
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.dll
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ref\ConsentCollector.Persistence.dll
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.pdb
+E:\Centric\Github_Project\03_08_2021\Consent-Collector\ConsentCollector\ConsentCollector.Persistence\obj\Debug\net5.0\ConsentCollector.Persistence.genruntimeconfig.cache

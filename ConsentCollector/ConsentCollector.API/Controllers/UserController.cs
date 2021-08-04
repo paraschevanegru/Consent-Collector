@@ -4,8 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using ConsentCollector.Business.Consent.Models.Users;
 using ConsentCollector.Business.Consent.Services.Users;
+using ConsentCollector.Entities.Consent;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace ConsentCollector.API.Controllers
 {
@@ -32,7 +35,32 @@ namespace ConsentCollector.API.Controllers
 
             return Ok(users);
         }
-        [HttpGet("{id}")]
+
+        [HttpGet("username/{username}/password/{password}")]
+        public async Task<IActionResult> GetUsernameAndPassword([FromRoute] string username, [FromRoute] string password)
+        {
+            var result = await userService.GetByUsername(username);
+            bool verified = BCrypt.Net.BCrypt.Verify(password, result.Password);
+
+            if (verified)
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return StatusCode(403);
+            }
+           
+        }
+
+        [HttpGet("username/{username}")]
+        public async Task<IActionResult> GetUsername([FromRoute] string username)
+        {
+            var result = await userService.GetByUsername(username);
+            return Ok(result);
+        }
+
+            [HttpGet("{id}")]
         public async Task<IActionResult> Get([FromRoute] Guid id)
         {
             var result = await userService.GetById(id);
@@ -61,6 +89,22 @@ namespace ConsentCollector.API.Controllers
             await userService.Update(id, model);
 
             return NoContent();
+        }
+
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> Patch([FromRoute] Guid id, [FromBody] JsonPatchDocument<UserModel> userPatchDocument)
+        {
+            var result = await userService.GetById(id);
+            userPatchDocument.ApplyTo(result);
+            CreateUserModel user = new CreateUserModel(){
+                Username = result.Username, 
+                Password = result.Password, 
+                Role = result.Role
+            };
+
+            await userService.Update(id, user);
+
+            return Ok(result);
         }
 
     }

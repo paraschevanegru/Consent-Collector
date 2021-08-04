@@ -31,6 +31,17 @@ namespace ConsentCollector.Persistence
             return await context.Notification.FirstAsync(n => n.Id == id);
         }
 
+        public  IEnumerable<Notification> GetNotificationByUserId(Guid userId)
+        {
+            return  context.Notification.Where(n => n.IdUser == userId).ToList();
+        }
+
+
+        public IEnumerable<Notification> GetNotificationByIdAndSeen(Guid id, bool seen)
+        {
+            return context.Notification.Where(n => n.IdUser == id && n.Seen==seen).ToList();
+        }
+
         public async Task SaveChanges()
         {
             await this.context.SaveChangesAsync();
@@ -45,5 +56,7 @@ namespace ConsentCollector.Persistence
         {
             return context.Notification;
         }
+
+
     }
 }

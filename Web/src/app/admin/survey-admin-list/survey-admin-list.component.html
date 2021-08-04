@@ -1,0 +1,103 @@
+<form [formGroup]="formSubmitFilter" (ngSubmit)="submitFilter()">
+  <div id="filter" class="row">
+    <div class="col-md">
+      <div class="input-group mb-3">
+
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="launchDate">Launch Date</span>
+
+
+        </div>
+        <input min="{{currentDate |date:'yyyy-MM-dd'}}" formControlName="launchDate" type="date" class="form-control"
+          placeholder="Launch Date" aria-label="Launch Date" aria-describedby="launchDate">
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="expirationDate">Expiration Date</span>
+
+        </div>
+        <input min="{{currentDate |date:'yyyy-MM-dd'}}" formControlName="expirationDate" type="date"
+          class="form-control" placeholder="Expiration Date" aria-label="Expiration Date"
+          aria-describedby="expirationDate">
+      </div>
+    </div>
+    <div class="col-md"><button type="submit" class="btn btn-primary">Filter</button></div>
+
+  </div>
+
+
+</form>
+
+
+<div *ngIf="alertPopup">
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+      <path
+        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+    </symbol>
+  </svg>
+  <div class="alert alert-success alert-dismissible fade show d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+      <use xlink:href="#check-circle-fill" />
+    </svg>
+    <div>
+      The Survey was deleted with success!
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" (click)="close()" aria-label="Close"></button>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <table class="table table-hover  table-borderless tableSurvey">
+      <thead>
+
+        <tr>
+          <th scope="col" class="text-center">Subject</th>
+          <th scope="col" class="text-center">Description</th>
+          <th scope="col" class="text-center">Legal Basis</th>
+          <th scope="col" class="text-center">Launch Date</th>
+          <th scope="col" class="text-center">Expiration Date</th>
+          <th scope="col" class="text-center">Action</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let s of survey" id={{s.id}}>
+        <tr>
+          <td class="text-center">
+            {{s.subject}}
+          </td>
+          <td class="text-center">
+            {{s.description}}
+          </td>
+          <td class="text-center">
+            {{s.legalBasis}}
+          </td>
+          <td class="text-center">
+            {{s.launchDate |date:'yyyy-MM-dd'}}
+          </td>
+          <td class="text-center">
+            {{s.expirationDate |date:'yyyy-MM-dd'}}
+          </td>
+          <td id="actionButtonAdmin" class="text-center">
+            <button class='btn btn-outline-info btn-xs' id="editButton" name="editButton"
+              (click)="onPressEditSurvey(s.id)"><span class="material-icons">
+                edit
+              </span>Edit</button>
+            <button class="btn btn-outline-danger btn-xs" id="deleteButton" name="deleteButton"
+              (click)="deleteSurvey(s.id)"><span class="material-icons">
+                remove_circle_outline
+              </span>Delete</button>
+          </td>
+        </tr>
+        <tr class="no-hover" id="comp-render" *ngIf="displayEditSurvey && currentSurvey == s.id">
+          <td colspan="6">
+            <app-edit-survey></app-edit-survey>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>

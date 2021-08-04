@@ -1,0 +1,81 @@
+
+#surveyButtons button {
+  margin: 0px 5px;
+  width: 100%;
+}
+.navbar {
+  background-color: #dfe8f4 !important;
+  box-shadow: 0 2px 5px #e6e4e4;
+}
+.separate {
+  margin: 0px 5px;
+  :hover {
+    cursor: pointer;
+  }
+  div {
+    display: flex;
+    align-items: center;
+  }
+  span {
+    padding: 0px 5px;
+
+  }
+}
+
+
+.notification{
+  :hover{
+    cursor: pointer;
+  }
+  margin-right: 20px;
+  color: rgb(189, 129, 19);
+  .number-of-notification{
+    color: black;
+    font-size: 20px;
+    background-color: rgb(214, 127, 127);
+    border-radius: 5px;
+  }
+}
+
+
+.survey-control{
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  .search{
+    display: flex;
+    border: 2px solid teal;
+    height: 50px;
+    width: 700px;
+    margin: 50px auto;
+    input[type=text]{
+      border:none;
+      font-size: 40px;
+      width: 95%;
+      margin:0px;
+      background:white;
+    }
+    span{
+      background-color: white;
+      font-size: 50px;
+    };
+  }
+  input[type=text]{
+    margin: 0 20px;
+    width: 220px;
+    font-size: 30px;
+    background: rgb(51, 49, 49);
+  }
+}
+
+.notifications{
+  margin-top: 85px;
+  .toast{
+    margin-top: 5px;
+  }
+}
+#profileContent {
+  .row {
+    margin-top: 20px;
+  }
+}

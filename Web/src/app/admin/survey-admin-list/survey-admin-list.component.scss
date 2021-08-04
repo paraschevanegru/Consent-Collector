@@ -1,0 +1,67 @@
+#actionButtonAdmin button {
+  margin: 0px 5px;
+  padding: 5px;
+  .material-icons {
+    font-size: 14px;
+  }
+}
+#filter {
+  button {
+    width: 100%;
+    margin: 0;
+  }
+  .col-md {
+    padding: 0px;
+  }
+}
+.table-hover > tbody > tr:hover {
+  background-color: #f8f6ff !important;
+}
+.table-hover > tbody > tr.no-hover:hover {
+  background-color: white !important;
+}
+
+table {
+  width: 100%;
+}
+th,
+td {
+  font-weight: unset;
+  padding-right: 10px;
+}
+
+.tableSurvey {
+  position: relative;
+  padding-top: 60px;
+  border: none;
+}
+
+.tableSurvey th {
+  font-family: Roboto;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.4;
+  background-color: #6c7ae0;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.tableSurvey td {
+  font-family: Roboto;
+  font-size: 15px;
+  color: gray;
+  line-height: 1.4;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.tableSurvey > tbody > tr:nth-child(even) {
+  background-color: #f8f6ff;
+}
+.tableSurvey {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+}

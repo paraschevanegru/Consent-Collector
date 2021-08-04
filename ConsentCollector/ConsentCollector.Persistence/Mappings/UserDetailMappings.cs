@@ -25,11 +25,15 @@ namespace ConsentCollector.Persistence.Mappings
                 .IsRequired()
                 .ValueGeneratedNever();
 
+                e.HasCheckConstraint("CK_UserDetail_Firstname", "Len([Firstname])>=3 and Len([Firstname])<=20");
+
                 e.Property(c => c.Lastname)
                 .HasColumnName("Lastname")
                 .HasMaxLength(20)
                 .IsRequired()
                 .ValueGeneratedNever();
+
+                e.HasCheckConstraint("CK_UserDetail_Lastname", "Len([Lastname])>=3 and Len([Lastname])<=20");
 
                 e.Property(c => c.Number)
                     .HasColumnName("Number")
@@ -37,10 +41,12 @@ namespace ConsentCollector.Persistence.Mappings
                     .IsRequired()
                     .ValueGeneratedNever();
 
+
                 e.Property(c => c.Email)
                 .HasColumnName("Email")
                 .IsRequired()
                 .ValueGeneratedNever();
+
 
                 e.HasIndex(c => c.Email)
                     .IsUnique(true);

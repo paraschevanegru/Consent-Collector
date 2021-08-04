@@ -1,0 +1,27 @@
+#adminContent {
+  .row {
+    margin-top: 20px;
+  }
+}
+#surveyButtons button {
+  margin: 0px 5px;
+  width: 100%;
+}
+.navbar {
+  background-color: #dfe8f4 !important;
+  box-shadow: 0 2px 5px #e6e4e4;
+}
+.separate {
+  margin: 0px 5px;
+  :hover {
+    cursor: pointer;
+  }
+  div {
+    display: flex;
+    align-items: center;
+  }
+  span {
+    padding: 0px 5px;
+
+  }
+}

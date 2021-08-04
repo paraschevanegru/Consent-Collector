@@ -1,0 +1,40 @@
+<nav class="navbar navbar-light bg-light sticky-top">
+  <div class="container-fluid"><a class="navbar-brand mx-auto" href="#">
+      <img src="./../../assets/consent.png" width="200" alt="">
+    </a>
+
+
+    <div class="separate">
+      <div *ngIf="userDetail?.firstname" class="user-fl">{{userDetail.firstname}} {{userDetail.lastname}} <span
+          class="material-icons">account_circle</span></div>
+
+    </div>
+    <div class="separate" (click)="logout()">
+      <div> Logout <span class="material-icons">logout</span></div>
+
+    </div>
+  </div>
+
+</nav>
+<div class="container" id="adminContent">
+  <div class="row" id="surveyButtons">
+
+    <div class="col-md"><button id="addButton" class="btn btn-outline-primary" data-mdb-ripple-color="dark"
+        name="addButton" (click)="onPress()">Add
+        New Survey</button></div>
+    <div class="col-md"> <button id="addAdminButton" class="btn btn-outline-primary" data-mdb-ripple-color="dark"
+        name="addAdminButton" (click)="onPressAddAdmin()">Add Admin</button></div>
+
+  </div>
+  <div class="row" *ngIf="display">
+    <app-add-form></app-add-form>
+  </div>
+  <div class="row" *ngIf="displayAdmin">
+    <app-add-admin></app-add-admin>
+  </div>
+
+  <div class="content-surveys row">
+    <app-survey-admin-list></app-survey-admin-list>
+  </div>
+
+</div>

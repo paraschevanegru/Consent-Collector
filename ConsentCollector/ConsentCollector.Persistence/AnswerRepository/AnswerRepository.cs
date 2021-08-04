@@ -15,6 +15,12 @@ namespace ConsentCollector.Persistence
         {
             this.context = context;
         }
+
+        public IEnumerable<Answer> GetAnswerByUserAndSurveyId(Guid userId, Guid surveyId)
+        {
+            return context.Answer.Where(a => a.IdUser == userId && a.IdSurvey == surveyId).ToList();
+        }
+
         public async Task Create(Answer answer)
         {
             await this.context.Answer.AddAsync(answer);

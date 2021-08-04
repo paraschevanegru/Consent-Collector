@@ -1,0 +1,33 @@
+<nav class="navbar navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand mx-auto" href="#">
+      <img src="./../../assets/consent.png" width="200" alt="">
+    </a>
+    <div class="separate">
+      <div class="notification" (click)="clickNotification()">
+        <span class="material-icons">notifications</span>
+        <sup class="number-of-notification">{{nrOfNotification}}</sup>
+      </div>
+    </div>
+
+    <div class="separate">
+      <div *ngIf="userDetail?.firstname" class="user-fl">{{userDetail.firstname}} {{userDetail.lastname}} <span
+          class="material-icons">account_circle</span></div>
+
+    </div>
+    <div class="separate" (click)="logout()">
+      <div> Logout <span class="material-icons">logout</span></div>
+
+    </div>
+  </div>
+
+</nav>
+<div class="container" id="profileContent">
+  <div class="content-surveys row">
+    <app-survey></app-survey>
+  </div>
+</div>
+
+<div *ngIf="displayNotifications" class="notifications toast-container position-absolute top-0 end-0 p-3">
+  <app-notifications (notificationEvent)="decrementNotification($event)"></app-notifications>
+</div>

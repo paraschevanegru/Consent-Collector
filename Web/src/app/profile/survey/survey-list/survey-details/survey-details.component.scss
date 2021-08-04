@@ -1,0 +1,27 @@
+.survey-form {
+  :hover {
+    cursor: pointer;
+  }
+  display: block;
+  width: 500px;
+  height: auto;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 9;
+}
+
+.custom-control.custom-checkbox {
+  padding-left: 0;
+}
+
+label.custom-control-label {
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+label.custom-control-label::before,
+label.custom-control-label::after {
+  right: 0;
+  left: auto;
+}

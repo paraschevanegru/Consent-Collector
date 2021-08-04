@@ -1,14 +1,20 @@
-<form action="" class="auth">
+<form class="auth" [formGroup]="formLogin" (ngSubmit)="submitLogin()">
   <label for="username">Username</label><br>
-  <input type="text" name="username" id="username" placeholder="Your username"><br>
+  <input type="text" formControlName="username" id="username" placeholder="Your username"><br>
   <label for="password">Password</label><br>
-  <input type="password" name="password" id="password" placeholder="Your password"><br><br>
+  <input type="password" formControlName="password" id="password" placeholder="Your password"><br><br>
   <input type="submit" value="Login">
-  <div>
+  <div class="invalid-data" *ngIf="invalidCredentials">
+    Invalid username and/or password
+  </div>
+  <div routerLink='/authentication/forgot_password' routerLinkActive='active'>
     <p>Forgot your password?</p>
   </div>
   <div routerLink='/authentication/register' routerLinkActive='active'>
     <p>Create an account</p>
   </div>
-</form>
 
+  <div routerLink='/help' routerLinkActive='active'>
+    <p>Help</p>
+  </div>
+</form>

@@ -23,6 +23,8 @@ namespace ConsentCollector.Persistence.Mappings
                 .HasColumnName("Text")
                 .IsRequired()
                 .ValueGeneratedNever();
+
+                e.HasCheckConstraint("CK_Comment_Text", "Len([Text])>=5 and Len([Text])<=100");
             });
         }
     }

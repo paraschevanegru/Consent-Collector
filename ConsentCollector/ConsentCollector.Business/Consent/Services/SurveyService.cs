@@ -64,5 +64,12 @@ namespace ConsentCollector.Business.Consent.Services
 
             await consentRepository.SaveChanges();
         }
+
+        public IEnumerable<SurveyModel> GetAll(DateTime? launchDateTime = null, DateTime? expirationDateTime = null, string? legalBasis = "")
+        {
+            var survey = consentRepository.GetAll(launchDateTime, expirationDateTime, legalBasis);
+
+            return mapper.Map<IEnumerable<SurveyModel>>(survey);
+        }
     }
 }

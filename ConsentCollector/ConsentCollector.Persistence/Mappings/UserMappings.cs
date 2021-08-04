@@ -27,7 +27,7 @@ namespace ConsentCollector.Persistence.Mappings
 
                 e.Property(c => c.Password)
                 .HasColumnName("Password")
-                .HasMaxLength(20)
+                .HasMaxLength(2000)
                 .IsRequired()
                 .ValueGeneratedNever();
 
@@ -35,6 +35,8 @@ namespace ConsentCollector.Persistence.Mappings
                 .HasColumnName("Role")
                 .IsRequired()
                 .ValueGeneratedNever();
+
+                e.HasCheckConstraint("CK_User_Role", "[Role] = 'admin' or [Role] = 'user'");
 
                 e.HasIndex(c => c.Username)
                     .IsUnique(true);

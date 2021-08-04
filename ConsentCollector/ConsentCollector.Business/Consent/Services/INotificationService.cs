@@ -11,7 +11,11 @@ namespace ConsentCollector.Business.Consent.Services
     {
         Task<NotificationModel> GetById(Guid id);
 
-        Task<NotificationModel> Create(NotificationModel model);
+        IEnumerable<NotificationModel> GetByUserId(Guid userId);
+
+        IEnumerable<NotificationModel> GetByUserIdAndSeen(Guid userId,bool seen);
+
+        Task<NotificationModel> Create(CreateNotificationModel model);
 
         Task Delete(Guid notificationId);
 

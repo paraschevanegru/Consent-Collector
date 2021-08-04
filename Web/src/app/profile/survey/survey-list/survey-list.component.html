@@ -1,0 +1,79 @@
+<form [formGroup]="formSubmitFilter" (ngSubmit)="submitFilter()">
+  <div id="filter" class="row">
+    <div class="col-md">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="launchDate">Launch Date</span>
+        </div>
+        <input min="{{currentDate |date:'yyyy-MM-dd'}}" formControlName="launchDate" type="date" class="form-control"
+          placeholder="Launch Date" aria-label="Launch Date" aria-describedby="launchDate">
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="expirationDate">Expiration Date</span>
+
+        </div>
+        <input min="{{currentDate |date:'yyyy-MM-dd'}}" formControlName="expirationDate" type="date"
+          class="form-control" placeholder="Expiration Date" aria-label="Expiration Date"
+          aria-describedby="expirationDate">
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="legalBasis">Legal Basis</label>
+        </div>
+        <select class="custom-select" formControlName="legalBasis" id="legalBasis">
+          <option value=""></option>
+          <option value="Contract">Contract</option>
+          <option value="Law">Law</option>
+          <option value="Legitimate Interest">Legitimate Interest</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md"><button id="filterButton"type="submit" class="btn btn-primary">Filter</button></div>
+  </div>
+</form>
+
+<div class="container">
+  <div class="row">
+    <table class="table table-hover  table-borderless tableSurvey">
+      <thead>
+        <tr>
+          <th scope="col" class="text-center">Subject</th>
+          <th scope="col" class="text-center">Description</th>
+          <th scope="col" class="text-center">Legal Basis</th>
+          <th scope="col" class="text-center">Launch Date</th>
+          <th scope="col" class="text-center">Expiration Date</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let s of survey" id={{s.id}} (click)="open(s.id)">
+        <ng-container *ngIf="isExpirate(s.expirationDate)">
+          <tr>
+            <td class="text-center">
+              {{s.subject}}
+            </td>
+            <td class="text-center">
+              {{s.description}}
+            </td>
+            <td class="text-center">
+              {{s.legalBasis}}
+            </td>
+            <td class="text-center">
+              {{s.launchDate |date:'yyyy-MM-dd'}}
+            </td>
+            <td class="text-center">
+              {{s.expirationDate |date:'yyyy-MM-dd'}}
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div *ngIf="surveyIsOpen">
+  <app-survey-details [Id]="surveyId"></app-survey-details>
+</div>

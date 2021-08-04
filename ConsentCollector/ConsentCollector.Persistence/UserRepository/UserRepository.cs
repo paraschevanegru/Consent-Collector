@@ -16,6 +16,12 @@ namespace ConsentCollector.Persistence.UserRepository
         {
             this.context = context;
         }
+
+        public async Task<User> GetUserByUsername(string username)
+        {
+            return await context.User.FirstAsync(u => u.Username == username);
+        }
+
         public async Task Create(User user)
         {
             await this.context.User.AddAsync(user);
@@ -36,6 +42,7 @@ namespace ConsentCollector.Persistence.UserRepository
             return await context.User
                 .FirstAsync(u => u.Id == id);
         }
+
 
         public async Task SaveChanges()
         {

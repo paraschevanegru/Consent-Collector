@@ -16,7 +16,7 @@ namespace ConsentCollector.Persistence.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.7")
+                .HasAnnotation("ProductVersion", "5.0.8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("ConsentCollector.Entities.Consent.Answer", b =>
@@ -77,6 +77,22 @@ namespace ConsentCollector.Persistence.Migrations
                     b.HasIndex("IdUser");
 
                     b.ToTable("Comment");
+
+                    b.HasCheckConstraint("CK_Comment_Text", "Len([Text])>=5 and Len([Text])<=100");
+                });
+
+            modelBuilder.Entity("ConsentCollector.Entities.Consent.History", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("History");
                 });
 
             modelBuilder.Entity("ConsentCollector.Entities.Consent.Notification", b =>
@@ -95,6 +111,10 @@ namespace ConsentCollector.Persistence.Migrations
 
                     b.Property<Guid>("IdUser")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Seen")
+                        .HasColumnType("bit")
+                        .HasColumnName("Seen");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -128,6 +148,8 @@ namespace ConsentCollector.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Question");
+
+                    b.HasCheckConstraint("CK_Question_Questions", "Len([Questions])>=5 and Len([Questions])<=100");
                 });
 
             modelBuilder.Entity("ConsentCollector.Entities.Consent.Survey", b =>
@@ -162,6 +184,8 @@ namespace ConsentCollector.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Survey");
+
+                    b.HasCheckConstraint("CK_Survey_LegalBasis", "[LegalBasis] = 'Contract' or [LegalBasis] = 'Law' or [LegalBasis] = 'Legitimate Interest'");
                 });
 
             modelBuilder.Entity("ConsentCollector.Entities.Consent.SurveyQuestion", b =>
@@ -195,8 +219,8 @@ namespace ConsentCollector.Persistence.Migrations
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)")
                         .HasColumnName("Password");
 
                     b.Property<string>("Role")
@@ -216,6 +240,8 @@ namespace ConsentCollector.Persistence.Migrations
                         .IsUnique();
 
                     b.ToTable("User");
+
+                    b.HasCheckConstraint("CK_User_Role", "[Role] = 'admin' or [Role] = 'user'");
                 });
 
             modelBuilder.Entity("ConsentCollector.Entities.Consent.UserDetail", b =>
@@ -262,6 +288,10 @@ namespace ConsentCollector.Persistence.Migrations
                         .IsUnique();
 
                     b.ToTable("UserDetail");
+
+                    b.HasCheckConstraint("CK_UserDetail_Firstname", "Len([Firstname])>=3 and Len([Firstname])<=20");
+
+                    b.HasCheckConstraint("CK_UserDetail_Lastname", "Len([Lastname])>=3 and Len([Lastname])<=20");
                 });
 
             modelBuilder.Entity("ConsentCollector.Entities.Consent.Answer", b =>
