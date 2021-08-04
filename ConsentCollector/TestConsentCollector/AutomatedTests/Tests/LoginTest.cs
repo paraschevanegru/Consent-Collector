@@ -25,14 +25,14 @@ namespace TestConsentCollector.AutomatedTests.Tests
 
 
 
-        [TestMethod]
-        public void Login_With_Valid_Credentials()
-        {
-            loginPage.Login("navamama99", "Abcd1234*");
-            dashboardPage = new DashboardPage(Driver);
-            dashboardPage.WaitForPageToLoad("p");
-            Assert.IsTrue(dashboardPage.ProfileMenu.Displayed);
-        }
+        //[TestMethod]
+        //public void Login_With_Valid_Credentials()
+        //{
+        //    loginPage.Login("nicoleta99", "Abcd1234*");
+        //    dashboardPage = new DashboardPage(Driver);
+        //    dashboardPage.WaitForPageToLoad("div");
+        //    Assert.IsTrue(dashboardPage.ProfileMenu.Displayed);
+        //}
 
         //[TestMethod]
         //public void Login_With_Invalid_Password()

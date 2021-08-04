@@ -16,7 +16,7 @@ namespace TestConsentCollector.AutomatedTests.PageObjects
             PageFactory.InitElements(this, new RetryingElementLocator(this.driver, TimeSpan.FromSeconds(20)));
         }
 
-        [FindsBy(How = How.CssSelector, Using = "p")]
+        [FindsBy(How = How.CssSelector, Using = "btn")]
         public IWebElement ProfileMenu { get; set; }
 
     }

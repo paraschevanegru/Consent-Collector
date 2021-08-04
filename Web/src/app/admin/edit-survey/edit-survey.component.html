@@ -75,26 +75,6 @@
             <option value="Legitimate Interest">Legitimate Interest</option>
           </select>
         </div>
-        <div>
-          <div *ngIf="listOfQuestions.length == 0">
-            <p>Currently there are no questions</p>
-          </div>
-          <div *ngIf="listOfQuestions.length > 0">
-            <p>Add new questions:</p>
-
-            <div *ngFor="let question of listOfQuestions; let i = index">
-              <div class="form-check">
-
-                <input [value]="question.id" (change)="onCheckChange($event)" type="checkbox" id="{{question.id}}"
-                  name="{{question.id}}" checked class="form-check-input" aria-label="Optional or Requierd Question">
-                <label class="form-check-label" for="{{question.id}}">{{question.questions}} ({{question.optional |
-                  optional}})</label>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="launchDate">Launch Date</span>
@@ -113,25 +93,6 @@
         <button type="submit" class="btn btn-secondary">Submit edited Survey</button>
 
 
-      </form>
-    </div>
-    <div class="col-md">
-      <form [formGroup]="formAddNewQuestion" (ngSubmit)="submitAddNewQuestion()">
-        <div class="input-group mb-3">
-          <input formControlName="questions" type="text" class="form-control" placeholder="Add your question"
-            aria-label="Add your question" aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="submit">Add question</button>
-          </div>
-
-        </div>
-        <div class="form-check">
-
-          <input class="form-check-input" id="optionalQuestion" name="optionalQuestion" formControlName="optional"
-            type="checkbox" aria-label="Optional or Requierd Question">
-          <label class="form-check-label" for="optionalQuestion">Required Question</label>
-
-        </div>
       </form>
     </div>
   </div>
